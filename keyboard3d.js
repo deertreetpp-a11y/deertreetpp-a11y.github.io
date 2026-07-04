@@ -15,7 +15,7 @@
 
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-  cam.position.set(0, 4.6, 5.8);   // closer = bigger board
+  cam.position.set(0, 5.3, 6.7);   // closer = bigger board
   const rnd = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   rnd.setPixelRatio(Math.min(devicePixelRatio, 2));
 
