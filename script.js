@@ -109,7 +109,7 @@ function frame(now) {
     tickerX -= tickerSpeed * dt * 66;           // px/s, frame-rate independent
     const half = track.scrollWidth / 2;
     if (-tickerX >= half) tickerX += half;
-    track.style.transform = `rotateY(26deg) translateX(${tickerX}px)`;
+    track.style.transform = `translateX(${tickerX}px)`;
   }
 
   // services fan
