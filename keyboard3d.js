@@ -15,7 +15,7 @@
 
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-  cam.position.set(0, 6, 8);
+  cam.position.set(0, 4.6, 5.8);   // closer = bigger board
   const rnd = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   rnd.setPixelRatio(Math.min(devicePixelRatio, 2));
 
@@ -26,7 +26,7 @@
 
   const controls = new THREE.OrbitControls(cam, rnd.domElement);
   controls.enableDamping = true; controls.dampingFactor = 0.08;
-  controls.autoRotate = true; controls.autoRotateSpeed = 0.9;
+  controls.autoRotate = false;   // user wants it still (drag still works)
   controls.enableZoom = false;           // don't steal page scroll
   controls.enablePan = false;
   controls.maxPolarAngle = 1.45;
