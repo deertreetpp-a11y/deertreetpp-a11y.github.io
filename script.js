@@ -126,9 +126,12 @@ function frame(now) {
     // start: x -440 (-0.30vw), y +216 (+0.32vh), rotateY -80deg
     // end:   x +586 (+0.40vw), y -135 (-0.20vh), rotateY +80deg
     // card spacing in both stacks: ~48px, same y for every card
-    // tighter than the ~45px a card projects to at 80° tilt, so the stacked
-    // cards overlap into one solid block (no background gaps between them)
-    const peek = 34;
+    // cards rest almost face-on (+28°), so at 48px spacing each one shows a
+    // slim strip of the card behind it — a solid block, no background gaps
+    const peek = 48;
+    const tiltRest = 28;                         // resting tilt of BOTH stacks:
+    // left edge toward the viewer — tops nearly level, bottoms fan out on the
+    // peeking side (matches the reference stacks the user screenshotted)
     const stagger = 0.16;                        // delay between cards (chain effect)
     const dur = 1 - stagger * (n - 1);           // each card's share of the scroll
 
@@ -137,7 +140,9 @@ function frame(now) {
     const cardReach = 200;                       // half-height + edge-on bulge
     const startX = -0.30 * vw;
     const startY = Math.min(0.32 * vh, 0.43 * vh - cardReach);
-    const endX = 0.40 * vw,   endY = -0.20 * vh;
+    // same guard on top for the landing stack, so it never tucks under the nav
+    const endX = 0.40 * vw;
+    const endY = Math.max(-0.20 * vh, cardReach - 0.36 * vh);
 
     sCards.forEach((card, i) => {
       // card 01 leads; each next card starts a beat later but they all
@@ -147,7 +152,8 @@ function frame(now) {
 
       const x = lerp(startX, endX, eased) - i * peek;
       const y = lerp(startY, endY, eased);
-      const tiltY = lerp(-80, 80, eased);        // near-edge-on at both stacks
+      // rest at +28° in both stacks, swinging face-on (0°) mid-flight
+      const tiltY = tiltRest - tiltRest * Math.sin(Math.PI * eased);
 
       // perspective lives on each card (like the reference), so every card
       // tilts identically around its own center instead of warping at the edges
