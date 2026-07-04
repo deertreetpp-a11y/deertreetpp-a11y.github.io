@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOURNAME® — Creative Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a class="nav-brand" href="#top">
+    <span class="nav-logo">✦</span>
+    <span class="nav-name">YOURNAME®</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects <sup>07</sup></a>
+    <a href="#blog">Blog</a>
+  </div>
+  <a href="#contact" class="btn btn-green btn-roll" data-text="Contact">
+    <span class="roll"><span>Contact</span><span>Contact</span></span>
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="menu">
+    <i></i><i></i><i></i>
+  </button>
+</nav>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-top">
+        <p class="hero-lede appear" data-delay="200">
+          A digital design practice crafting brands with substance.
+          I merge interactive motion with strategic identity to build
+          websites that feel alive.
+        </p>
+        <a href="#contact" class="btn btn-green btn-lg btn-roll appear" data-delay="300">
+          <span class="roll"><span>Start Your Project</span><span>Start Your Project</span></span>
+        </a>
+      </div>
+      <h1 class="hero-title appear" data-delay="400">YOURNAME®</h1>
+    </div>
+  </section>
+
+  <!-- divider -->
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (About Me)</span><span class="line"></span></div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section intro" id="about">
+    <div class="intro-grid">
+      <div class="intro-spacer"></div>
+      <div class="intro-body">
+        <p class="big-text word-reveal">
+          I believe great design should be structural, not decorative.
+          This is a one-person studio dedicated to removing friction —
+          blending clean engineering with expressive motion so your brand
+          can move faster, look sharper, and feel unmistakably real.
+        </p>
+        <div class="logo-grid">
+          <div class="logo-cell reveal">STUDIO A</div>
+          <div class="logo-cell reveal">BRAND B</div>
+          <div class="logo-cell reveal">LABS C</div>
+          <div class="logo-cell reveal">HOUSE D</div>
+          <div class="logo-cell reveal">TEAM E</div>
+          <div class="logo-cell reveal">CO. F</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (Portfolio)</span><span class="line"></span></div>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <header class="section-head">
+      <div class="head-left">
+        <h2 class="giant reveal">Projects.</h2>
+        <span class="count reveal">(07)</span>
+      </div>
+      <a href="#contact" class="btn btn-green btn-roll reveal">
+        <span class="roll"><span>All Projects</span><span>All Projects</span></span>
+      </a>
+    </header>
+    <div class="ticker-3d">
+      <div class="ticker-track" id="tickerTrack">
+        <!-- cards injected by JS (x2 for loop) -->
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (Services)</span><span class="line"></span></div>
+
+  <!-- ===== SERVICES (sticky stacked cards) ===== -->
+  <section class="services" id="services">
+    <div class="services-sticky">
+      <h2 class="giant services-title">Services.</h2>
+      <div class="card-stack" id="cardStack">
+        <div class="s-card" style="--i:0"><span class="s-num">01</span><span class="s-glyph">W</span><span class="s-name">Web Design</span></div>
+        <div class="s-card" style="--i:1"><span class="s-num">02</span><span class="s-glyph">D</span><span class="s-name">Development</span></div>
+        <div class="s-card" style="--i:2"><span class="s-num">03</span><span class="s-glyph">UI</span><span class="s-name">UI/UX Design</span></div>
+        <div class="s-card" style="--i:3"><span class="s-num">04</span><span class="s-glyph">M</span><span class="s-name">Motion</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (Pricing)</span><span class="line"></span></div>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section pricing">
+    <header class="section-head"><h2 class="giant reveal">Pricing.</h2></header>
+    <p class="big-text word-reveal pricing-lede">
+      Most freelancers sell time — I sell momentum. Pick a focused sprint
+      to accelerate a launch, or partner with me for the long haul.
+    </p>
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <h3>Design Support</h3>
+        <p class="muted">Consistent social and marketing assets for growing brands.</p>
+        <div class="price"><span>$</span><strong>1,499</strong><em>/ month</em></div>
+        <a href="#contact" class="btn btn-green btn-block btn-roll"><span class="roll"><span>Get Started</span><span>Get Started</span></span></a>
+        <h4>What's included</h4>
+        <ul>
+          <li>One active request at a time</li>
+          <li>2-day average turnaround</li>
+          <li>Social &amp; ad creatives</li>
+        </ul>
+      </div>
+      <div class="price-card reveal">
+        <h3>Web &amp; Growth</h3>
+        <p class="muted">Full support for companies that need design + development.</p>
+        <div class="price"><span>$</span><strong>3,499</strong><em>/ month</em></div>
+        <a href="#contact" class="btn btn-green btn-block btn-roll"><span class="roll"><span>Scale Now</span><span>Scale Now</span></span></a>
+        <h4>What's included</h4>
+        <ul>
+          <li>Two active requests at a time</li>
+          <li>Website builds &amp; updates</li>
+          <li>Landing page optimization</li>
+          <li>Basic SEO setup</li>
+          <li>Presentation decks</li>
+        </ul>
+      </div>
+      <div class="price-card price-featured reveal">
+        <h3>Full Partner</h3>
+        <p class="muted">A dedicated designer embedded directly in your workflow.</p>
+        <div class="price"><span>$</span><strong>6,999</strong><em>/ month</em></div>
+        <a href="#contact" class="btn btn-white btn-block btn-roll"><span class="roll"><span>Book a Call</span><span>Book a Call</span></span></a>
+        <h4>What's included</h4>
+        <ul>
+          <li>Four active requests at a time</li>
+          <li>Priority support via chat</li>
+          <li>Unlimited brands</li>
+          <li>3D &amp; motion graphics</li>
+          <li>Weekly sync calls</li>
+          <li>Same-day small tasks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (Stats)</span><span class="line"></span></div>
+
+  <!-- ===== STATS ===== -->
+  <section class="section stats">
+    <p class="big-text word-reveal stats-lede">
+      Good design pays dividends. I combine creative strategy with technical
+      precision to deliver results you can actually measure.
+    </p>
+    <div class="stats-grid">
+      <div class="stat-card reveal" style="--off:0px">
+        <span class="stat-label">Client Satisfaction</span>
+        <div class="stat-num"><span class="counter" data-target="98">0</span>%</div>
+        <hr><span class="stat-foot">Avg. across all projects</span>
+      </div>
+      <div class="stat-card reveal" style="--off:80px">
+        <span class="stat-label">Years Active</span>
+        <div class="stat-num"><span class="counter" data-target="6">0</span>+</div>
+        <hr><span class="stat-foot">In the industry</span>
+      </div>
+      <div class="stat-card reveal" style="--off:0px">
+        <span class="stat-label">Delivered Projects</span>
+        <div class="stat-num"><span class="counter" data-target="120">0</span>+</div>
+        <hr><span class="stat-foot">Shipped on time</span>
+      </div>
+      <div class="stat-card reveal" style="--off:80px">
+        <span class="stat-label">Average ROI</span>
+        <div class="stat-num"><span class="counter" data-target="4">0</span>x</div>
+        <hr><span class="stat-foot">For my clients</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (FAQ)</span><span class="line"></span></div>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq">
+    <header class="section-head"><h2 class="giant reveal">FAQ.</h2></header>
+    <div class="faq-wrap">
+      <div class="faq-side reveal">
+        <div class="faq-photo"></div>
+        <p class="muted">Total transparency. If you don't see what you're looking for,
+        just reach out and let's clear things up.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
+          <summary>What services do you provide? <span class="faq-icon">+</span></summary>
+          <p>Brand identity, web design, front-end development, and motion design.
+          I focus purely on digital experiences.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How long does a typical project take? <span class="faq-icon">+</span></summary>
+          <p>A landing page usually ships in 1–2 weeks. Full brand + site projects
+          take 4–6 weeks depending on scope.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can I update the website myself after launch? <span class="faq-icon">+</span></summary>
+          <p>Yes — every project ships with a clean structure and a short walkthrough
+          so you can edit content without a developer.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How do payments work? <span class="faq-icon">+</span></summary>
+          <p>50% deposit to book the slot, 50% on delivery. Monthly plans are billed
+          at the start of each cycle and can be paused anytime.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Do you offer ongoing support? <span class="faq-icon">+</span></summary>
+          <p>Every launch includes 30 days of free fixes. After that you can move to
+          a monthly plan or book ad-hoc support.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider reveal"><span class="line"></span><span class="pill">✦ (Blog)</span><span class="line"></span></div>
+
+  <!-- ===== BLOG ===== -->
+  <section class="section blog" id="blog">
+    <header class="section-head">
+      <h2 class="giant reveal">Latest<br>Blogs.</h2>
+      <a href="#" class="btn btn-green btn-roll reveal"><span class="roll"><span>All Blogs</span><span>All Blogs</span></span></a>
+    </header>
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <div class="blog-top"><span>Feb 6, 2026</span><span class="tag">Web design</span></div>
+        <div class="blog-img img-a"></div>
+        <h3>Using Whitespace as Luxury</h3>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-top"><span>Feb 3, 2026</span><span class="tag">SEO</span></div>
+        <div class="blog-img img-b"></div>
+        <h3>Core Web Vitals, Simply</h3>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-top"><span>Feb 1, 2026</span><span class="tag">Development</span></div>
+        <div class="blog-img img-c"></div>
+        <h3>Why I Ship Fast</h3>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-top"><span>Jan 28, 2026</span><span class="tag">UI/UX</span></div>
+        <div class="blog-img img-d"></div>
+        <h3>The Secret to "Delight"</h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact">
+    <div class="cta-pill">
+      <span class="cta-type"><span id="typewriter"></span><span class="caret">|</span></span>
+      <a href="mailto:hello@example.com" class="btn btn-black btn-roll"><span class="roll"><span>Contact me</span><span>Contact me</span></span></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <div class="footer-avatar">✦</div>
+      <a href="#top" class="btn btn-black btn-roll"><span class="roll"><span>Back to top</span><span>Back to top</span></span></a>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <a href="#top">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Social Media</h4>
+      <a href="#">Twitter / X</a><a href="#">Instagram</a><a href="#">Dribbble</a>
+    </div>
+  </div>
+  <div class="footer-giant">YOURNAME®</div>
+  <div class="footer-bottom reveal">
+    <span>Created with ❤️</span>
+    <div><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></div>
+    <span>© 2026 All Rights Reserved</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
