@@ -7,13 +7,13 @@
 
 // ---------- 1. Project ticker (build cards, duplicate for seamless loop) ----------
 const projects = [
-  { title: "Aurora",   tag: "Web design",   glyph: "AU", bg: "linear-gradient(135deg,#1b2a24,#0f8054)" },
-  { title: "Pulse",    tag: "UI/UX Design", glyph: "PU", bg: "linear-gradient(135deg,#2a1b24,#804a0f)" },
-  { title: "Canvas",   tag: "Web design",   glyph: "CA", bg: "linear-gradient(135deg,#24291b,#6a8000)" },
-  { title: "Nexus",    tag: "Development",  glyph: "NE", bg: "linear-gradient(135deg,#1b2029,#0f4a80)" },
-  { title: "Summit",   tag: "SEO",          glyph: "SU", bg: "linear-gradient(135deg,#291b1b,#801f0f)" },
-  { title: "Vault",    tag: "UI/UX Design", glyph: "VA", bg: "linear-gradient(135deg,#241b29,#5c0f80)" },
-  { title: "Velocity", tag: "Development",  glyph: "VE", bg: "linear-gradient(135deg,#1b2926,#0f8071)" },
+  { title: "PAAM Serum — 42.3K views", tag: "AI Content",   glyph: "PA", bg: "linear-gradient(135deg,#1b2a24,#0f8054)" },
+  { title: "TikTok Affiliate Clips",   tag: "AI Content",   glyph: "TT", bg: "linear-gradient(135deg,#2a1b24,#804a0f)" },
+  { title: "AI Short Film",            tag: "AI Video",     glyph: "FX", bg: "linear-gradient(135deg,#24291b,#6a8000)" },
+  { title: "Trading Bot Store",        tag: "Web & Product", glyph: "TB", bg: "linear-gradient(135deg,#1b2029,#0f4a80)" },
+  { title: "Thai Game-Mod Store",      tag: "Web & Product", glyph: "GM", bg: "linear-gradient(135deg,#291b1b,#801f0f)" },
+  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", glyph: "KU", bg: "linear-gradient(135deg,#241b29,#5c0f80)" },
+  { title: "MUVITA — R2M 2025",        tag: "Research",     glyph: "MU", bg: "linear-gradient(135deg,#1b2926,#0f8071)" },
 ];
 
 const track = document.getElementById("tickerTrack");
@@ -181,9 +181,9 @@ requestAnimationFrame(frame);
 // ---------- 6. Typewriter CTA ----------
 const phrases = [
   "Need a website?",
-  "Need a brand refresh?",
-  "Need motion design?",
-  "Need a partner? Let's talk.",
+  "Need AI content that sells?",
+  "Need an AI agent?",
+  "Let's build it. — Dear",
 ];
 const tw = document.getElementById("typewriter");
 if (tw) {
