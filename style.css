@@ -427,6 +427,3 @@ main{display:block}
   .section{padding:60px 15px}
   .hero{margin:0}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-}
