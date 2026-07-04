@@ -179,20 +179,16 @@ function frame(now) {
 requestAnimationFrame(frame);
 
 // ---------- 6. Typewriter CTA ----------
-const phrases = [
-  "Need a website?",
-  "Need AI content that sells?",
-  "Need an AI agent?",
-  "Let's build it. — Dear",
-];
+// phrases live in i18n.js (window.i18nPhrases) so the TH/EN toggle swaps them live
 const tw = document.getElementById("typewriter");
 if (tw) {
   let pi = 0, ci = 0, deleting = false;
   (function loop() {
-    const phrase = phrases[pi];
-    tw.textContent = phrase.slice(0, ci);
+    const phrases = window.i18nPhrases[window.currentLang];
+    const phrase = phrases[pi % phrases.length];
+    tw.textContent = phrase.slice(0, Math.min(ci, phrase.length));
     let delay = deleting ? 35 : 65;
-    if (!deleting && ci === phrase.length) { deleting = true; delay = 1600; }
+    if (!deleting && ci >= phrase.length) { deleting = true; ci = phrase.length; delay = 1600; }
     else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
     else ci += deleting ? -1 : 1;
     setTimeout(loop, delay);
