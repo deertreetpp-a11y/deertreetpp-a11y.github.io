@@ -207,7 +207,21 @@ faqItems.forEach(item => {
   });
 });
 
-// ---------- 8. Mobile burger: simple jump menu ----------
+// ---------- 8. Nav: collapse to a mini pill while scrolling down ----------
+const nav = document.getElementById("nav");
+let navLastY = scrollY;
+addEventListener("scroll", () => {
+  const y = scrollY;
+  if (y > navLastY + 4 && y > 140) nav.classList.add("nav-mini");
+  else if (y < navLastY - 4 || y <= 140) nav.classList.remove("nav-mini");
+  navLastY = y;
+}, { passive: true });
+document.getElementById("navDots")?.addEventListener("click", () => {
+  nav.classList.remove("nav-mini");
+  navLastY = scrollY;
+});
+
+// ---------- 9. Mobile burger: simple jump menu ----------
 document.getElementById("navBurger")?.addEventListener("click", () => {
   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 });

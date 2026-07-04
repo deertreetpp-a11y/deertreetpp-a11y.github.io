@@ -82,7 +82,26 @@ main{display:block}
   border-radius:999px;
   border:1px solid rgba(255,255,255,.06);
   animation:navDrop .8s var(--ease) both;
+  transition:gap .45s var(--ease),padding .45s var(--ease);
 }
+/* scrolling DOWN collapses the bar to logo + dots so it doesn't cover
+   content; scrolling UP brings the full menu back (reference behavior) */
+.nav-links,.nav>.btn{
+  max-width:420px;overflow:hidden;white-space:nowrap;
+  transition:max-width .45s var(--ease),opacity .25s ease,padding .45s var(--ease);
+}
+.nav.nav-mini{gap:0;padding:8px 18px}
+.nav.nav-mini .nav-links,.nav.nav-mini>.btn{
+  max-width:0;opacity:0;padding-left:0;padding-right:0;pointer-events:none;
+}
+.nav-dots{
+  display:flex;align-items:center;gap:5px;
+  max-width:0;opacity:0;overflow:hidden;cursor:pointer;
+  transition:max-width .45s var(--ease),opacity .25s ease,margin .45s var(--ease);
+}
+.nav-dots i{flex:none;width:5px;height:5px;border-radius:99px;background:#fff;opacity:.75}
+.nav-dots i:nth-child(2){width:6px;height:14px;background:var(--amber);opacity:1}
+.nav.nav-mini .nav-dots{max-width:44px;opacity:1;margin-left:14px}
 @keyframes navDrop{from{opacity:0;transform:translate(-50%,-30px)}to{opacity:1;transform:translate(-50%,0)}}
 .nav-brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.04px}
 .nav-logo{color:var(--amber)}
