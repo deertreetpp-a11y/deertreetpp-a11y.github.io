@@ -129,7 +129,7 @@ function frame(now) {
     // cards rest almost face-on (+28°), so at 48px spacing each one shows a
     // slim strip of the card behind it — a solid block, no background gaps
     const peek = 48;
-    const tiltRest = 28;                         // resting tilt of BOTH stacks:
+    const tiltRest = 38;                         // resting tilt of BOTH stacks:
     // left edge toward the viewer — tops nearly level, bottoms fan out on the
     // peeking side (matches the reference stacks the user screenshotted)
     const stagger = 0.16;                        // delay between cards (chain effect)
