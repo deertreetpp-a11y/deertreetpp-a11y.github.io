@@ -129,7 +129,7 @@ function frame(now) {
     // cards rest almost face-on (+28°), so at 48px spacing each one shows a
     // slim strip of the card behind it — a solid block, no background gaps
     const peek = 48;
-    const tiltRest = 38;                         // resting tilt of BOTH stacks:
+    const tiltRest = 45;                         // resting tilt of BOTH stacks:
     // left edge toward the viewer — tops nearly level, bottoms fan out on the
     // peeking side (matches the reference stacks the user screenshotted)
     const stagger = 0.16;                        // delay between cards (chain effect)
@@ -142,7 +142,8 @@ function frame(now) {
     // reference sits the start stack low — bottoms almost kissing the floor
     const startY = Math.min(0.39 * vh, 0.50 * vh - cardReach);
     // same guard on top for the landing stack, so it never tucks under the nav
-    const endX = 0.40 * vw;
+    // 0.37vw parks the landing stack with a comfortable gap off the right edge
+    const endX = 0.37 * vw;
     const endY = Math.max(-0.28 * vh, cardReach - 0.44 * vh);
 
     sCards.forEach((card, i) => {
