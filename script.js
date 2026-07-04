@@ -138,12 +138,15 @@ function frame(now) {
     // keep breathing room under the start stack: never push the cards'
     // bottom edge (incl. the perspective bulge) closer than ~7vh to the floor
     const cardReach = 200;                       // half-height + edge-on bulge
-    const startX = -0.30 * vw;
+    // both stacks keep the SAME breathing room to their outer screen edge:
+    // solve each stack's x from the gap instead of guessing vw fractions
+    const sideGap = 0.045 * vw;                  // outer margin, both stacks
+    const halfW = 99;    // near-edge half width: 129.5·cos45°·1200/(1200−129.5·sin45°)
+    const startX = sideGap + halfW + (n - 1) * peek - vw / 2;
     // reference sits the start stack low — bottoms almost kissing the floor
     const startY = Math.min(0.39 * vh, 0.50 * vh - cardReach);
     // same guard on top for the landing stack, so it never tucks under the nav
-    // 0.37vw parks the landing stack with a comfortable gap off the right edge
-    const endX = 0.37 * vw;
+    const endX = vw / 2 - sideGap - halfW;
     const endY = Math.max(-0.28 * vh, cardReach - 0.44 * vh);
 
     sCards.forEach((card, i) => {
