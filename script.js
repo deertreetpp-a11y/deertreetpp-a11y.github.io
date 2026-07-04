@@ -140,10 +140,10 @@ function frame(now) {
     const cardReach = 200;                       // half-height + edge-on bulge
     const startX = -0.30 * vw;
     // reference sits the start stack low — bottoms almost kissing the floor
-    const startY = Math.min(0.41 * vh, 0.52 * vh - cardReach);
+    const startY = Math.min(0.39 * vh, 0.50 * vh - cardReach);
     // same guard on top for the landing stack, so it never tucks under the nav
     const endX = 0.40 * vw;
-    const endY = Math.max(-0.24 * vh, cardReach - 0.40 * vh);
+    const endY = Math.max(-0.28 * vh, cardReach - 0.44 * vh);
 
     sCards.forEach((card, i) => {
       // card 01 leads; each next card starts a beat later but they all
