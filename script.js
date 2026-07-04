@@ -126,11 +126,17 @@ function frame(now) {
     // start: x -440 (-0.30vw), y +216 (+0.32vh), rotateY -80deg
     // end:   x +586 (+0.40vw), y -135 (-0.20vh), rotateY +80deg
     // card spacing in both stacks: ~48px, same y for every card
-    const peek = 48;
+    // tighter than the ~45px a card projects to at 80° tilt, so the stacked
+    // cards overlap into one solid block (no background gaps between them)
+    const peek = 34;
     const stagger = 0.16;                        // delay between cards (chain effect)
     const dur = 1 - stagger * (n - 1);           // each card's share of the scroll
 
-    const startX = -0.30 * vw, startY = 0.32 * vh;
+    // keep breathing room under the start stack: never push the cards'
+    // bottom edge (incl. the perspective bulge) closer than ~7vh to the floor
+    const cardReach = 200;                       // half-height + edge-on bulge
+    const startX = -0.30 * vw;
+    const startY = Math.min(0.32 * vh, 0.43 * vh - cardReach);
     const endX = 0.40 * vw,   endY = -0.20 * vh;
 
     sCards.forEach((card, i) => {
