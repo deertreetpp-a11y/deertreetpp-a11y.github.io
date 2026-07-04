@@ -152,8 +152,9 @@ function frame(now) {
 
       const x = lerp(startX, endX, eased) - i * peek;
       const y = lerp(startY, endY, eased);
-      // rest at +28° in both stacks, swinging face-on (0°) mid-flight
-      const tiltY = tiltRest - tiltRest * Math.sin(Math.PI * eased);
+      // both stacks tilt toward screen center: start (left stack) +28°,
+      // landing (right stack) −28°, passing face-on mid-flight
+      const tiltY = lerp(tiltRest, -tiltRest, eased);
 
       // perspective lives on each card (like the reference), so every card
       // tilts identically around its own center instead of warping at the edges
