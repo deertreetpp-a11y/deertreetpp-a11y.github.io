@@ -15,6 +15,8 @@
   --radius:30px;
   --nav-h:64px;
   --ease:cubic-bezier(.22,1,.36,1);
+  /* reference nav morph: framer spring duration .4s bounce .2 (zeta .8, ~1.5% overshoot) */
+  --spring:linear(0, 0.0894, 0.275, 0.4759, 0.6519, 0.7886, 0.8854, 0.9483, 0.9857, 1.0052, 1.0135, 1.0151, 1.0135, 1.0106, 1.0076, 1.005, 1.003);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -82,22 +84,23 @@ main{display:block}
   border-radius:999px;
   border:1px solid rgba(255,255,255,.06);
   animation:navDrop .8s var(--ease) both;
-  transition:gap .45s var(--ease),padding .45s var(--ease);
+  transition:gap .4s var(--spring),padding .4s var(--spring);
 }
 /* scrolling DOWN collapses the bar to logo + dots so it doesn't cover
-   content; scrolling UP brings the full menu back (reference behavior) */
+   content; scrolling UP brings the full menu back (reference behavior).
+   Reference morph is one spring on width AND height (pill 44 -> 34). */
 .nav-links,.nav>.btn{
-  max-width:420px;overflow:hidden;white-space:nowrap;
-  transition:max-width .45s var(--ease),opacity .25s ease,padding .45s var(--ease);
+  max-width:420px;max-height:48px;overflow:hidden;white-space:nowrap;
+  transition:max-width .4s var(--spring),max-height .4s var(--spring),opacity .25s ease,padding .4s var(--spring);
 }
 .nav.nav-mini{gap:0;padding:8px 18px}
 .nav.nav-mini .nav-links,.nav.nav-mini>.btn{
-  max-width:0;opacity:0;padding-left:0;padding-right:0;pointer-events:none;
+  max-width:0;max-height:22px;opacity:0;padding-left:0;padding-right:0;pointer-events:none;
 }
 .nav-dots{
   display:flex;align-items:center;gap:5px;
   max-width:0;opacity:0;overflow:hidden;cursor:pointer;
-  transition:max-width .45s var(--ease),opacity .25s ease,margin .45s var(--ease);
+  transition:max-width .4s var(--spring),opacity .25s ease,margin .4s var(--spring);
 }
 .nav-dots i{flex:none;width:5px;height:5px;border-radius:99px;background:#fff;opacity:.75}
 .nav-dots i:nth-child(2){width:6px;height:14px;background:var(--amber);opacity:1}
