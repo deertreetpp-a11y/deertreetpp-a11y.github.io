@@ -226,30 +226,28 @@ main{display:block}
 .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .logo-cell{
   aspect-ratio:1.825;background:var(--card);border-radius:var(--radius);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  display:flex;align-items:center;justify-content:center;
   font-weight:800;letter-spacing:.06em;color:#666;font-size:clamp(13px,1.4vw,18px);
   transition:background .3s,color .3s, opacity .9s var(--ease), transform .9s var(--ease);
 }
-/* keycaps (from Dear's 3D keyboard) — colored cap body, white logo plate, presses down */
-.keycap{
-  --side:color-mix(in srgb,var(--cap),#000 42%);
-  width:clamp(56px,5.4vw,78px);aspect-ratio:1;
-  padding:0;border:none;cursor:pointer;
-  background:var(--cap);border-radius:16px;
-  box-shadow:0 8px 0 var(--side),0 18px 26px rgba(0,0,0,.5);
-  transition:transform .07s ease,box-shadow .07s ease;
-  display:flex;align-items:center;justify-content:center;
+.logo-cell:hover{background:var(--amber);color:#000}
+/* Dear's 3D keyboard (three.js) — replaces the old logo grid */
+.kb3d{
+  position:relative;height:520px;
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
 }
-.keycap:hover{transform:translateY(2px);box-shadow:0 6px 0 var(--side),0 14px 20px rgba(0,0,0,.45)}
-.keycap.pressed,.keycap:active{transform:translateY(7px);box-shadow:0 1px 0 var(--side),0 6px 10px rgba(0,0,0,.4)}
-.key-plate{
-  width:78%;aspect-ratio:1;border-radius:12px;background:#fff;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
+.kb3d canvas{width:100%;height:100%;display:block;cursor:grab}
+.kb3d canvas:active{cursor:grabbing}
+.kb3d-label{
+  position:absolute;z-index:3;pointer-events:none;white-space:nowrap;
+  background:rgba(20,15,11,.9);border:1px solid rgba(255,255,255,.15);color:var(--amber);
+  padding:5px 12px;border-radius:20px;font-size:13px;font-weight:600;
+  transform:translate(-50%,-140%);opacity:0;transition:opacity .15s;
 }
-.key-plate img{width:72%;height:72%;object-fit:contain}
-.key-plate.key-cover img{width:100%;height:100%;object-fit:cover}
-.key-name{font-size:11px;letter-spacing:.14em;color:#666;transition:color .3s}
-.logo-cell:hover .key-name{color:var(--amber)}
+.kb3d-tip{
+  position:absolute;bottom:16px;left:0;width:100%;text-align:center;pointer-events:none;
+  color:var(--muted);font-size:13px;letter-spacing:.04em;
+}
 
 /* ---------- PROJECTS TICKER ---------- */
 .ticker-3d{
@@ -461,6 +459,7 @@ main{display:block}
   .nav-burger{display:block}
   .nav{gap:16px;padding-right:14px}
   .lang-btn{margin-left:0}
+  .kb3d{height:340px}
   .hero-card{width:calc(100vw - 48px);padding:28px 24px 24px}
   .hero-name{white-space:normal;font-size:clamp(40px,12vw,64px)}
   .hero-mid{flex-direction:column;align-items:flex-start;gap:8px}

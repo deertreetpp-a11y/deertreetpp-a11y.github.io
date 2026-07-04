@@ -203,18 +203,6 @@ faqItems.forEach(item => {
   });
 });
 
-// ---------- 7b. Keycaps: press animation + key sound ----------
-const keySound = new Audio("assets/audio/key.mp3");
-document.querySelectorAll(".keycap").forEach(cap => {
-  cap.addEventListener("click", () => {
-    cap.classList.add("pressed");
-    setTimeout(() => cap.classList.remove("pressed"), 110);
-    const s = keySound.cloneNode();   // clone so rapid presses overlap
-    s.volume = 0.5;
-    s.play().catch(() => {});         // ignore pre-interaction autoplay block
-  });
-});
-
 // ---------- 8. Nav: collapse to a mini pill while scrolling down ----------
 const nav = document.getElementById("nav");
 let navLastY = scrollY;
