@@ -195,14 +195,6 @@ if (tw) {
   })();
 }
 
-// ---------- 7. FAQ: only one open at a time ----------
-const faqItems = document.querySelectorAll(".faq-item");
-faqItems.forEach(item => {
-  item.addEventListener("toggle", () => {
-    if (item.open) faqItems.forEach(o => { if (o !== item) o.open = false; });
-  });
-});
-
 // ---------- 8. Nav: collapse to a mini pill while scrolling down ----------
 const nav = document.getElementById("nav");
 let navLastY = scrollY;
