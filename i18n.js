@@ -9,14 +9,14 @@
 // Each entry: [selector, [thai strings in document order]]
 // A null in the array = leave that matched element untouched.
 const I18N_TH = [
-  [".nav-links a", ["เกี่ยวกับ", "ผลงาน <sup>07</sup>", "ไฮไลต์"]],
+  [".nav-links a", ["เกี่ยวกับ", "ผลงาน <sup>07</sup>"]],
   [".nav > .btn .roll span", ["ติดต่อ", "ติดต่อ"]],
 
   [".hero-est", ["(สุปวีร์ มะธุเสน — ขอนแก่น, ประเทศไทย)"]],
   [".hero-desc", ["ไอเดียไม่ควรต้องรอ <span>ผมเปลี่ยนมันให้เป็นงานจริงที่จับต้องได้ — เร็ว</span> ด้วย AI และหัวคิดแบบคนทำธุรกิจ <span>แชมป์ — แฮ็กกาธอน KRUNGSRI UNIVERSE 2025</span>"]],
   [".hero-tags", ["คอนเทนต์ AI <i>/</i> ระบบอัตโนมัติ <i>/</i> เว็บ &amp; วิจัย"]],
 
-  [".divider .pill", ["✦ (เกี่ยวกับผม)", "✦ (ผลงาน)", "✦ (บริการ)", "✦ (ตัวเลข)", "✦ (ไฮไลต์)"]],
+  [".divider .pill", ["✦ (เกี่ยวกับผม)", "✦ (ผลงาน)", "✦ (บริการ)", "✦ (ตัวเลข)"]],
 
   [".kb3d-tip", ["ชุดเครื่องมือ AI ของผม — (ลองกดปุ่มดูสิ)"]],
 
@@ -34,16 +34,6 @@ const I18N_TH = [
   [".stats-lede", ["ผมไม่เดา — ผมวัดผล งาน AI ที่มีอินไซต์จริงนำทาง พร้อมตัวเลขพิสูจน์ว่าเวิร์ก"]],
   [".stat-label", ["ยอดวิว TikTok", "ไลก์ที่ได้", "ผู้บริโภคที่สำรวจ", "แชมป์แฮ็กกาธอน"]],
   [".stat-foot", ["แคมเปญ PAAM Serum", "จากคลิป AI คลิปเดียว", "วิจัยอินไซต์ CHURO", "Krungsri UniVerse 2025"]],
-
-  ["#blog .giant", ["ไฮ-<br>ไลต์."]],
-  ["#blog .section-head .roll span", ["ร่วมงานกับผม", "ร่วมงานกับผม"]],
-  [".blog-top .tag", ["แชมป์", "คอนเทนต์ AI", "วิจัย", "อินไซต์"]],
-  [".blog-card h3", [
-    "แชมป์แฮ็กกาธอน Krungsri UniVerse — ที่ 1",
-    "PAAM Serum — 42.3K วิวบน TikTok",
-    "MUVITA — Research to Market (R2M)",
-    "CHURO — วิจัยผู้บริโภค 400+ คน",
-  ]],
 
   [".cta .btn .roll span", ["ทักมาเลย", "ทักมาเลย"]],
 

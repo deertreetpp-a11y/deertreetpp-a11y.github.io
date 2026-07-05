@@ -351,31 +351,6 @@ main{display:block}
 .stat-card hr{border:none;border-top:1px solid rgba(255,255,255,.6);margin:14px 0 10px}
 .stat-foot{font-size:14px;font-weight:600;color:var(--grey)}
 
-/* ---------- BLOG ---------- */
-.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:start}
-.blog-grid .blog-card:nth-child(2){margin-top:60px}
-.blog-grid .blog-card:nth-child(4){margin-top:60px}
-.blog-card{display:flex;flex-direction:column;gap:4px;cursor:pointer}
-.blog-top{
-  background:var(--card);border-radius:18px;padding:16px 20px;
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:14px;font-weight:600;
-}
-.tag{background:var(--amber);color:#000;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:500}
-.blog-img{
-  aspect-ratio:1.5;border-radius:18px;filter:grayscale(1);
-  transition:filter .5s var(--ease),transform .5s var(--ease);
-}
-.blog-card:hover .blog-img{filter:grayscale(0);transform:scale(.98)}
-.img-a{background:linear-gradient(140deg,#e8dcc8,#a88f5f)}
-.img-b{background:linear-gradient(140deg,#c8d8e8,#4f6f8f)}
-.img-c{background:linear-gradient(140deg,#d8e8cf,#4f8f5c)}
-.img-d{background:linear-gradient(140deg,#e8c8d8,#8f4f6f)}
-.blog-card h3{
-  background:var(--card-2);border-radius:18px;padding:14px 20px;
-  font-size:16px;font-weight:600;letter-spacing:-.04px;
-}
-
 /* ---------- CTA (typewriter capsule) ---------- */
 .cta{height:100vh;display:flex;align-items:center;justify-content:center;padding:0 24px}
 .cta-pill{
@@ -459,7 +434,6 @@ main{position:relative;z-index:2;background:var(--bg)}
 @media (max-width:1199px){
   .stats-grid{flex-wrap:wrap}
   .stats-grid .stat-card{width:calc(50% - 8px)}
-  .blog-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:809px){
   .nav-links{display:none}
@@ -478,8 +452,6 @@ main{position:relative;z-index:2;background:var(--bg)}
   .intro-facts{flex-direction:row;flex-wrap:wrap;gap:16px 28px}
   .intro .kb3d{margin-top:40px}
   .logo-grid{grid-template-columns:repeat(2,1fr)}
-  .blog-grid{grid-template-columns:1fr}
-  .blog-grid .blog-card{margin-top:0!important}
   .stats-grid .stat-card{width:100%;margin:4px 0;--off:0px!important}
   .stats-grid{flex-direction:column}
   .contact-grid{grid-template-columns:1fr;gap:28px}
