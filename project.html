@@ -69,8 +69,10 @@
 
   const media = document.getElementById("pjMedia");
   if (p.media && p.media.length) {
-    media.innerHTML = p.media.map((m, mi) => {
+    const render = (m, mi) => {
       if (typeof m === "string") m = { type: "img", src: m };
+      if (m.type === "row")
+        return `<div class="pj-row">${m.items.map(render).join("")}</div>`;
       if (m.type === "img")
         return `<img src="${m.src}" alt="${p.title}" loading="lazy">`;
       if (m.type === "video")
@@ -86,7 +88,8 @@
         </div>`;
       }
       return "";
-    }).join("");
+    };
+    media.innerHTML = p.media.map(render).join("");
 
     // slide decks: arrows or a tap on the image flip through the pages
     document.querySelectorAll(".pj-slides").forEach(box => {

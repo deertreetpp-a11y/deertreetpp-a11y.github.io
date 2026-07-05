@@ -400,6 +400,9 @@ a.p-card:hover .p-title{color:#fff}
 .pj-media{width:100%;margin-top:70px;display:flex;flex-direction:column;gap:14px}
 .pj-media img{width:100%;max-height:82vh;object-fit:cover;border-radius:22px;display:block}
 .pj-media video{max-height:78vh;max-width:100%;margin:0 auto;border-radius:22px;display:block;background:#0a0a0a}
+/* paired media (e.g. portrait photo + portrait video) share one row, equal height */
+.pj-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+.pj-row img,.pj-row video{width:100%;height:100%;max-height:74vh;object-fit:cover;margin:0}
 /* click-through slide deck */
 .pj-slides{position:relative}
 .pj-slides img{object-fit:contain;background:#0d0d0d;cursor:e-resize}
@@ -541,6 +544,7 @@ main{position:relative;z-index:2;background:var(--bg)}
   .logo-grid{grid-template-columns:repeat(2,1fr)}
   .stats-grid .stat-card{width:100%;margin:4px 0;--off:0px!important}
   .stats-grid{flex-direction:column}
+  .pj-row{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:28px}
   .form-row{flex-direction:column;gap:18px}
   .footer{justify-content:center;text-align:center}

@@ -73,8 +73,10 @@ const PROJECT_PAGES = {
       th: "ทำครบทั้งไอเดีย UI prototype และ user testing ภายในเวลาแข่ง — คว้าที่ 1 เวที Krungsri UniVerse × Khon Kaen University Hackathon",
     },
     media: [
-      { type: "img",    src: "assets/projects/krungsri/team.jpg" },
-      { type: "video",  src: "assets/projects/krungsri/pitch.mp4" },
+      { type: "row", items: [
+        { type: "img",   src: "assets/projects/krungsri/team.jpg" },
+        { type: "video", src: "assets/projects/krungsri/pitch.mp4" },
+      ]},
       { type: "slides", base: "assets/projects/krungsri/slides/", count: 11 },
     ],
   },
