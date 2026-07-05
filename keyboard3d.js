@@ -30,18 +30,30 @@
     Canva:    { en: "design at 2x speed.",              th: "ดีไซน์สปีดคูณสอง" },
     Docs:     { en: "where the research lives.",        th: "บ้านของงานวิจัยทุกชิ้น" },
     Excel:    { en: "rows, columns, insights.",         th: "ตัวเลขที่เล่าเรื่องได้" },
+    Manus:        { en: "the intern that never sleeps.",   th: "เด็กฝึกงานที่ไม่หลับไม่นอน" },
+    Hermes:       { en: "my agent on a mission.",          th: "เอเจนต์คู่ใจสายลุย" },
+    NotebookLM:   { en: "turns my PDFs into podcasts.",    th: "เปลี่ยน PDF เป็นพอดแคสต์" },
+    "VS Code":    { en: "the OG editor.",                  th: "อีดิเตอร์คู่บุญ" },
+    v0:           { en: "UI out of thin air.",             th: "เสก UI จากอากาศ" },
+    Colab:        { en: "GPUs I don't have to own.",       th: "GPU ที่ไม่ต้องซื้อเอง" },
+    Higgsfield:   { en: "cinematic AI shots.",             th: "ช็อตหนังระดับโรงจาก AI" },
+    HeyGen:       { en: "me, in every language.",          th: "ผมเวอร์ชันพูดได้ทุกภาษา" },
+    Suno:         { en: "my personal soundtrack factory.", th: "โรงงานเพลงประกอบส่วนตัว" },
+    n8n:          { en: "workflows on autopilot.",         th: "เวิร์กโฟลว์ขับเคลื่อนอัตโนมัติ" },
+    "Google Labs":{ en: "tomorrow's toys, today.",         th: "ของเล่นจากอนาคต" },
+    OpenClaw:     { en: "the claw handles the chores.",    th: "ก้ามนี้เก็บงานจุกจิกให้หมด" },
   };
 
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-  cam.position.set(3.4, 5.6, 5.4);   // fixed 3/4 view like the reference
+  cam.position.set(4.8, 7.9, 7.6);   // fixed 3/4 view like the reference (pulled back for the 6x4 board)
   const rnd = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   rnd.setPixelRatio(Math.min(devicePixelRatio, 2));
 
-  scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-  const key = new THREE.DirectionalLight(0xffffff, 0.85); key.position.set(4, 9, 5); scene.add(key);
-  const rim = new THREE.DirectionalLight(0x99bbff, 0.25); rim.position.set(-6, 4, -4); scene.add(rim);
-  const fill = new THREE.DirectionalLight(0xffffff, 0.2); fill.position.set(0, 4, 8); scene.add(fill);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.38));
+  const key = new THREE.DirectionalLight(0xffffff, 0.6); key.position.set(4, 9, 5); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x99bbff, 0.18); rim.position.set(-6, 4, -4); scene.add(rim);
+  const fill = new THREE.DirectionalLight(0xffffff, 0.1); fill.position.set(0, 4, 8); scene.add(fill);
 
   const controls = new THREE.OrbitControls(cam, rnd.domElement);
   controls.enableDamping = true; controls.dampingFactor = 0.08;
@@ -52,7 +64,7 @@
   controls.target.set(0, 0, 0);
 
   const board = new THREE.Group(); scene.add(board);
-  const COLS = 4, ROWS = 3, GAP = 1.08, KS = 1.02;   // tight, real-keyboard spacing
+  const COLS = 6, ROWS = 4, GAP = 1.08, KS = 1.02;   // tight, real-keyboard spacing
   const bw = COLS * GAP + 0.6, bd = ROWS * GAP + 0.6;
 
   function roundedSlab(w, d, h, r, colorHex) {
