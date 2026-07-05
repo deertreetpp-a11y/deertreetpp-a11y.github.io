@@ -185,12 +185,12 @@ main{display:block}
   color:#fff;
 }
 .hero-desc span{color:rgba(255,255,255,.55)}
-.hero-sign{width:min(300px,26vw);height:auto;margin-bottom:-18px}
-.hero-sign path{
-  stroke-dasharray:1400;stroke-dashoffset:1400;
-  animation:signDraw 1.4s ease-out 1.1s forwards;
+.hero-sign{
+  width:min(300px,26vw);height:auto;margin-bottom:-18px;
+  clip-path:inset(0 100% 0 0);
+  animation:signWipe 1.3s ease-out 1.1s forwards;   /* handwriting wipe, left to right */
 }
-@keyframes signDraw{to{stroke-dashoffset:0}}
+@keyframes signWipe{to{clip-path:inset(0 0 0 0)}}
 .hero-tags{
   margin-top:64px;
   font-size:17px;font-weight:700;letter-spacing:.04em;color:#fff;
