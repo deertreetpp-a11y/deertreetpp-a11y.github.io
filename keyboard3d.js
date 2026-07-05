@@ -77,7 +77,7 @@
     g.rotateX(-Math.PI / 2); g.center();
     return new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: new THREE.Color(colorHex), roughness: 0.9, metalness: 0.08 }));
   }
-  const base = roundedSlab(bw + 0.55, bd + 0.55, 0.85, 0.4, 0x161616);
+  const base = roundedSlab(bw + 0.55, bd + 0.55, 0.85, 0.4, 0xEDEDEA);
   base.position.y = -0.62; board.add(base);
 
   // ---- sculpted keycap: tapered frustum sides + textured top face ----
@@ -176,7 +176,12 @@
   rnd.domElement.addEventListener("mousemove", e => {
     setMouse(e); ray.setFromCamera(mouse, cam);
     const hit = ray.intersectObjects(bodies)[0];
-    hovered = hit ? hit.object.userData.group : null;
+    const g = hit ? hit.object.userData.group : null;
+    if (g && g !== hovered) {          // hovering presses the key by itself
+      clickSound();
+      showCallout(g.userData.name);
+    }
+    hovered = g;
     rnd.domElement.style.cursor = hit ? "pointer" : "grab";
   });
 
@@ -223,7 +228,7 @@
     requestAnimationFrame(loop);
     if (!visible) return;
     keycaps.forEach(k => {
-      const target = (k.userData.press > 0 ? -0.24 : 0) + (k === hovered ? 0.05 : 0);
+      const target = (k === hovered || k.userData.press > 0) ? -0.24 : 0;   // stays pressed while hovered
       k.position.y += (target - k.position.y) * 0.35;
       if (k.userData.press > 0) { k.userData.press -= 0.06; if (k.userData.press < 0) k.userData.press = 0; }
     });
