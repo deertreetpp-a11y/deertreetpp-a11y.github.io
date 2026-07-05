@@ -20,7 +20,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;background:var(--bg);overscroll-behavior-y:none}
 body{
   background:var(--bg);
   color:var(--white);
@@ -125,7 +125,7 @@ main{display:block}
 
 /* ---------- HERO ---------- */
 .hero{
-  position:relative;height:100vh;margin:8px;border-radius:12px;overflow:hidden;
+  position:relative;height:100vh;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
 .hero-bg{position:absolute;inset:0;animation:heroZoom 1.6s var(--ease) both}
