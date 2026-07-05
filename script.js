@@ -6,15 +6,15 @@
    ============================================================ */
 
 // ---------- 1. Project ticker (build cards, duplicate for seamless loop) ----------
-// cards with `img` show a real screenshot; cards with `url` open the live site (mattter-style)
+// `url` opens a live site in a new tab; `page` opens the in-site case study (project.html?p=slug)
 const projects = [
-  { title: "PAAM Serum — 42.3K views", tag: "AI Content",   glyph: "PA", bg: "linear-gradient(135deg,#1b2a24,#0f8054)" },
-  { title: "TikTok Affiliate Clips",   tag: "AI Content",   glyph: "TT", bg: "linear-gradient(135deg,#2a1b24,#804a0f)" },
-  { title: "AI Short Film",            tag: "AI Video",     glyph: "FX", bg: "linear-gradient(135deg,#24291b,#6a8000)" },
-  { title: "Trading Bot Store",        tag: "Web & Product", glyph: "TB", bg: "linear-gradient(135deg,#1b2029,#0f4a80)" },
+  { title: "PAAM Serum — 42.3K views", tag: "AI Content",   glyph: "PA", bg: "linear-gradient(135deg,#1b2a24,#0f8054)", page: "paam" },
+  { title: "TikTok Affiliate Clips",   tag: "AI Content",   glyph: "TT", bg: "linear-gradient(135deg,#2a1b24,#804a0f)", page: "affiliate" },
+  { title: "AI Short Film",            tag: "AI Video",     glyph: "FX", bg: "linear-gradient(135deg,#24291b,#6a8000)", page: "film" },
+  { title: "Trading Bot Store",        tag: "Web & Product", glyph: "TB", bg: "linear-gradient(135deg,#1b2029,#0f4a80)", page: "trading" },
   { title: "ModKrub — Thai Game Mods", tag: "Web & Product", img: "assets/projects/modkrub.jpg", url: "https://modkrub.vercel.app/" },
-  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", glyph: "KU", bg: "linear-gradient(135deg,#241b29,#5c0f80)" },
-  { title: "MUVITA — R2M 2025",        tag: "Research",     glyph: "MU", bg: "linear-gradient(135deg,#1b2926,#0f8071)" },
+  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", glyph: "KU", bg: "linear-gradient(135deg,#241b29,#5c0f80)", page: "krungsri" },
+  { title: "MUVITA — R2M 2025",        tag: "Research",     glyph: "MU", bg: "linear-gradient(135deg,#1b2926,#0f8071)", page: "muvita" },
 ];
 
 const track = document.getElementById("tickerTrack");
@@ -28,9 +28,9 @@ if (track) {
         <span class="p-tag">${p.tag}</span>
       </div>
       <div class="p-title">${p.title}</div>`;
-    return p.url
-      ? `<a class="p-card" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`
-      : `<div class="p-card">${inner}</div>`;
+    if (p.url)  return `<a class="p-card" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`;
+    if (p.page) return `<a class="p-card" href="project.html?p=${p.page}">${inner}</a>`;
+    return `<div class="p-card">${inner}</div>`;
   }).join("");
   track.innerHTML = cards + cards; // duplicate for -50% loop
 }

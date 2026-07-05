@@ -376,6 +376,37 @@ a.p-card:hover .p-title{color:#fff}
 .sv-auto{background-image:url("assets/services/auto.jpg")}
 .sv-web{background-image:url("assets/services/web.jpg")}
 
+/* ---------- PROJECT CASE-STUDY PAGE (project.html) ---------- */
+.pj-nav{gap:0;justify-content:space-between;width:min(560px,calc(100vw - 48px))}
+.pj-main{
+  max-width:1240px;margin:0 auto;padding:170px 24px 90px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.pj-title{
+  font-size:clamp(56px,9vw,140px);font-weight:800;letter-spacing:-.04em;line-height:1;
+  background:linear-gradient(#fff 35%,#555);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.pj-tagline{
+  max-width:760px;margin-top:26px;
+  font-size:clamp(19px,2vw,27px);font-weight:700;letter-spacing:-.02em;line-height:1.35;text-wrap:balance;
+}
+.pj-meta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;justify-content:center}
+.pj-meta>div{display:flex;flex-direction:column;gap:8px;align-items:center}
+.pj-meta-label{color:var(--muted);font-size:13px;font-weight:600}
+.pj-pill{
+  background:#1d1d1d;border:1px solid rgba(255,255,255,.1);border-radius:999px;
+  padding:9px 18px;font-size:15px;font-weight:700;
+}
+.pj-media{width:100%;margin-top:70px;display:flex;flex-direction:column;gap:14px}
+.pj-media img{width:100%;border-radius:22px;display:block}
+.pj-placeholder{
+  width:100%;aspect-ratio:16/8.4;border-radius:22px;
+  display:flex;align-items:center;justify-content:center;
+}
+.pj-placeholder span{font-size:clamp(80px,12vw,170px);font-weight:900;color:rgba(255,255,255,.85);letter-spacing:-.05em}
+.pj-desc{max-width:680px;margin-top:44px;color:var(--grey);font-size:17px;line-height:1.65}
+.pj-cta{margin-top:44px}
+
 /* ---------- STATS ---------- */
 .stats-lede{max-width:920px;margin-bottom:80px}
 .stats-grid{display:flex;gap:0}

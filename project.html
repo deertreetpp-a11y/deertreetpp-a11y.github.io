@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project — DEAR®</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV (simplified: brand goes home, back goes to the ticker) ===== -->
+<nav class="nav pj-nav">
+  <a class="nav-brand" href="index.html">
+    <span class="nav-logo">✦</span>
+    <span class="nav-name">DEAR®</span>
+  </a>
+  <a href="index.html#projects" class="btn btn-green btn-roll">
+    <span class="roll"><span id="backLabel">← All Projects</span><span id="backLabel2">← All Projects</span></span>
+  </a>
+</nav>
+
+<main class="pj-main">
+  <h1 class="pj-title" id="pjTitle">—</h1>
+  <p class="pj-tagline" id="pjTagline"></p>
+
+  <div class="pj-meta">
+    <div><span class="pj-meta-label" data-l="service">Service</span><span class="pj-pill" id="pjService"></span></div>
+    <div><span class="pj-meta-label" data-l="client">Client</span><span class="pj-pill" id="pjClient"></span></div>
+    <div><span class="pj-meta-label" data-l="year">Year</span><span class="pj-pill" id="pjYear"></span></div>
+  </div>
+
+  <div class="pj-media" id="pjMedia"></div>
+
+  <p class="pj-desc" id="pjDesc"></p>
+
+  <a href="index.html#contact" class="btn btn-white btn-lg btn-roll pj-cta">
+    <span class="roll"><span id="ctaLabel">Work with me →</span><span id="ctaLabel2">Work with me →</span></span>
+  </a>
+</main>
+
+<script src="project-data.js"></script>
+<script>
+(function () {
+  const lang = (localStorage.getItem("lang") === "th") ? "th" : "en";
+  const slug = new URLSearchParams(location.search).get("p");
+  const p = PROJECT_PAGES[slug];
+  if (!p) { location.replace("index.html#projects"); return; }
+
+  document.title = p.title + " — DEAR®";
+  document.getElementById("pjTitle").textContent = p.title;
+  document.getElementById("pjTagline").textContent = p.tagline[lang];
+  document.getElementById("pjDesc").textContent = p.desc[lang];
+  document.getElementById("pjService").textContent = p.service;
+  document.getElementById("pjClient").textContent = p.client;
+  document.getElementById("pjYear").textContent = p.year;
+
+  const L = {
+    th: { service: "บริการ", client: "ลูกค้า/งาน", year: "ปี", back: "← ผลงานทั้งหมด", cta: "ร่วมงานกับผม →" },
+    en: { service: "Service", client: "Client", year: "Year", back: "← All Projects", cta: "Work with me →" },
+  }[lang];
+  document.querySelectorAll(".pj-meta-label").forEach(e => (e.textContent = L[e.dataset.l]));
+  document.getElementById("backLabel").textContent = L.back;
+  document.getElementById("backLabel2").textContent = L.back;
+  document.getElementById("ctaLabel").textContent = L.cta;
+  document.getElementById("ctaLabel2").textContent = L.cta;
+
+  const media = document.getElementById("pjMedia");
+  if (p.media && p.media.length) {
+    media.innerHTML = p.media.map(src => `<img src="${src}" alt="${p.title}" loading="lazy">`).join("");
+  } else {
+    // branded placeholder until real shots arrive
+    media.innerHTML = `<div class="pj-placeholder" style="background:${p.bg}"><span>${p.glyph}</span></div>`;
+  }
+})();
+</script>
+</body>
+</html>
