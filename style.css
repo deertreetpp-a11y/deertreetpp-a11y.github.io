@@ -312,7 +312,8 @@ main{display:block}
   display:flex;gap:20px;width:max-content;
   will-change:transform;
 }
-.p-card{width:clamp(300px,27vw,400px);flex:none;cursor:pointer}
+.p-card{display:block;width:clamp(300px,27vw,400px);flex:none;cursor:pointer}
+a.p-card:hover .p-title{color:#fff}
 .p-thumb{
   position:relative;aspect-ratio:1.6;border-radius:25px;overflow:hidden;
   background:var(--p-bg,linear-gradient(135deg,#1a1a1a,#2c2c2c));
