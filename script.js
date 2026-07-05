@@ -13,7 +13,7 @@ const projects = [
   { title: "AI Short Film",            tag: "AI Video",     glyph: "FX", bg: "linear-gradient(135deg,#24291b,#6a8000)", page: "film" },
   { title: "Trading Bot Store",        tag: "Web & Product", glyph: "TB", bg: "linear-gradient(135deg,#1b2029,#0f4a80)", page: "trading" },
   { title: "ModKrub — Thai Game Mods", tag: "Web & Product", img: "assets/projects/modkrub.jpg", url: "https://modkrub.vercel.app/" },
-  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", glyph: "KU", bg: "linear-gradient(135deg,#241b29,#5c0f80)", page: "krungsri" },
+  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
   { title: "MUVITA — R2M 2025",        tag: "Research",     glyph: "MU", bg: "linear-gradient(135deg,#1b2926,#0f8071)", page: "muvita" },
 ];
 

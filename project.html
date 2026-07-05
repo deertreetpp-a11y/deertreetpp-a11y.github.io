@@ -69,7 +69,39 @@
 
   const media = document.getElementById("pjMedia");
   if (p.media && p.media.length) {
-    media.innerHTML = p.media.map(src => `<img src="${src}" alt="${p.title}" loading="lazy">`).join("");
+    media.innerHTML = p.media.map((m, mi) => {
+      if (typeof m === "string") m = { type: "img", src: m };
+      if (m.type === "img")
+        return `<img src="${m.src}" alt="${p.title}" loading="lazy">`;
+      if (m.type === "video")
+        return `<video src="${m.src}" controls playsinline preload="metadata"></video>`;
+      if (m.type === "slides") {
+        const srcs = Array.from({ length: m.count }, (_, i) => `${m.base}${String(i + 1).padStart(2, "0")}.jpg`);
+        return `
+        <div class="pj-slides" data-srcs='${JSON.stringify(srcs)}' data-i="0" id="slides${mi}">
+          <img src="${srcs[0]}" alt="${p.title} — slide 1" loading="lazy">
+          <button class="pj-sbtn pj-prev" aria-label="previous slide">←</button>
+          <button class="pj-sbtn pj-next" aria-label="next slide">→</button>
+          <span class="pj-scount">1 / ${srcs.length}</span>
+        </div>`;
+      }
+      return "";
+    }).join("");
+
+    // slide decks: arrows or a tap on the image flip through the pages
+    document.querySelectorAll(".pj-slides").forEach(box => {
+      const srcs = JSON.parse(box.dataset.srcs);
+      const img = box.querySelector("img"), count = box.querySelector(".pj-scount");
+      const go = d => {
+        const i = (Number(box.dataset.i) + d + srcs.length) % srcs.length;
+        box.dataset.i = i;
+        img.src = srcs[i];
+        count.textContent = `${i + 1} / ${srcs.length}`;
+      };
+      box.querySelector(".pj-prev").addEventListener("click", () => go(-1));
+      box.querySelector(".pj-next").addEventListener("click", () => go(1));
+      img.addEventListener("click", () => go(1));
+    });
   } else {
     // branded placeholder until real shots arrive
     media.innerHTML = `<div class="pj-placeholder" style="background:${p.bg}"><span>${p.glyph}</span></div>`;

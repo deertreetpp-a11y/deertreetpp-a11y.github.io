@@ -65,14 +65,18 @@ const PROJECT_PAGES = {
     service: "Hackathon", client: "Krungsri", year: "2025",
     bg: "linear-gradient(135deg,#241b29,#5c0f80)", glyph: "KU",
     tagline: {
-      en: "National champion — a cashless payment app for tourists, from idea to tested prototype.",
-      th: "แชมป์ระดับประเทศ — แอปจ่ายเงินไร้เงินสดสำหรับนักท่องเที่ยว จากไอเดียถึง prototype ที่ผ่าน user testing",
+      en: "Champion — ฿30,000 first prize. A cashless payment app for tourists, from idea to tested prototype.",
+      th: "รางวัลชนะเลิศ 30,000 บาท — แอปจ่ายเงินไร้เงินสดสำหรับนักท่องเที่ยว จากไอเดียถึง prototype ที่ผ่าน user testing",
     },
     desc: {
-      en: "Idea, UI, prototype and user testing delivered inside the competition window — first place out of every team.",
-      th: "ทำครบทั้งไอเดีย UI prototype และ user testing ภายในเวลาแข่ง — คว้าที่ 1 จากทุกทีม",
+      en: "Idea, UI, prototype and user testing delivered inside the competition window — first place at the Krungsri UniVerse × Khon Kaen University Hackathon.",
+      th: "ทำครบทั้งไอเดีย UI prototype และ user testing ภายในเวลาแข่ง — คว้าที่ 1 เวที Krungsri UniVerse × Khon Kaen University Hackathon",
     },
-    media: [],
+    media: [
+      { type: "img",    src: "assets/projects/krungsri/team.jpg" },
+      { type: "video",  src: "assets/projects/krungsri/pitch.mp4" },
+      { type: "slides", base: "assets/projects/krungsri/slides/", count: 11 },
+    ],
   },
   muvita: {
     title: "MUVITA",
