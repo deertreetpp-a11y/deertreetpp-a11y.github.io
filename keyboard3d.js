@@ -172,14 +172,16 @@
     mouse.x = ((e.clientX - r.left) / r.width) * 2 - 1;
     mouse.y = -((e.clientY - r.top) / r.height) * 2 + 1;
   }
-  let hovered = null;
+  let hovered = null, lastSnd = 0, hoverDwell;
   rnd.domElement.addEventListener("mousemove", e => {
     setMouse(e); ray.setFromCamera(mouse, cam);
     const hit = ray.intersectObjects(bodies)[0];
     const g = hit ? hit.object.userData.group : null;
     if (g && g !== hovered) {          // hovering presses the key by itself
-      clickSound();
-      showCallout(g.userData.name);
+      const now = performance.now();   // rate-limit so sweeping across keys doesn't machine-gun
+      if (now - lastSnd > 130) { clickSound(); lastSnd = now; }
+      clearTimeout(hoverDwell);        // callout only once the mouse settles on a key
+      hoverDwell = setTimeout(() => { if (hovered === g) showCallout(g.userData.name); }, 90);
     }
     hovered = g;
     rnd.domElement.style.cursor = hit ? "pointer" : "grab";
