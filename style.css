@@ -110,9 +110,29 @@ main{display:block}
   max-width:0;opacity:0;overflow:hidden;cursor:pointer;
   transition:max-width .4s var(--spring),opacity .25s ease,margin .4s var(--spring);
 }
-.nav-dots i{flex:none;width:5px;height:5px;border-radius:99px;background:#fff;opacity:.75}
-.nav-dots i:nth-child(2){width:6px;height:14px;background:var(--amber);opacity:1}
+.nav-dots i{
+  flex:none;width:5px;height:5px;border-radius:99px;background:#fff;opacity:.75;
+  transform:scale(0);
+  transition:transform .5s var(--spring),height .45s var(--spring);
+}
+.nav-dots i:nth-child(2){width:6px;height:6px;background:var(--amber);opacity:1}
 .nav.nav-mini .nav-dots{max-width:44px;opacity:1;margin-left:14px}
+/* reference behavior: dots pop in one by one with a spring when the bar collapses,
+   then the amber one stretches tall and keeps a soft breathing pulse */
+.nav.nav-mini .nav-dots i{transform:scale(1)}
+.nav.nav-mini .nav-dots i:nth-child(1){transition-delay:.08s}
+.nav.nav-mini .nav-dots i:nth-child(2){transition-delay:.16s;height:14px}
+.nav.nav-mini .nav-dots i:nth-child(3){transition-delay:.24s}
+@keyframes dotBreathe{0%,100%{transform:scale(1) scaleY(1)}50%{transform:scale(1) scaleY(.5)}}
+.nav.nav-mini .nav-dots i:nth-child(2){animation:dotBreathe 2.4s ease-in-out 1.2s infinite}
+/* hovering the collapsed pill springs the full menu back open (mattter behavior) */
+.nav.nav-mini:hover{gap:40px;padding:8px 8px 8px 18px}
+.nav.nav-mini:hover .nav-links,.nav.nav-mini:hover>.btn,.nav.nav-mini:hover>.lang-btn{
+  max-width:420px;max-height:48px;opacity:1;pointer-events:auto;
+}
+.nav.nav-mini:hover>.btn{padding:12px 22px}
+.nav.nav-mini:hover>.lang-btn{padding:9px 14px;margin-left:-24px;border-width:1px}
+.nav.nav-mini:hover .nav-dots{max-width:0;opacity:0;margin-left:0}
 @keyframes navDrop{from{opacity:0;transform:translate(-50%,-30px)}to{opacity:1;transform:translate(-50%,0)}}
 .nav-brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.04px}
 .nav-logo{color:var(--amber)}
