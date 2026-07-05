@@ -178,21 +178,32 @@ function frame(now) {
 }
 requestAnimationFrame(frame);
 
-// ---------- 6. Typewriter CTA ----------
-// phrases live in i18n.js (window.i18nPhrases) so the TH/EN toggle swaps them live
-const tw = document.getElementById("typewriter");
-if (tw) {
-  let pi = 0, ci = 0, deleting = false;
-  (function loop() {
-    const phrases = window.i18nPhrases[window.currentLang];
-    const phrase = phrases[pi % phrases.length];
-    tw.textContent = phrase.slice(0, Math.min(ci, phrase.length));
-    let delay = deleting ? 35 : 65;
-    if (!deleting && ci >= phrase.length) { deleting = true; ci = phrase.length; delay = 1600; }
-    else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
-    else ci += deleting ? -1 : 1;
-    setTimeout(loop, delay);
-  })();
+// ---------- 6. Contact form: validate, then open a prefilled email ----------
+const cf = document.getElementById("contactForm");
+if (cf) {
+  const ERR = {
+    en: { name: "Full name must be at least 2 characters", email: "Please enter a valid email address", msg: "Message must be at least 10 characters" },
+    th: { name: "กรุณากรอกชื่ออย่างน้อย 2 ตัวอักษร", email: "กรุณากรอกอีเมลให้ถูกต้อง", msg: "กรุณาเขียนข้อความอย่างน้อย 10 ตัวอักษร" },
+  };
+  const fields = {
+    name:  { el: document.getElementById("cfName"),  err: document.getElementById("errName"),  ok: v => v.trim().length >= 2 },
+    email: { el: document.getElementById("cfEmail"), err: document.getElementById("errEmail"), ok: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+    msg:   { el: document.getElementById("cfMsg"),   err: document.getElementById("errMsg"),   ok: v => v.trim().length >= 10 },
+  };
+  Object.values(fields).forEach(f => f.el.addEventListener("input", () => f.err.classList.remove("show")));
+  cf.addEventListener("submit", e => {
+    e.preventDefault();
+    const lang = window.currentLang === "th" ? "th" : "en";
+    let bad = false;
+    for (const [k, f] of Object.entries(fields)) {
+      if (!f.ok(f.el.value)) { f.err.textContent = ERR[lang][k]; f.err.classList.add("show"); if (!bad) f.el.focus(); bad = true; }
+    }
+    if (bad) return;
+    const name = fields.name.el.value.trim(), mail = fields.email.el.value.trim(), msg = fields.msg.el.value.trim();
+    const subject = encodeURIComponent(`Portfolio contact — ${name}`);
+    const body = encodeURIComponent(`${msg}\n\n— ${name} (${mail})`);
+    location.href = `mailto:suprawee.m@kkumail.com?subject=${subject}&body=${body}`;
+  });
 }
 
 // ---------- 8. Nav: collapse to a mini pill while scrolling down ----------

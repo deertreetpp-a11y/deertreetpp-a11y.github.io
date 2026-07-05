@@ -196,39 +196,53 @@
   </section>
 
   <!-- ===== CTA ===== -->
-  <section class="cta" id="contact">
-    <div class="cta-pill">
-      <span class="cta-type"><span id="typewriter"></span><span class="caret">|</span></span>
-      <a href="mailto:suprawee.m@kkumail.com" class="btn btn-black btn-roll"><span class="roll"><span>Contact me</span><span>Contact me</span></span></a>
+  <!-- ===== CONTACT (final page, nareshkhatri-style) ===== -->
+  <section class="section contact" id="contact">
+    <h2 class="contact-title reveal">LET'S WORK<br>TOGETHER</h2>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3 class="contact-card-title">Contact Form</h3>
+        <p class="contact-sub">Please contact me directly at <a href="mailto:suprawee.m@kkumail.com">suprawee.m(at)kkumail.com</a> or drop your info here.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label><span class="f-label">Full name</span>
+              <input type="text" id="cfName" placeholder="Your Name" autocomplete="name">
+              <em class="f-err" id="errName"></em>
+            </label>
+            <label><span class="f-label">Email Address</span>
+              <input type="email" id="cfEmail" placeholder="you@example.com" autocomplete="email">
+              <em class="f-err" id="errEmail"></em>
+            </label>
+          </div>
+          <label><span class="f-label">Your Message</span>
+            <textarea id="cfMsg" rows="5" placeholder="Tell me about your project…"></textarea>
+            <em class="f-err" id="errMsg"></em>
+          </label>
+          <p class="form-note">I'll never share your data with anyone else. Pinky promise!</p>
+          <button type="submit" class="btn btn-white btn-block btn-roll">
+            <span class="roll"><span>Send Message →</span><span>Send Message →</span></span>
+          </button>
+        </form>
+      </div>
+      <aside class="contact-side reveal">
+        <p class="contact-side-lede">Prefer DMs? Reach me anywhere:</p>
+        <a class="contact-line" href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram @HIDEARKUB</a>
+        <a class="contact-line" href="mailto:suprawee.m@kkumail.com">suprawee.m@kkumail.com</a>
+        <a class="contact-line" href="tel:+66620816459">+66 62 081 6459</a>
+        <a href="#top" class="btn btn-black btn-roll contact-top"><span class="roll"><span>Back to top ↑</span><span>Back to top ↑</span></span></a>
+      </aside>
     </div>
   </section>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER (slim, nareshkhatri-style) ===== -->
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-col">
-      <div class="footer-avatar">✦</div>
-      <a href="#top" class="btn btn-black btn-roll"><span class="roll"><span>Back to top</span><span>Back to top</span></span></a>
-    </div>
-    <div class="footer-col">
-      <h4>Menu</h4>
-      <a href="#top">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram @HIDEARKUB</a>
-      <a href="mailto:suprawee.m@kkumail.com">suprawee.m@kkumail.com</a>
-      <a href="tel:+66620816459">+66 62 081 6459</a>
-    </div>
-  </div>
-  <div class="footer-giant">DEAR®</div>
-  <div class="footer-bottom reveal">
-    <span>Created with ❤️ in Khon Kaen</span>
-    <div><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></div>
-    <span>© 2026 All Rights Reserved</span>
-  </div>
+  <span class="footer-copy">© 2026 Suprawee Mathusen. All rights reserved.</span>
+  <span class="footer-made">Created with ❤️ in Khon Kaen</span>
+  <nav class="footer-nav">
+    <a href="#top">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram</a>
+  </nav>
 </footer>
 
 <script src="i18n.js"></script>

@@ -45,31 +45,19 @@ const I18N_TH = [
     "CHURO — วิจัยผู้บริโภค 400+ คน",
   ]],
 
-  [".cta .btn .roll span", ["ทักมาเลย", "ทักมาเลย"]],
+  [".contact-title", ["มาทำงาน<br>ด้วยกัน"]],
+  [".contact-card-title", ["ฟอร์มติดต่อ"]],
+  [".contact-sub", ['ติดต่อผมตรงๆ ได้ที่ <a href="mailto:suprawee.m@kkumail.com">suprawee.m(at)kkumail.com</a> หรือฝากข้อมูลไว้ตรงนี้ได้เลย']],
+  [".f-label", ["ชื่อ-นามสกุล", "อีเมล", "ข้อความของคุณ"]],
+  [".form-note", ["ข้อมูลของคุณผมไม่แชร์ให้ใครแน่นอน สัญญา!"]],
+  ["#contactForm .btn .roll span", ["ส่งข้อความ →", "ส่งข้อความ →"]],
+  [".contact-side-lede", ["ถนัด DM มากกว่า? ทักมาได้ทุกช่องทาง:"]],
+  [".contact-top .roll span", ["กลับขึ้นบน ↑", "กลับขึ้นบน ↑"]],
 
-  [".footer-col h4", ["เมนู", "ติดต่อ"]],
-  [".footer-col:nth-child(2) a", ["หน้าแรก", "เกี่ยวกับ", "ผลงาน", "ไฮไลต์", "ติดต่อ"]],
-  [".footer-col .roll span", ["กลับขึ้นบน", "กลับขึ้นบน"]],
-  [".footer-bottom > span:first-child", ["สร้างด้วย ❤️ ที่ขอนแก่น"]],
-  [".footer-bottom a", ["นโยบายความเป็นส่วนตัว", "ข้อกำหนดการใช้งาน"]],
-  [".footer-bottom > span:last-child", ["© 2026 สงวนลิขสิทธิ์"]],
+  [".footer-copy", ["© 2026 สุปวีร์ มะธุเสน สงวนลิขสิทธิ์"]],
+  [".footer-made", ["สร้างด้วย ❤️ ที่ขอนแก่น"]],
+  [".footer-nav a", ["หน้าแรก", "เกี่ยวกับ", "ผลงาน", "อินสตาแกรม"]],
 ];
-
-// Typewriter phrases — script.js reads these live via window.i18nPhrases[window.currentLang]
-window.i18nPhrases = {
-  en: [
-    "Need a website?",
-    "Need AI content that sells?",
-    "Need an AI agent?",
-    "Let's build it. — Dear",
-  ],
-  th: [
-    "อยากได้เว็บไซต์?",
-    "อยากได้คอนเทนต์ AI ที่ขายของได้?",
-    "อยากได้ AI Agent?",
-    "มาสร้างด้วยกันเลย — เดียร์",
-  ],
-};
 
 // capture English from the DOM once, so the markup stays the only EN source
 const i18nEls = I18N_TH.map(([sel, th]) => {

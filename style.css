@@ -376,46 +376,50 @@ main{display:block}
   font-size:16px;font-weight:600;letter-spacing:-.04px;
 }
 
-/* ---------- CTA ---------- */
-.cta{height:100vh;display:flex;align-items:center;justify-content:center;padding:0 24px}
-.cta-pill{
-  width:min(560px,100%);background:var(--green);border-radius:var(--radius);
-  backdrop-filter:blur(15px);
-  padding:8px 8px 8px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+/* ---------- CONTACT (final page) ---------- */
+.contact{padding-top:140px}
+.contact-title{
+  font-size:clamp(48px,7.6vw,112px);font-weight:800;letter-spacing:-.04em;line-height:.95;
+  text-align:center;margin-bottom:72px;text-wrap:balance;
 }
-.cta-type{font-size:16px;font-weight:600;letter-spacing:-.3px}
-.caret{color:#c9f5e3;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
+.contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:start}
+.contact-card{
+  background:var(--card);border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:36px;
+}
+.contact-card-title{font-size:clamp(26px,2.6vw,36px);font-weight:800;letter-spacing:-.02em}
+.contact-sub{color:var(--muted);font-size:15px;line-height:1.5;margin:8px 0 28px}
+.contact-sub a{text-decoration:underline;text-underline-offset:3px}
+.contact-sub a:hover{color:var(--amber)}
+#contactForm{display:flex;flex-direction:column;gap:18px}
+.form-row{display:flex;gap:14px}
+.form-row label{flex:1}
+#contactForm label{display:flex;flex-direction:column;gap:8px}
+.f-label{font-size:14px;font-weight:600}
+#contactForm input,#contactForm textarea{
+  background:#0d0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;
+  padding:12px 14px;color:#fff;font:inherit;font-size:15px;resize:vertical;
+  transition:border-color .2s;
+}
+#contactForm input:focus,#contactForm textarea:focus{outline:none;border-color:var(--amber)}
+#contactForm ::placeholder{color:#5c5c5c}
+.f-err{display:none;font-style:normal;font-size:13px;color:#ff6a5c}
+.f-err.show{display:block}
+.form-note{color:var(--muted);font-size:13px;margin-top:-6px}
+.contact-side{display:flex;flex-direction:column;gap:20px;padding-top:14px}
+.contact-side-lede{color:var(--muted);font-size:15px}
+.contact-line{font-size:clamp(18px,1.7vw,23px);font-weight:700;letter-spacing:-.02em;transition:color .2s}
+.contact-line:hover{color:var(--amber)}
+.contact-top{align-self:flex-start;margin-top:22px}
 
-/* ---------- FOOTER ---------- */
+/* ---------- FOOTER (slim) ---------- */
 .footer{
-  background:var(--green);border-radius:var(--radius) var(--radius) 0 0;
-  padding:120px 24px 24px;max-width:100%;
+  border-top:1px solid rgba(255,255,255,.12);
+  padding:22px 24px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;font-size:13px;font-weight:600;color:var(--muted);
 }
-.footer-top{
-  max-width:1440px;margin:0 auto;display:grid;
-  grid-template-columns:1fr 1fr 1fr;gap:40px;
-}
-.footer-avatar{
-  width:130px;height:130px;border-radius:14px;background:#0b5c3c;
-  display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:20px;
-}
-.footer-col{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
-.footer-col h4{font-size:16px;font-weight:700;margin-bottom:8px}
-.footer-col a{font-size:16px;font-weight:600;opacity:.95;transition:opacity .2s}
-.footer-col a:hover{opacity:.6}
-.footer-giant{
-  font-size:clamp(60px,15.5vw,220px);font-weight:700;letter-spacing:-.03em;line-height:.8;
-  text-transform:uppercase;text-align:center;margin:80px 0 40px;
-  user-select:none;white-space:nowrap;
-}
-.footer-bottom{
-  max-width:1440px;margin:0 auto;padding-top:30px;
-  border-top:1px solid rgba(255,255,255,.25);
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-  font-size:14px;font-weight:600;
-}
-.footer-bottom a:hover{opacity:.7}
+.footer-nav{display:flex;gap:20px}
+.footer a:hover{color:#fff}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:1199px){
@@ -444,8 +448,9 @@ main{display:block}
   .blog-grid .blog-card{margin-top:0!important}
   .stats-grid .stat-card{width:100%;margin:4px 0;--off:0px!important}
   .stats-grid{flex-direction:column}
-  .footer-top{grid-template-columns:1fr}
-  .cta-pill{width:100%}
+  .contact-grid{grid-template-columns:1fr;gap:28px}
+  .form-row{flex-direction:column;gap:18px}
+  .footer{justify-content:center;text-align:center}
   .section{padding:60px 15px}
   .hero{margin:0}
 }
