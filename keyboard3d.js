@@ -46,7 +46,7 @@
 
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-  cam.position.set(0.5, 7.2, 9.8);   // near-frontal view so the category rows read left-to-right
+  cam.position.set(-1.3, 10.9, 5.4);   // steep top-down, slight left yaw (user's reference pose)
   const rnd = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   rnd.setPixelRatio(Math.min(devicePixelRatio, 2));
 
