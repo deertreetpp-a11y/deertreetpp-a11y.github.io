@@ -204,11 +204,18 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT (final page, nareshkhatri-style) ===== -->
-  <section class="section contact" id="contact">
-    <h2 class="contact-title reveal">LET'S WORK<br>TOGETHER</h2>
+</main>
+
+<!-- scrolling past this transparent spacer "opens the curtain" on the fixed
+     green end page below (mattter-style footer reveal) -->
+<div class="end-spacer" id="contact" aria-hidden="true"></div>
+
+<!-- ===== END PAGE: CONTACT + FOOTER (fixed behind, revealed from the bottom) ===== -->
+<div class="page-end">
+  <section class="section contact">
+    <h2 class="contact-title">LET'S WORK<br>TOGETHER</h2>
     <div class="contact-grid">
-      <div class="contact-card reveal">
+      <div class="contact-card">
         <h3 class="contact-card-title">Contact Form</h3>
         <p class="contact-sub">Please contact me directly at <a href="mailto:suprawee.m@kkumail.com">suprawee.m(at)kkumail.com</a> or drop your info here.</p>
         <form id="contactForm" novalidate>
@@ -232,7 +239,7 @@
           </button>
         </form>
       </div>
-      <aside class="contact-side reveal">
+      <aside class="contact-side">
         <p class="contact-side-lede">Prefer DMs? Reach me anywhere:</p>
         <a class="contact-line" href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram @HIDEARKUB</a>
         <a class="contact-line" href="mailto:suprawee.m@kkumail.com">suprawee.m@kkumail.com</a>
@@ -242,15 +249,13 @@
     </div>
   </section>
 
-</main>
-
-<!-- ===== FOOTER (slim, nareshkhatri-style) ===== -->
-<footer class="footer">
-  <span class="footer-copy">© 2026 Suprawee Mathusen. All rights reserved.</span>
-  <nav class="footer-nav">
-    <a href="#top">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram</a>
-  </nav>
-</footer>
+  <footer class="footer">
+    <span class="footer-copy">© 2026 Suprawee Mathusen. All rights reserved.</span>
+    <nav class="footer-nav">
+      <a href="#top">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </footer>
+</div>
 
 <script src="i18n.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>

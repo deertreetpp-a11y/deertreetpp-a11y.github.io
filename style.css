@@ -387,16 +387,27 @@ main{display:block}
 .caret{color:#c9f5e3;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 
+/* ---------- END PAGE (mattter-style curtain reveal) ----------
+   main scrolls away like a curtain, uncovering this fixed green page. */
+main{position:relative;z-index:2;background:var(--bg)}
+.end-spacer{height:100vh;pointer-events:none}
+.page-end{
+  position:fixed;left:0;bottom:0;width:100%;height:100vh;z-index:1;
+  background:var(--green);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:auto;
+}
+
 /* ---------- CONTACT (final page) ---------- */
-.contact{padding-top:140px}
+.contact{padding-top:40px;padding-bottom:40px;margin-bottom:auto;width:100%}
 .contact-title{
-  font-size:clamp(48px,7.6vw,112px);font-weight:800;letter-spacing:-.04em;line-height:.95;
-  text-align:center;margin-bottom:72px;text-wrap:balance;
+  font-size:clamp(40px,6.4vw,92px);font-weight:800;letter-spacing:-.04em;line-height:.95;
+  text-align:center;margin-bottom:44px;text-wrap:balance;
 }
 .contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:start}
 .contact-card{
-  background:var(--card);border:1px solid rgba(255,255,255,.08);
-  border-radius:20px;padding:36px;
+  background:rgba(10,14,12,.92);border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;padding:32px;
 }
 .contact-card-title{font-size:clamp(26px,2.6vw,36px);font-weight:800;letter-spacing:-.02em}
 .contact-sub{color:var(--muted);font-size:15px;line-height:1.5;margin:8px 0 28px}
@@ -418,16 +429,16 @@ main{display:block}
 .f-err.show{display:block}
 .form-note{color:var(--muted);font-size:13px;margin-top:-6px}
 .contact-side{display:flex;flex-direction:column;gap:20px;padding-top:14px}
-.contact-side-lede{color:var(--muted);font-size:15px}
+.contact-side-lede{color:rgba(255,255,255,.75);font-size:15px}
 .contact-line{font-size:clamp(18px,1.7vw,23px);font-weight:700;letter-spacing:-.02em;transition:color .2s}
 .contact-line:hover{color:var(--amber)}
 .contact-top{align-self:flex-start;margin-top:22px}
 
-/* ---------- FOOTER (slim) ---------- */
+/* ---------- FOOTER (slim, sits on the green end page) ---------- */
 .footer{
-  border-top:1px solid rgba(255,255,255,.12);
-  padding:22px 24px;display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:12px;font-size:13px;font-weight:600;color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.25);
+  padding:20px 24px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;font-size:13px;font-weight:600;color:rgba(255,255,255,.85);
 }
 .footer-nav{display:flex;gap:20px}
 .footer a:hover{color:#fff}
@@ -462,6 +473,9 @@ main{display:block}
   .contact-grid{grid-template-columns:1fr;gap:28px}
   .form-row{flex-direction:column;gap:18px}
   .footer{justify-content:center;text-align:center}
+  /* curtain reveal off on small screens — normal flow instead */
+  .end-spacer{display:none}
+  .page-end{position:static;height:auto;overflow:visible}
   .section{padding:60px 15px}
   .hero{margin:0}
 }
