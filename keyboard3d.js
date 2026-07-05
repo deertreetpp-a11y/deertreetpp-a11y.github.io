@@ -46,7 +46,7 @@
 
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-  cam.position.set(4.8, 7.9, 7.6);   // fixed 3/4 view like the reference (pulled back for the 6x4 board)
+  cam.position.set(0.5, 7.2, 9.8);   // near-frontal view so the category rows read left-to-right
   const rnd = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   rnd.setPixelRatio(Math.min(devicePixelRatio, 2));
 
