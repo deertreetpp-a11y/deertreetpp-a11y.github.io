@@ -376,6 +376,17 @@ main{display:block}
   font-size:16px;font-weight:600;letter-spacing:-.04px;
 }
 
+/* ---------- CTA (typewriter capsule) ---------- */
+.cta{height:100vh;display:flex;align-items:center;justify-content:center;padding:0 24px}
+.cta-pill{
+  width:min(560px,100%);background:var(--green);border-radius:var(--radius);
+  backdrop-filter:blur(15px);
+  padding:8px 8px 8px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.cta-type{font-size:16px;font-weight:600;letter-spacing:-.3px}
+.caret{color:#c9f5e3;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
 /* ---------- CONTACT (final page) ---------- */
 .contact{padding-top:140px}
 .contact-title{

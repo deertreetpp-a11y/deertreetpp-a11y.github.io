@@ -178,7 +178,24 @@ function frame(now) {
 }
 requestAnimationFrame(frame);
 
-// ---------- 6. Contact form: validate, then open a prefilled email ----------
+// ---------- 6a. Typewriter CTA ----------
+// phrases live in i18n.js (window.i18nPhrases) so the TH/EN toggle swaps them live
+const tw = document.getElementById("typewriter");
+if (tw) {
+  let pi = 0, ci = 0, deleting = false;
+  (function loop() {
+    const phrases = window.i18nPhrases[window.currentLang];
+    const phrase = phrases[pi % phrases.length];
+    tw.textContent = phrase.slice(0, Math.min(ci, phrase.length));
+    let delay = deleting ? 35 : 65;
+    if (!deleting && ci >= phrase.length) { deleting = true; ci = phrase.length; delay = 1600; }
+    else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
+    else ci += deleting ? -1 : 1;
+    setTimeout(loop, delay);
+  })();
+}
+
+// ---------- 6b. Contact form: validate, then open a prefilled email ----------
 const cf = document.getElementById("contactForm");
 if (cf) {
   const ERR = {
