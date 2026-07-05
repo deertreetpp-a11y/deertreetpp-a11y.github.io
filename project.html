@@ -71,12 +71,16 @@
   if (p.media && p.media.length) {
     const render = (m, mi) => {
       if (typeof m === "string") m = { type: "img", src: m };
+      // portrait media marked phone:true sits inside an iPhone mockup on a brand-colored panel
+      const phone = el => m.phone
+        ? `<div class="pj-phone-wrap" style="background:${p.bg}"><div class="pj-phone">${el}</div></div>`
+        : el;
       if (m.type === "row")
         return `<div class="pj-row">${m.items.map(render).join("")}</div>`;
       if (m.type === "img")
-        return `<img src="${m.src}" alt="${p.title}" loading="lazy">`;
+        return phone(`<img src="${m.src}" alt="${p.title}" loading="lazy">`);
       if (m.type === "video")
-        return `<video src="${m.src}" controls playsinline preload="metadata"></video>`;
+        return phone(`<video src="${m.src}" controls playsinline preload="metadata"></video>`);
       if (m.type === "slides") {
         const srcs = Array.from({ length: m.count }, (_, i) => `${m.base}${String(i + 1).padStart(2, "0")}.jpg`);
         return `

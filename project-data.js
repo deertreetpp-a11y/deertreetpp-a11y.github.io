@@ -75,7 +75,7 @@ const PROJECT_PAGES = {
     media: [
       { type: "row", items: [
         { type: "img",   src: "assets/projects/krungsri/team.jpg" },
-        { type: "video", src: "assets/projects/krungsri/pitch.mp4" },
+        { type: "video", src: "assets/projects/krungsri/pitch.mp4", phone: true },
       ]},
       { type: "slides", base: "assets/projects/krungsri/slides/", count: 11 },
     ],
