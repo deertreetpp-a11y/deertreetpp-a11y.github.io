@@ -342,7 +342,7 @@ main{display:block}
 }
 /* artwork backgrounds: glyph art sits in the upper area, name bar fades in below */
 .s-card{
-  background-size:cover;background-position:center 32%;background-repeat:no-repeat;
+  background-size:72% auto;background-position:center 34%;background-repeat:no-repeat;
   background-color:#000;
 }
 .s-card::after{
