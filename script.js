@@ -288,7 +288,13 @@ if (cf) {
       if (!f.ok(f.el.value)) { f.err.textContent = ERR[lang][k]; f.err.classList.add("show"); if (!bad) f.el.focus(); bad = true; }
     }
     if (bad) return;
-    const name = fields.name.el.value.trim(), mail = fields.email.el.value.trim(), msg = fields.msg.el.value.trim();
+    // strip CR/LF and cap length before anything reaches the mailto: URL —
+    // a newline in the subject is how mail-header injection gets attempted,
+    // and a giant body can silently blow past URL limits in some clients
+    const clean = (s, max) => s.replace(/[\r\n\u2028\u2029]+/g, " ").trim().slice(0, max);
+    const name = clean(fields.name.el.value, 120);
+    const mail = clean(fields.email.el.value, 160);
+    const msg  = fields.msg.el.value.replace(/\r/g, "").trim().slice(0, 4000);
     const subject = encodeURIComponent(`Portfolio contact — ${name}`);
     const body = encodeURIComponent(`${msg}\n\n— ${name} (${mail})`);
     location.href = `mailto:suprawee.m@kkumail.com?subject=${subject}&body=${body}`;

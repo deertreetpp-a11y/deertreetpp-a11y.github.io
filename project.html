@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project — DEAR®</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@400..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202608111921">
+<link rel="stylesheet" href="style.css?v=202608112002">
 </head>
 <body>
 
@@ -57,13 +59,16 @@
   </div>
 </main>
 
-<script src="project-data.js?v=202608111921"></script>
+<script src="project-data.js?v=202608112002"></script>
 <script>
 (function () {
   const lang = (localStorage.getItem("lang") === "th") ? "th" : "en";
   const slug = new URLSearchParams(location.search).get("p");
-  const p = PROJECT_PAGES[slug];
-  if (!p) { location.replace("index.html#projects"); return; }
+  // hasOwn, not a plain lookup: ?p=constructor / __proto__ / toString would
+  // otherwise resolve up the prototype chain and render a broken page
+  const p = (slug && Object.prototype.hasOwnProperty.call(PROJECT_PAGES, slug))
+    ? PROJECT_PAGES[slug] : null;
+  if (!p) { location.replace("projects.html"); return; }
 
   document.title = p.title + " — DEAR®";
   document.getElementById("pjTitle").textContent = p.title;

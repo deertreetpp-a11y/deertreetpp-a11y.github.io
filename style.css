@@ -662,11 +662,15 @@ main{position:relative;z-index:2;background:var(--bg)}
   .nav{gap:16px;padding-right:14px}
   .lang-btn{margin-left:0}
   .kb3d{height:340px}
-  .hero-card{width:calc(100vw - 48px);padding:28px 24px 24px}
+  .hero-card{width:calc(100vw - 48px);max-width:100%;padding:28px 24px 24px}
   .hero-name{white-space:normal;font-size:clamp(40px,12vw,64px)}
-  .hero-mid{flex-direction:column;align-items:flex-start;gap:8px}
-  .hero-sign{margin-bottom:0}
-  .hero-tags{margin-top:36px;font-size:14px;gap:10px}
+  .hero-mid{flex-direction:column;align-items:flex-start;gap:8px;width:100%}
+  /* the desc is `flex:none; max-width:440px` on desktop — on a 390px phone that
+     refuses to shrink and drags the whole card past the right edge */
+  .hero-desc{max-width:100%;flex:1 1 auto;min-width:0}
+  .hero-sign{margin-bottom:0;width:min(220px,58%)}
+  .hero-est{font-size:12.5px;letter-spacing:.04em}
+  .hero-tags{margin-top:36px;font-size:14px;gap:10px;flex-wrap:wrap}
   .intro-grid{flex-direction:column;gap:32px}
   .intro-meta{width:100%}
   .intro-facts{flex-direction:row;flex-wrap:wrap;gap:16px 28px}

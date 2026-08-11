@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deertreetpp-a11y.github.io/sitemap.xml
