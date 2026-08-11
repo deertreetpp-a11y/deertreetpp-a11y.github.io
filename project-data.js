@@ -147,26 +147,26 @@ const PROJECT_PAGES = {
     service: "Internship", client: "Central Department Store, Khon Kaen", year: "2026",
     bg: "linear-gradient(135deg,#2a0f16,#ff0037)", glyph: "GR",
     tagline: {
-      en: "A month inside the loading bay of a department store — the part of retail customers never see.",
-      th: "หนึ่งเดือนในหลังร้านของห้างสรรพสินค้า — ส่วนที่ลูกค้าไม่เคยเห็น",
+      en: "Nearly three months inside the loading bay of a department store — the part of retail customers never see.",
+      th: "เกือบสามเดือนในหลังร้านของห้างสรรพสินค้า — ส่วนที่ลูกค้าไม่เคยเห็น",
     },
     desc: {
-      en: "Everything on a department store's shelves passes through one door first. Goods Receiving is that door: suppliers deliver, and nothing goes upstairs until it has been counted, checked against paperwork and entered into the system.\n\nI spent April 2026 there as an intern at Central Department Store, Khon Kaen — 08:00 to 17:30, four weeks.\n\nThe work ran the full loop, on both stock systems the store uses — Credit (goods bought outright) and Consignment (goods still owned by the supplier). Receive from the supplier, count the quantity and check the condition against the delivery note, key it into the system, file the delivery and GR documents, then send it up to the right floor by each department's sup dept number. When something arrived short or damaged, that meant going back to the supplier to sort it out.",
-      th: "ของทุกชิ้นที่วางอยู่บนชั้นห้างสรรพสินค้า ผ่านประตูเดียวกันมาก่อนเสมอ แผนก Goods Receiving คือประตูบานนั้น — ซัพพลายเออร์ส่งของมา แล้วไม่มีอะไรขึ้นไปข้างบนได้จนกว่าจะถูกนับ ตรวจกับเอกสาร และคีย์เข้าระบบเรียบร้อย\n\nผมอยู่ตรงนั้นเดือนเมษายน 2569 ในฐานะนักศึกษาฝึกงานที่ห้างสรรพสินค้าเซ็นทรัล สาขาขอนแก่น เข้า 08.00 ออก 17.30 รวม 4 สัปดาห์\n\nงานเดินครบลูป และครบทั้งสองระบบสต็อกที่ห้างใช้ — Credit (ของที่ห้างซื้อขาด) กับ Consignment (ของที่ยังเป็นของซัพพลายเออร์) ตั้งแต่รับของจากซัพพลายเออร์ ตรวจนับจำนวนและสภาพให้ตรงกับใบส่งของ คีย์ข้อมูลเข้าระบบคอมพิวเตอร์ จัดเก็บใบส่งของกับใบ GR แล้วกระจายขึ้นชั้นให้ถูกแผนกตามเลข sup dept ส่วนของที่มาไม่ครบหรือมาเสียหาย ก็ต้องประสานกลับไปหาซัพพลายเออร์ให้จบ",
+      en: "Everything on a department store's shelves passes through one door first. Goods Receiving is that door: suppliers deliver, and nothing goes upstairs until it has been counted, checked against paperwork and entered into the system.\n\nI spent close to three months there as an intern at Central Department Store, Khon Kaen, starting April 2026 — 08:00 to 17:30.\n\nThe work ran the full loop, on both stock systems the store uses — Credit (goods bought outright) and Consignment (goods still owned by the supplier). Receive from the supplier, count the quantity and check the condition against the delivery note, key it into the system, file the delivery and GR documents, then send it up to the right floor by each department's sup dept number. When something arrived short or damaged, that meant going back to the supplier to sort it out.",
+      th: "ของทุกชิ้นที่วางอยู่บนชั้นห้างสรรพสินค้า ผ่านประตูเดียวกันมาก่อนเสมอ แผนก Goods Receiving คือประตูบานนั้น — ซัพพลายเออร์ส่งของมา แล้วไม่มีอะไรขึ้นไปข้างบนได้จนกว่าจะถูกนับ ตรวจกับเอกสาร และคีย์เข้าระบบเรียบร้อย\n\nผมอยู่ตรงนั้นเกือบสามเดือน ในฐานะนักศึกษาฝึกงานที่ห้างสรรพสินค้าเซ็นทรัล สาขาขอนแก่น เริ่มเดือนเมษายน 2569 เข้า 08.00 ออก 17.30\n\nงานเดินครบลูป และครบทั้งสองระบบสต็อกที่ห้างใช้ — Credit (ของที่ห้างซื้อขาด) กับ Consignment (ของที่ยังเป็นของซัพพลายเออร์) ตั้งแต่รับของจากซัพพลายเออร์ ตรวจนับจำนวนและสภาพให้ตรงกับใบส่งของ คีย์ข้อมูลเข้าระบบคอมพิวเตอร์ จัดเก็บใบส่งของกับใบ GR แล้วกระจายขึ้นชั้นให้ถูกแผนกตามเลข sup dept ส่วนของที่มาไม่ครบหรือมาเสียหาย ก็ต้องประสานกลับไปหาซัพพลายเออร์ให้จบ",
     },
     result: {
       en: "Passed the assessment and received the certificate of completion. What stayed with me was less about receiving stock and more about the discipline underneath it — that a real operation runs on doing the unglamorous, repetitive parts correctly, every single time, and being willing to do whatever the day actually needs.",
       th: "ผ่านการประเมินและได้รับใบประกาศนียบัตร สิ่งที่ติดตัวมาไม่ใช่วิธีรับของ แต่เป็นวินัยที่อยู่ข้างใต้มัน — งานจริงเดินได้เพราะมีคนทำส่วนที่ซ้ำซากและไม่มีใครเห็นให้ถูกต้องทุกครั้ง และต้องอดทนกับงานทุกประเภทที่วันนั้นต้องการ",
     },
+    // the corridor shot is landscape and carries the scene — it runs full width
+    // on its own; the two portrait desk shots pair up; the certificate closes
     media: [
+      { type: "img", src: "assets/projects/central/crates.jpg" },
       { type: "row", items: [
         { type: "img", src: "assets/projects/central/desk.jpg" },
         { type: "img", src: "assets/projects/central/docs.jpg" },
       ]},
-      { type: "row", items: [
-        { type: "img", src: "assets/projects/central/crates.jpg" },
-        { type: "img", src: "assets/projects/central/cert.jpg" },
-      ]},
+      { type: "img", src: "assets/projects/central/cert.jpg" },
     ],
   },
   torbhai: {

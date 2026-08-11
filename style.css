@@ -455,7 +455,10 @@ a.p-card:hover .p-title{color:#fff}
 .pj-element-cat{padding:0 12px 10px;font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 /* paired media (e.g. portrait photo + portrait video) share one row, equal height */
 .pj-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.pj-row img,.pj-row video{width:100%;height:auto;max-height:74vh;object-fit:contain;margin:0}
+/* let the column width drive the size: a height cap would letterbox portrait
+   shots inside their cell and leave dead bars either side */
+.pj-row img{width:100%;height:auto;max-height:none;object-fit:contain;margin:0;border-radius:22px}
+.pj-row video{width:100%;height:auto;max-height:74vh;object-fit:contain;margin:0}
 /* portrait media inside an iPhone mockup on a brand-colored panel */
 .pj-phone-wrap{
   display:flex;align-items:center;justify-content:center;
