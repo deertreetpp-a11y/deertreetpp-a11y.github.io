@@ -45,7 +45,7 @@ const I18N_TH = [
 
   [".contact-title", ["มาทำงาน<br>ด้วยกัน"]],
   [".contact-card-title", ["ฟอร์มติดต่อ"]],
-  [".contact-sub", ['ติดต่อผมตรงๆ ได้ที่ <a href="mailto:suprawee.m@kkumail.com">suprawee.m(at)kkumail.com</a> หรือฝากข้อมูลไว้ตรงนี้ได้เลย']],
+  [".contact-sub", ['ติดต่อผมตรงๆ ได้ที่ <a href="mailto:suprawee.m@kkumail.com">suprawee.m@kkumail.com</a> หรือฝากข้อมูลไว้ตรงนี้ได้เลย']],
   [".f-label", ["ชื่อ-นามสกุล", "อีเมล", "ข้อความของคุณ"]],
   [".form-note", ["ข้อมูลของคุณผมไม่แชร์ให้ใครแน่นอน สัญญา!"]],
   ["#contactForm .btn .roll span", ["ส่งข้อความ →", "ส่งข้อความ →"]],
