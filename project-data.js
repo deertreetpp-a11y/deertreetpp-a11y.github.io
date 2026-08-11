@@ -155,8 +155,8 @@ const PROJECT_PAGES = {
       th: "ของทุกชิ้นที่วางอยู่บนชั้นห้างสรรพสินค้า ผ่านประตูเดียวกันมาก่อนเสมอ แผนก Goods Receiving คือประตูบานนั้น — ซัพพลายเออร์ส่งของมา แล้วไม่มีอะไรขึ้นไปข้างบนได้จนกว่าจะถูกนับ ตรวจกับเอกสาร และคีย์เข้าระบบเรียบร้อย\n\nผมอยู่ตรงนั้นเกือบสามเดือน ในฐานะนักศึกษาฝึกงานที่ห้างสรรพสินค้าเซ็นทรัล สาขาขอนแก่น เริ่มเดือนเมษายน 2569 เข้า 08.00 ออก 17.30\n\nงานเดินครบลูป และครบทั้งสองระบบสต็อกที่ห้างใช้ — Credit (ของที่ห้างซื้อขาด) กับ Consignment (ของที่ยังเป็นของซัพพลายเออร์) ตั้งแต่รับของจากซัพพลายเออร์ ตรวจนับจำนวนและสภาพให้ตรงกับใบส่งของ คีย์ข้อมูลเข้าระบบคอมพิวเตอร์ จัดเก็บใบส่งของกับใบ GR แล้วกระจายขึ้นชั้นให้ถูกแผนกตามเลข sup dept ส่วนของที่มาไม่ครบหรือมาเสียหาย ก็ต้องประสานกลับไปหาซัพพลายเออร์ให้จบ",
     },
     result: {
-      en: "Passed the assessment and finished with the certificate. The lasting part wasn't learning to receive stock — it was seeing what a real operation actually runs on: the unglamorous, repetitive work done right every single time, and the patience to take on whatever the day puts in front of you.",
-      th: "ผ่านการประเมินและจบมาพร้อมใบประกาศนียบัตร แต่สิ่งที่ติดตัวมาไม่ใช่วิธีรับของ — เป็นการได้เห็นว่างานจริงเดินได้ด้วยอะไร: ด้วยงานซ้ำ ๆ ที่ไม่มีใครมองเห็นแต่ต้องถูกต้องทุกครั้ง และด้วยความอดทนที่จะรับงานทุกแบบที่วันนั้นวางตรงหน้า",
+      en: "Passed the assessment and received the certificate — along with what a real workplace teaches: how the work actually runs, and the patience to take on every kind of job it hands you.",
+      th: "ผ่านการประเมินและได้รับใบประกาศนียบัตร พร้อมกับสิ่งที่ได้จากที่ทำงานจริง — ได้เรียนรู้การทำงานจริง และความอดทนต่องานทุกประเภท",
     },
     // the corridor shot is landscape and carries the scene — it runs full width
     // on its own; the two portrait desk shots pair up; the certificate closes
@@ -182,8 +182,8 @@ const PROJECT_PAGES = {
       th: "การทำ Haru สอนปัญหานี้ให้ผมเองกับมือ — ลูกค้าคอมเมนต์ตอนเที่ยงคืน พอตอบตอนเช้าเขาซื้อร้านอื่นไปแล้ว แม่ค้าออนไลน์ไทยเสียลูกค้าที่พร้อมจ่ายไปเพราะ “ตอบช้า” ไม่ใช่เพราะราคา ส่วนเครื่องมือที่แก้เรื่องนี้ได้ก็ถูกออกแบบมาเพื่อตลาดที่ใช้ภาษาอังกฤษเป็นหลัก และตั้งราคาสำหรับบริษัท ไม่ใช่สำหรับคนขายของจากมือถือเครื่องเดียว\n\nเป้าหมายเลยเป็นระบบที่แม่ค้าไทยตั้งค่าเองได้ในไม่กี่นาที: เก็บทุกคอมเมนต์และทุก DM ทั้ง Facebook และ Instagram ตอบด้วยน้ำเสียงที่เหมือนร้านพูดเอง และส่งต่อให้คนจริงเฉพาะตอนที่จำเป็นจริง ๆ\n\nผมออกแบบและสร้างเองทั้งหมด ทั้งตัวเว็บ ตัวแอป ระบบสร้างโฟลว์ ระบบ AI ตอบแชท และการเชื่อมต่อกับแพลตฟอร์มของ Meta ฝั่ง AI ตอบคำถามได้ อ่านรูปที่ลูกค้าส่งมาได้ และทำงานโดยมีเป้าหมายที่การปิดการขาย ไม่ใช่แค่ตอบให้สุภาพ",
     },
     result: {
-      en: "Running live on my own Haru page, which is deliberate — the product earns its case on a real shop with real customers before anyone else is asked to trust it. The AI side is finished, and the app is with Meta for review ahead of opening to other sellers.",
-      th: "เดินอยู่จริงบนเพจ Haru ของผมเอง ซึ่งตั้งใจให้เป็นแบบนั้น — ให้สินค้าพิสูจน์ตัวเองกับร้านจริงและลูกค้าจริงก่อน แล้วค่อยไปขอให้คนอื่นเชื่อ ฝั่ง AI ทำเสร็จแล้ว ตอนนี้ตัวแอปอยู่ระหว่างรอผลรีวิวจาก Meta ก่อนเปิดให้แม่ค้าคนอื่นเข้ามาใช้",
+      en: "In use on my own Haru page, where the market testing is being done. The AI side is finished, and the app is now with Meta for review before it can open to other sellers.",
+      th: "ใช้งานอยู่จริงบนเพจ Haru ของผมเอง ซึ่งเป็นที่ที่ทดสอบตลาดอยู่ ฝั่ง AI ทำเสร็จแล้ว ตอนนี้ตัวแอปอยู่ระหว่างรอผลรีวิวจาก Meta ก่อนเปิดให้แม่ค้าคนอื่นใช้",
     },
     media: [
       { type: "img", src: "assets/projects/torbhai.jpg" },
@@ -257,10 +257,6 @@ const PROJECT_PAGES = {
       en: "Mitr Phol set the brief: design a new consumer product built on their allulose syrup — a sugar-free sweetener with monk fruit extract, zero calories, a one-to-one swap for sugar.\n\nTeam GOAT developed it into a premium flavoured syrup line, packaged as a gift set, and pitched it at the Mitr Phol Innovation & Research Centre.",
       th: "โจทย์จากมิตรผลคือ ออกแบบสินค้าใหม่จากไซรัปแอลลูโลสของเขา — สารให้ความหวานแทนน้ำตาลผสมสารสกัดหล่อฮังก๊วย 0 แคลอรี ใช้แทนน้ำตาลได้ 1 ต่อ 1\n\nทีม GOAT พัฒนาออกมาเป็นไซรัปพรีเมียมหลายรส จัดเป็นเซ็ตของขวัญ แล้วนำไปพิตช์ที่ Mitr Phol Innovation & Research Centre",
     },
-    result: {
-      en: "The idea travelled the whole distance — from a raw ingredient to a finished gift set, pitched to Mitr Phol's own people inside their research centre. It taught me how to look at a single ingredient and answer the two questions that decide everything: what should this become, and who is it for.",
-      th: "ไอเดียเดินไปจนสุดทาง — จากวัตถุดิบตั้งต้นกลายเป็นเซ็ตของขวัญที่จับต้องได้ และได้ขึ้นพิตช์ให้คนของมิตรผลฟังถึงในศูนย์วิจัยของเขาเอง งานนี้สอนให้มองวัตถุดิบตัวเดียวแล้วตอบสองคำถามที่ชี้ขาดทุกอย่างให้ได้ — มันควรกลายเป็นอะไร และมันมีไว้เพื่อใคร",
-    },
     media: [
       { type: "img", src: "assets/projects/mitrphol/brief-allulose.jpg" },
       { type: "row", items: [
@@ -282,8 +278,8 @@ const PROJECT_PAGES = {
       th: "R2M ไม่ใช่การประกวดแผนธุรกิจ — โครงการระบุไว้ชัดว่าเป็นงานช่วงต้นน้ำที่มาก่อนแผนธุรกิจ งานวิจัยของมหาวิทยาลัยจะถูกตรวจทรัพย์สินทางปัญญาแล้วส่งมาเป็นโจทย์ให้ทีมนักศึกษา โจทย์คือคำถามที่ต้องตอบก่อนจะเขียนแผนใด ๆ ได้: เทคโนโลยีชิ้นนี้พัฒนาไปเป็นสินค้าหรือบริการอะไรได้บ้าง และฝั่งตลาดของมันเป็นไปได้จริงไหม\n\nโจทย์ของทีมเราคือ MUVITA — เครื่องดื่มโปรตีนถั่วเหลืองที่ต่อยอดจากงานวิจัยสารสกัดพืช ทั้งผักแพวและใบหม่อน ผลิตตามมาตรฐาน GHPs/HACCP อยู่แล้ว เราเลือกทำฝั่งความเป็นไปได้ทางการตลาด: ใครคือคนซื้อตัวจริง สินค้าต้องยืนอยู่บนอะไรคนกลุ่มนั้นถึงจะรู้สึกว่า “นี่ของฉัน” และช่องทางไหนที่เข้าถึงเขาได้จริง สิ่งที่เจอคือมันไม่ได้แพ้ที่ตัววิทยาศาสตร์ แต่แพ้ที่ความชัด — ไม่มีอะไรในตัวสินค้าบอกคนซื้อได้ว่าเขาอยู่กลุ่มไหน เราจึงวางจุดยืนใหม่ที่ “โปรตีนจากพืช” ซึ่งเป็นคำที่คนฟังแล้ววัดตัวเองได้ทันที แล้ววางเส้นทางสู่ตลาดใหม่จากตรงนั้น",
     },
     result: {
-      en: "We carried it all the way to a new positioning and a route to market for a product already sitting on shelves. It gave me the part no class teaches: giving real lab research a commercial answer, in a room where the people who own that research are listening.",
-      th: "เราทำไปจนถึงการวางจุดยืนใหม่และเส้นทางสู่ตลาดให้สินค้าที่วางขายอยู่จริงแล้ว งานนี้ให้ในสิ่งที่ห้องเรียนไม่เคยสอน — การเอางานวิจัยจริงในแล็บมาตอบโจทย์เชิงพาณิชย์ ในห้องที่เจ้าของงานวิจัยนั่งฟังอยู่ด้วย",
+      en: "A new positioning and a route to market, worked out for a product already on shelves — and the experience of taking real university research through to a commercial answer.",
+      th: "ได้จุดยืนใหม่และเส้นทางสู่ตลาดของสินค้าที่วางขายอยู่จริง และได้ประสบการณ์การเอางานวิจัยของมหาวิทยาลัยมาตอบโจทย์เชิงพาณิชย์",
     },
     media: [
       { type: "img", src: "assets/projects/muvita/product.jpg" },
