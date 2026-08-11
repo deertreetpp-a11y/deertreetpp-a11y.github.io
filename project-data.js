@@ -17,8 +17,8 @@ const PROJECT_PAGES = {
       th: "โฆษณาบอลโลกให้โค้กตามปกติแปลว่าต้องมีกองถ่าย ใบอนุญาตปิดถนน ทีมสตันต์ และงบที่นักศึกษาคนหนึ่งไม่มีสักอย่าง\n\nผมตั้งโจทย์ให้ตัวเองอยู่ดีว่า หนังต้องออกมาเหมือน “ถ่ายมา” ไม่ใช่ “เจนมา” นั่นแปลว่าต้องเป็นฉากแปลงร่างต่อเนื่องช็อตเดียว — ถนนธรรมดากลายเป็นสนามฟุตบอลหุ่นยนต์ — เพราะรอยตัดคือจุดที่วิดีโอ AI มักหลุด\n\nทุกชิ้นถูกสร้างแยกกันก่อนใน Higgsfield.ai: ชุดหุ่นยนต์ที่ออกแบบเอง ลูกบอลพลังงาน โกลชิลด์ ถนนในเมืองแบบภาพจริง และตัวละคร แล้วค่อยประกอบเข้าเป็นซีเควนซ์เดียว เพื่อให้โลกในเรื่องคงเส้นคงวาตั้งแต่เฟรมแรกจนเฟรมสุดท้าย",
     },
     result: {
-      en: "A finished 126-second ad with zero live footage, zero crew and zero location cost — every frame generated and composited by one person. The element library it was built from is laid out below.",
-      th: "ได้โฆษณาความยาว 126 วินาทีที่ไม่มีฟุตเทจถ่ายจริงแม้แต่เฟรมเดียว ไม่มีกองถ่าย ไม่มีค่าสถานที่ — สร้างและประกอบด้วยคนคนเดียว ชุดเอเลเมนต์ที่ใช้สร้างอยู่ด้านล่าง",
+      en: "A finished 126-second film — no crew, no location, not one frame of live footage, built and composited by one person. Every element it was made from is laid out below.",
+      th: "หนังจบความยาว 126 วินาที — ไม่มีกองถ่าย ไม่มีสถานที่ ไม่มีฟุตเทจถ่ายจริงสักเฟรม สร้างและประกอบด้วยคนคนเดียว ชิ้นส่วนทุกอย่างที่ใช้สร้างมันอยู่ด้านล่างนี้",
     },
     media: [
       { type: "video", src: "assets/projects/coke/ad-full.mp4", sound: true },
@@ -47,8 +47,8 @@ const PROJECT_PAGES = {
       th: "ทุกเทอม นักศึกษาไทยเสียคืนไปกับการ “จัดรูปแบบ” มากกว่าการเขียนจริง ๆ ทั้งหน้าปก สารบัญ การตัดบรรทัดภาษาไทยที่ไม่เคยยอมอยู่ในร่องในรอย ไปจนถึงบรรณานุกรม\n\nโจทย์เลยมีสองชั้นพร้อมกัน: สร้างของที่ตัดงานส่วนนั้นทิ้ง และทำให้มันไปถึงมือคนที่ต้องใช้จริง ๆ เพราะของฟรีที่ไม่มีใครหาเจอ ก็เท่ากับไม่มี\n\nตัว Skill เปลี่ยนเรื่องอะไรก็ได้ให้เป็นรายงานมาตรฐาน มข. ครบชุด ส่วนคลิปโปรโมทถูกตัดต่อด้วย AI ทั้งหมดตั้งแต่ต้นจนจบภายใน 5-10 นาที โดยมี Claude เป็นคนสั่งงาน และ HyperFrames ซึ่งเป็นโอเพนซอร์สฟรีเป็นตัวเรนเดอร์ สิ่งที่ทำให้เป็นไปได้คือการเชื่อม API หลายตัวเข้ามาเป็นคลังทรัพยากร: ElevenLabs ถอดเสียงให้ซับไทยลงจังหวะพูดจริง Klipy ดึงมีม Mixkit จ่ายเพลง เอฟเฟกต์เสียง และบีโรล ส่วนโมเดล AI (OpenAI, Gemini, xAI ผ่าน OpenRouter) รับงานที่เหลือระหว่างทาง เลือกมีม เลือกเพลง เขียนซับ จับจังหวะตัดทุกคัท — เป็นงานของ AI ทั้งหมด ไม่ใช่คนนั่งลากคลิปบนไทม์ไลน์ แล้วต่อท้ายด้วยระบบ ManyChat ที่คอยจับคำคอมเมนต์แล้วส่งลิงก์ดาวน์โหลดผ่าน DM ทันที",
     },
     result: {
-      en: "204,780 views, 11,050 likes, 8,650 shares, 5,109 saves and 514 comments — reaching 163,176 accounts, 99.1% of them people who don't follow me. Every download was delivered by the automation, with nothing answered by hand.",
-      th: "ยอดดู 204,780 · ไลก์ 11,050 · แชร์ 8,650 · เซฟ 5,109 · คอมเมนต์ 514 · เข้าถึง 163,176 บัญชี โดย 99.1% เป็นคนที่ไม่ได้ติดตามผมอยู่ก่อน และทุกการดาวน์โหลดถูกส่งด้วยระบบอัตโนมัติ ไม่ต้องตอบเองสักข้อความ",
+      en: "204,780 views · 11,050 likes · 8,650 shares · 5,109 saves · 514 comments — reaching 163,176 accounts, 99.1% of whom had never heard of me. Every single download went out through the automation, without one message answered by hand.",
+      th: "ยอดดู 204,780 · ไลก์ 11,050 · แชร์ 8,650 · เซฟ 5,109 · คอมเมนต์ 514 · เข้าถึง 163,176 บัญชี ซึ่ง 99.1% ไม่เคยรู้จักผมมาก่อน และทุกการดาวน์โหลดถูกส่งออกไปด้วยระบบอัตโนมัติ โดยไม่ต้องตอบด้วยมือสักข้อความเดียว",
     },
     media: [
       { type: "video", src: "assets/projects/kku/clip.mp4", sound: true },
@@ -131,8 +131,8 @@ const PROJECT_PAGES = {
       th: "นักท่องเที่ยวมาถึงไทยแล้วเจอกำแพงทันที — ประเทศนี้เดินด้วยระบบไร้เงินสดที่เขาเข้าร่วมไม่ได้ถ้าไม่มีบัญชีธนาคารไทย สุดท้ายเลยต้องพกแบงก์ในที่ที่คนท้องถิ่นแทบไม่จับเงินสดแล้ว\n\nเวที Krungsri UniVerse × มหาวิทยาลัยขอนแก่น ให้เวลาจำกัดมาก้อนหนึ่งเพื่อเปลี่ยนเรื่องนี้ให้เป็นของที่กรรมการจับต้องได้จริง ไม่ใช่แค่สไลด์\n\nเราเดินจากไอเดีย → UI → prototype ที่กดได้จริง → ทดสอบกับผู้ใช้ ภายในเวลานั้น เรื่องเทสต์สำคัญกว่าความสวย เพราะแอปจ่ายเงินที่นักท่องเที่ยวงงเกินสิบวินาทีหน้าร้านอาหารก็ถือว่าแพ้ไปแล้ว เราจึงเอาไปให้คนจริงลองตั้งแต่ยังมีเวลาแก้",
     },
     result: {
-      en: "Champion — first place and the ฿30,000 top prize, with a tested prototype instead of a concept deck.",
-      th: "รางวัลชนะเลิศ — ที่ 1 พร้อมเงินรางวัล 30,000 บาท โดยส่งมอบเป็น prototype ที่ผ่านการทดสอบจริง ไม่ใช่แค่เด็คไอเดีย",
+      en: "First place, and the ฿30,000 top prize — won with a prototype real people had already tried, not a deck of intentions.",
+      th: "ที่ 1 พร้อมเงินรางวัล 30,000 บาท — ชนะด้วย prototype ที่คนจริงได้ลองมาแล้ว ไม่ใช่เด็คที่มีแต่ความตั้งใจ",
     },
     media: [
       { type: "row", items: [
@@ -155,8 +155,8 @@ const PROJECT_PAGES = {
       th: "ของทุกชิ้นที่วางอยู่บนชั้นห้างสรรพสินค้า ผ่านประตูเดียวกันมาก่อนเสมอ แผนก Goods Receiving คือประตูบานนั้น — ซัพพลายเออร์ส่งของมา แล้วไม่มีอะไรขึ้นไปข้างบนได้จนกว่าจะถูกนับ ตรวจกับเอกสาร และคีย์เข้าระบบเรียบร้อย\n\nผมอยู่ตรงนั้นเกือบสามเดือน ในฐานะนักศึกษาฝึกงานที่ห้างสรรพสินค้าเซ็นทรัล สาขาขอนแก่น เริ่มเดือนเมษายน 2569 เข้า 08.00 ออก 17.30\n\nงานเดินครบลูป และครบทั้งสองระบบสต็อกที่ห้างใช้ — Credit (ของที่ห้างซื้อขาด) กับ Consignment (ของที่ยังเป็นของซัพพลายเออร์) ตั้งแต่รับของจากซัพพลายเออร์ ตรวจนับจำนวนและสภาพให้ตรงกับใบส่งของ คีย์ข้อมูลเข้าระบบคอมพิวเตอร์ จัดเก็บใบส่งของกับใบ GR แล้วกระจายขึ้นชั้นให้ถูกแผนกตามเลข sup dept ส่วนของที่มาไม่ครบหรือมาเสียหาย ก็ต้องประสานกลับไปหาซัพพลายเออร์ให้จบ",
     },
     result: {
-      en: "Passed the assessment and received the certificate of completion. What stayed with me was less about receiving stock and more about the discipline underneath it — that a real operation runs on doing the unglamorous, repetitive parts correctly, every single time, and being willing to do whatever the day actually needs.",
-      th: "ผ่านการประเมินและได้รับใบประกาศนียบัตร สิ่งที่ติดตัวมาไม่ใช่วิธีรับของ แต่เป็นวินัยที่อยู่ข้างใต้มัน — งานจริงเดินได้เพราะมีคนทำส่วนที่ซ้ำซากและไม่มีใครเห็นให้ถูกต้องทุกครั้ง และต้องอดทนกับงานทุกประเภทที่วันนั้นต้องการ",
+      en: "Passed the assessment and finished with the certificate. The lasting part wasn't learning to receive stock — it was seeing what a real operation actually runs on: the unglamorous, repetitive work done right every single time, and the patience to take on whatever the day puts in front of you.",
+      th: "ผ่านการประเมินและจบมาพร้อมใบประกาศนียบัตร แต่สิ่งที่ติดตัวมาไม่ใช่วิธีรับของ — เป็นการได้เห็นว่างานจริงเดินได้ด้วยอะไร: ด้วยงานซ้ำ ๆ ที่ไม่มีใครมองเห็นแต่ต้องถูกต้องทุกครั้ง และด้วยความอดทนที่จะรับงานทุกแบบที่วันนั้นวางตรงหน้า",
     },
     // the corridor shot is landscape and carries the scene — it runs full width
     // on its own; the two portrait desk shots pair up; the certificate closes
@@ -182,8 +182,8 @@ const PROJECT_PAGES = {
       th: "การทำ Haru สอนปัญหานี้ให้ผมเองกับมือ — ลูกค้าคอมเมนต์ตอนเที่ยงคืน พอตอบตอนเช้าเขาซื้อร้านอื่นไปแล้ว แม่ค้าออนไลน์ไทยเสียลูกค้าที่พร้อมจ่ายไปเพราะ “ตอบช้า” ไม่ใช่เพราะราคา ส่วนเครื่องมือที่แก้เรื่องนี้ได้ก็ถูกออกแบบมาเพื่อตลาดที่ใช้ภาษาอังกฤษเป็นหลัก และตั้งราคาสำหรับบริษัท ไม่ใช่สำหรับคนขายของจากมือถือเครื่องเดียว\n\nเป้าหมายเลยเป็นระบบที่แม่ค้าไทยตั้งค่าเองได้ในไม่กี่นาที: เก็บทุกคอมเมนต์และทุก DM ทั้ง Facebook และ Instagram ตอบด้วยน้ำเสียงที่เหมือนร้านพูดเอง และส่งต่อให้คนจริงเฉพาะตอนที่จำเป็นจริง ๆ\n\nผมออกแบบและสร้างเองทั้งหมด ทั้งตัวเว็บ ตัวแอป ระบบสร้างโฟลว์ ระบบ AI ตอบแชท และการเชื่อมต่อกับแพลตฟอร์มของ Meta ฝั่ง AI ตอบคำถามได้ อ่านรูปที่ลูกค้าส่งมาได้ และทำงานโดยมีเป้าหมายที่การปิดการขาย ไม่ใช่แค่ตอบให้สุภาพ",
     },
     result: {
-      en: "Live and in use on my own Haru page, which is where the market testing is happening — the product proves itself on a real shop before anyone else is asked to trust it. The AI side has just been finished, and the app is now waiting on Meta's review before it can open to other sellers.",
-      th: "ใช้งานจริงอยู่บนเพจ Haru ของผมเอง ซึ่งเป็นที่ที่กำลังทดสอบตลาดอยู่ — ให้ตัวสินค้าพิสูจน์ตัวเองกับร้านจริงก่อน แล้วค่อยไปขอให้คนอื่นเชื่อ ฝั่ง AI เพิ่งทำเสร็จ และตอนนี้ตัวแอปกำลังรอผลรีวิวจาก Meta ก่อนจะเปิดให้แม่ค้าคนอื่นเข้ามาใช้ได้",
+      en: "Running live on my own Haru page, which is deliberate — the product earns its case on a real shop with real customers before anyone else is asked to trust it. The AI side is finished, and the app is with Meta for review ahead of opening to other sellers.",
+      th: "เดินอยู่จริงบนเพจ Haru ของผมเอง ซึ่งตั้งใจให้เป็นแบบนั้น — ให้สินค้าพิสูจน์ตัวเองกับร้านจริงและลูกค้าจริงก่อน แล้วค่อยไปขอให้คนอื่นเชื่อ ฝั่ง AI ทำเสร็จแล้ว ตอนนี้ตัวแอปอยู่ระหว่างรอผลรีวิวจาก Meta ก่อนเปิดให้แม่ค้าคนอื่นเข้ามาใช้",
     },
     media: [
       { type: "img", src: "assets/projects/torbhai.jpg" },
@@ -203,8 +203,8 @@ const PROJECT_PAGES = {
       th: "Ready or Not เป็นเกมแนว tactical shooter ที่มีคนไทยเล่นเยอะมากแต่ไม่มีภาษาไทย คนถามหากันมาหลายปีแล้วไม่มีใครทำออกมาได้ — เพราะเกมนี้บทพูดเยอะมาก และแพตช์ที่แปลครึ่ง ๆ กลาง ๆ แย่กว่าไม่มีเลย\n\nโจทย์เลยเป็นว่าต้องแปลให้ครบทั้งเกม ไม่ใช่แปลเฉพาะส่วนที่ง่าย แล้วเอาไปแจกฟรี\n\nแปลบทพูดไปกว่า 40,000 บรรทัด ครอบคลุมทั้งทีม SWAT พลเรือน และผู้ต้องสงสัย บวก UI กับเมนูในเกมทั้งหมด 12,002 รายการ และชื่อตัวละครอีก 91 รายการ ตัวติดตั้งหาโฟลเดอร์เกมให้เอง ผู้เล่นไม่ต้องมานั่งย้ายไฟล์เอง ในเว็บมีทั้งวิธีลง หน้าแจ้งบัค และกระดานให้คนเสนอเกมถัดไปแล้วโหวตกัน",
     },
     result: {
-      en: "Live at v15 and free to anyone — no paywall, no ads. A second game, Fears to Fathom: Scratch Creek, is translated and shipped too, and the next one is being picked by the players themselves.",
-      th: "ปล่อยจริงถึงเวอร์ชัน v15 แล้ว ใครก็โหลดได้ฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา มีเกมที่สองแปลเสร็จและปล่อยแล้วคือ Fears to Fathom: Scratch Creek ส่วนเกมถัดไปให้ผู้เล่นโหวตเลือกกันเอง",
+      en: "Shipped and still shipping — v15 is live, free to anyone, no paywall and no ads. A second game, Fears to Fathom: Scratch Creek, is translated and out, and the players are voting on which one gets done next.",
+      th: "ปล่อยแล้วและยังปล่อยต่อ — v15 ใช้งานอยู่จริง โหลดฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา เกมที่สองอย่าง Fears to Fathom: Scratch Creek แปลเสร็จและปล่อยแล้วเหมือนกัน ส่วนเกมถัดไปผู้เล่นกำลังโหวตเลือกกันเอง",
     },
     media: [
       { type: "img", src: "assets/projects/modkrub/menu.jpg" },
@@ -232,8 +232,8 @@ const PROJECT_PAGES = {
       th: "คนที่อยากเริ่มวาดสีน้ำต้องซื้อพาเลต สี พู่กัน กระดาษ แล้วก็อะไรสักอย่างมายึดมันไว้ด้วยกัน — ห้าการตัดสินใจแยกกัน และคนส่วนใหญ่ถอดใจตั้งแต่ตอนเลือกซื้อ\n\nสินค้าเลยต้องเป็นกล่องเดียวที่ตัดการตัดสินใจพวกนั้นทิ้งให้หมด และต้องขายกับคนที่ไม่เคยซื้ออุปกรณ์ศิลปะมาก่อน ซึ่งแปลว่าห้ามพูดจาแบบร้านขายอุปกรณ์ศิลปะ\n\nผมดูแลเองทั้งหมด ตั้งแต่ตัวสินค้า แพ็กเกจจิ้ง ภาพถ่าย ครีเอทีฟโฆษณา ไปจนถึงการคุยปิดการขายในแชท ตัวชุดคือเซ็ตครบจบในกล่องเดียว — พาเลตไม้ สีน้ำ 12 สี พู่กันเติมน้ำ กระดาษสเก็ตช์ และคลิปหนีบ ขายตรงบน Facebook โดยผมเขียนและยิงแอดเอง ตอบลูกค้าเอง และมีเก็บเงินปลายทางเพราะเป็นสิ่งที่ลูกค้ากลุ่มนี้ไว้ใจ",
     },
     result: {
-      en: "Currently in market testing, with a first production run of 500 units being prepared. Every part of it — brand, box, ads, chat — is running live rather than sitting in a plan.",
-      th: "ตอนนี้อยู่ในเฟสทดสอบตลาด และกำลังเตรียมผลิตล็อตแรก 500 ชิ้น ทุกส่วน — ทั้งแบรนด์ กล่อง แอด และแชท — เดินอยู่จริง ไม่ได้อยู่แค่ในแผน",
+      en: "In market testing now, with a first production run of 500 units being prepared. Brand, box, ads and chat are all running in the open — none of it is still sitting in a plan.",
+      th: "ตอนนี้อยู่ในช่วงทดสอบตลาด และกำลังเตรียมผลิตล็อตแรก 500 ชิ้น ทั้งแบรนด์ กล่อง แอด และแชท เดินอยู่กลางสนามจริงทั้งหมด ไม่มีส่วนไหนเหลือค้างอยู่ในแผน",
     },
     media: [
       { type: "img", src: "assets/projects/haru/set.jpg" },
@@ -258,8 +258,8 @@ const PROJECT_PAGES = {
       th: "โจทย์จากมิตรผลคือ ออกแบบสินค้าใหม่จากไซรัปแอลลูโลสของเขา — สารให้ความหวานแทนน้ำตาลผสมสารสกัดหล่อฮังก๊วย 0 แคลอรี ใช้แทนน้ำตาลได้ 1 ต่อ 1\n\nทีม GOAT พัฒนาออกมาเป็นไซรัปพรีเมียมหลายรส จัดเป็นเซ็ตของขวัญ แล้วนำไปพิตช์ที่ Mitr Phol Innovation & Research Centre",
     },
     result: {
-      en: "Took part, didn't place.",
-      th: "ได้เข้าร่วม ไม่ได้รางวัล",
+      en: "The idea travelled the whole distance — from a raw ingredient to a finished gift set, pitched to Mitr Phol's own people inside their research centre. It taught me how to look at a single ingredient and answer the two questions that decide everything: what should this become, and who is it for.",
+      th: "ไอเดียเดินไปจนสุดทาง — จากวัตถุดิบตั้งต้นกลายเป็นเซ็ตของขวัญที่จับต้องได้ และได้ขึ้นพิตช์ให้คนของมิตรผลฟังถึงในศูนย์วิจัยของเขาเอง งานนี้สอนให้มองวัตถุดิบตัวเดียวแล้วตอบสองคำถามที่ชี้ขาดทุกอย่างให้ได้ — มันควรกลายเป็นอะไร และมันมีไว้เพื่อใคร",
     },
     media: [
       { type: "img", src: "assets/projects/mitrphol/brief-allulose.jpg" },
@@ -282,8 +282,8 @@ const PROJECT_PAGES = {
       th: "R2M ไม่ใช่การประกวดแผนธุรกิจ — โครงการระบุไว้ชัดว่าเป็นงานช่วงต้นน้ำที่มาก่อนแผนธุรกิจ งานวิจัยของมหาวิทยาลัยจะถูกตรวจทรัพย์สินทางปัญญาแล้วส่งมาเป็นโจทย์ให้ทีมนักศึกษา โจทย์คือคำถามที่ต้องตอบก่อนจะเขียนแผนใด ๆ ได้: เทคโนโลยีชิ้นนี้พัฒนาไปเป็นสินค้าหรือบริการอะไรได้บ้าง และฝั่งตลาดของมันเป็นไปได้จริงไหม\n\nโจทย์ของทีมเราคือ MUVITA — เครื่องดื่มโปรตีนถั่วเหลืองที่ต่อยอดจากงานวิจัยสารสกัดพืช ทั้งผักแพวและใบหม่อน ผลิตตามมาตรฐาน GHPs/HACCP อยู่แล้ว เราเลือกทำฝั่งความเป็นไปได้ทางการตลาด: ใครคือคนซื้อตัวจริง สินค้าต้องยืนอยู่บนอะไรคนกลุ่มนั้นถึงจะรู้สึกว่า “นี่ของฉัน” และช่องทางไหนที่เข้าถึงเขาได้จริง สิ่งที่เจอคือมันไม่ได้แพ้ที่ตัววิทยาศาสตร์ แต่แพ้ที่ความชัด — ไม่มีอะไรในตัวสินค้าบอกคนซื้อได้ว่าเขาอยู่กลุ่มไหน เราจึงวางจุดยืนใหม่ที่ “โปรตีนจากพืช” ซึ่งเป็นคำที่คนฟังแล้ววัดตัวเองได้ทันที แล้ววางเส้นทางสู่ตลาดใหม่จากตรงนั้น",
     },
     result: {
-      en: "We didn't make it past the university round. What I took from it was the part no class teaches: handing real lab research a commercial answer, in a room where the people who own that research are listening.",
-      th: "ทีมเราไม่ได้ผ่านรอบมหาวิทยาลัยไปต่อ สิ่งที่ได้กลับมาคือประสบการณ์ที่ห้องเรียนไม่สอน — การเอางานวิจัยจริงในแล็บมาตอบโจทย์เชิงพาณิชย์ ในห้องที่เจ้าของงานวิจัยนั่งฟังอยู่ด้วย",
+      en: "We carried it all the way to a new positioning and a route to market for a product already sitting on shelves. It gave me the part no class teaches: giving real lab research a commercial answer, in a room where the people who own that research are listening.",
+      th: "เราทำไปจนถึงการวางจุดยืนใหม่และเส้นทางสู่ตลาดให้สินค้าที่วางขายอยู่จริงแล้ว งานนี้ให้ในสิ่งที่ห้องเรียนไม่เคยสอน — การเอางานวิจัยจริงในแล็บมาตอบโจทย์เชิงพาณิชย์ ในห้องที่เจ้าของงานวิจัยนั่งฟังอยู่ด้วย",
     },
     media: [
       { type: "img", src: "assets/projects/muvita/product.jpg" },
