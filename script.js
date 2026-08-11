@@ -6,32 +6,11 @@
    ============================================================ */
 
 // ---------- 1. Project ticker (build cards, duplicate for seamless loop) ----------
-// `url` opens a live site in a new tab; `page` opens the in-site case study (project.html?p=slug)
-const projects = [
-  { title: "PAAM Serum — 42.3K views", tag: "AI Content",   glyph: "PA", bg: "linear-gradient(135deg,#1b2a24,#0f8054)", page: "paam" },
-  { title: "TikTok Affiliate Clips",   tag: "AI Content",   glyph: "TT", bg: "linear-gradient(135deg,#2a1b24,#804a0f)", page: "affiliate" },
-  { title: "AI Short Film",            tag: "AI Video",     glyph: "FX", bg: "linear-gradient(135deg,#24291b,#6a8000)", page: "film" },
-  { title: "Trading Bot Store",        tag: "Web & Product", glyph: "TB", bg: "linear-gradient(135deg,#1b2029,#0f4a80)", page: "trading" },
-  { title: "ModKrub — Thai Game Mods", tag: "Web & Product", img: "assets/projects/modkrub.jpg", url: "https://modkrub.vercel.app/" },
-  { title: "Krungsri UniVerse 2025",   tag: "Hackathon Win", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
-  { title: "MUVITA — R2M 2025",        tag: "Research",     glyph: "MU", bg: "linear-gradient(135deg,#1b2926,#0f8071)", page: "muvita" },
-];
-
+// the list and the card markup live in projects-list.js so the All Projects
+// page renders exactly the same cards — no second copy to keep in sync
 const track = document.getElementById("tickerTrack");
 if (track) {
-  const cards = projects.map(p => {
-    const thumb = p.img
-      ? `background-image:url('${p.img}');background-size:cover;background-position:center;--p-glyph:''`
-      : `--p-bg:${p.bg};--p-glyph:'${p.glyph}'`;
-    const inner = `
-      <div class="p-thumb" style="${thumb}">
-        <span class="p-tag">${p.tag}</span>
-      </div>
-      <div class="p-title">${p.title}</div>`;
-    if (p.url)  return `<a class="p-card" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`;
-    if (p.page) return `<a class="p-card" href="project.html?p=${p.page}">${inner}</a>`;
-    return `<div class="p-card">${inner}</div>`;
-  }).join("");
+  const cards = PROJECTS.map(p => projectCard(p, "p-card")).join("");
   track.innerHTML = cards + cards; // duplicate for -50% loop
 }
 
@@ -80,13 +59,87 @@ document.querySelectorAll(".counter").forEach(el => counterIO.observe(el));
 
 const lerp = (a, b, t) => a + (b - a) * t;
 
-// -- 5a. Projects ticker: endless drift, eases to a crawl on hover
+// -- 5a. Projects ticker: endless drift, eases to a crawl on hover,
+//        and can be grabbed and thrown by hand so nobody has to wait for a card
 let tickerX = 0;
 let tickerSpeed = 1.1;      // current px/frame
 let tickerTarget = 1.1;     // desired px/frame
+let tickerDragging = false;
+let tickerFlick = 0;        // px/s carried over when the user lets go
 if (track) {
-  track.parentElement.addEventListener("mouseenter", () => (tickerTarget = 0.15));
-  track.parentElement.addEventListener("mouseleave", () => (tickerTarget = 1.1));
+  const stage = track.parentElement.parentElement;   // .ticker-3d (the visible box)
+  stage.addEventListener("mouseenter", () => { if (!tickerDragging) tickerTarget = 0.15; });
+  stage.addEventListener("mouseleave", () => { if (!tickerDragging) tickerTarget = 1.1; });
+
+  // the track lives on a plane rotated ~40deg, so a pixel of mouse travel covers
+  // more than a pixel of track — this keeps the card under the cursor
+  const DRAG_GAIN = 1.35;
+  const DRAG_SLOP = 6;        // px of travel before it counts as a drag, not a click
+  let armed = false;          // pointer is down but hasn't moved enough yet
+  let startX = 0, startTickerX = 0, moved = 0, lastX = 0, lastMove = 0;
+
+  stage.style.cursor = "grab";
+  stage.addEventListener("pointerdown", e => {
+    if (e.button !== 0) return;
+    // NOTE: capture is claimed only once a real drag starts. Capturing here
+    // would retarget the click to the stage and the card link would never open.
+    armed = true;
+    moved = 0;
+    startX = lastX = e.clientX;
+    startTickerX = tickerX;
+    lastMove = performance.now();
+    tickerFlick = 0;
+  });
+
+  stage.addEventListener("pointermove", e => {
+    if (!armed && !tickerDragging) return;
+    const dx = e.clientX - startX;
+    moved = Math.max(moved, Math.abs(dx));
+    if (!tickerDragging) {
+      if (moved < DRAG_SLOP) return;      // still just a click, leave it alone
+      tickerDragging = true;
+      armed = false;
+      stage.setPointerCapture(e.pointerId);
+      stage.style.cursor = "grabbing";
+    }
+    tickerX = startTickerX + dx * DRAG_GAIN;
+    // running velocity, so letting go mid-swipe keeps the motion going
+    const now = performance.now();
+    const dt = Math.max(now - lastMove, 1) / 1000;
+    tickerFlick = ((e.clientX - lastX) * DRAG_GAIN) / dt;
+    lastX = e.clientX;
+    lastMove = now;
+  });
+
+  const endDrag = e => {
+    armed = false;
+    if (!tickerDragging) return;
+    tickerDragging = false;
+    stage.style.cursor = "grab";
+    if (e.pointerId != null && stage.hasPointerCapture?.(e.pointerId)) stage.releasePointerCapture(e.pointerId);
+    // stale velocity (paused finger before release) shouldn't throw the track
+    if (performance.now() - lastMove > 120) tickerFlick = 0;
+    tickerFlick = Math.max(Math.min(tickerFlick, 4000), -4000);
+    // still hovering after letting go? stay at the slow browse speed
+    tickerTarget = stage.matches(":hover") ? 0.15 : 1.1;
+  };
+  stage.addEventListener("pointerup", endDrag);
+  stage.addEventListener("pointercancel", endDrag);
+
+  // a drag that travelled shouldn't also count as a click on the card underneath
+  stage.addEventListener("click", e => {
+    if (moved > DRAG_SLOP) { e.preventDefault(); e.stopPropagation(); }
+    moved = 0;
+  }, true);
+
+  // trackpad / horizontal wheel nudges it too; vertical wheel is left alone
+  // so the page keeps scrolling normally
+  stage.addEventListener("wheel", e => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      e.preventDefault();
+      tickerX -= e.deltaX;
+    }
+  }, { passive: false });
 }
 
 // -- 5b. Services fan: whole hand of cards glides left -> right with scroll
@@ -112,10 +165,22 @@ function frame(now) {
 
   // ticker
   if (track) {
-    tickerSpeed = lerp(tickerSpeed, tickerTarget, k);
-    tickerX -= tickerSpeed * dt * 66;           // px/s, frame-rate independent
+    if (!tickerDragging) {
+      tickerSpeed = lerp(tickerSpeed, tickerTarget, k);
+      tickerX -= tickerSpeed * dt * 66;         // px/s, frame-rate independent
+      if (tickerFlick) {                        // throw from a release, decaying
+        tickerX += tickerFlick * dt;
+        tickerFlick *= Math.exp(-dt * 3.2);
+        if (Math.abs(tickerFlick) < 20) tickerFlick = 0;
+      }
+    }
+    // the track is the card list twice over, so it can wrap either way and
+    // the seam never shows — however far the user throws it
     const half = track.scrollWidth / 2;
-    if (-tickerX >= half) tickerX += half;
+    if (half > 0) {
+      while (-tickerX >= half) tickerX += half;
+      while (tickerX > 0) tickerX -= half;
+    }
     track.style.transform = `translateX(${tickerX}px)`;
   }
 
@@ -248,3 +313,44 @@ document.getElementById("navDots")?.addEventListener("click", () => {
 document.getElementById("navBurger")?.addEventListener("click", () => {
   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 });
+
+// ---------- 10. Come back to where you left off ----------
+// Leaving for a case page and pressing Back should put you back at the card you
+// were looking at, not at the top of the site. The browser's own restore fires
+// before the ticker cards exist (the page is still short at that moment), so it
+// lands at 0 — we save the offset ourselves and re-apply it after layout.
+(function () {
+  const KEY = "homeScrollY";
+  // take the wheel from the browser: its own restore fires too early here
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+  const save = () => sessionStorage.setItem(KEY, String(scrollY));
+  addEventListener("pagehide", save);
+  // pagehide can be skipped on some in-page navigations, so also save the
+  // moment a card is clicked — that's the exact position worth keeping
+  addEventListener("click", e => { if (e.target.closest("a[href]")) save(); }, true);
+
+  const nav = performance.getEntriesByType("navigation")[0];
+  const wentBack = nav && nav.type === "back_forward";
+  let from = null;
+  try { from = document.referrer ? new URL(document.referrer, location.href) : null; } catch {}
+  const cameFromCase = from && from.origin === location.origin &&
+    /\/(project|projects)\.html$/.test(from.pathname);
+
+  const saved = Number(sessionStorage.getItem(KEY) || 0);
+  if ((wentBack || cameFromCase) && saved > 0) {
+    const put = () => scrollTo(0, saved);
+    put();
+    requestAnimationFrame(() => requestAnimationFrame(put));
+    addEventListener("load", put);            // again once images settle the height
+    setTimeout(put, 250);                     // and once more after fonts/images reflow
+  }
+
+  // returning through bfcache: the page is resurrected with no script re-run,
+  // so put the position back on the way in
+  addEventListener("pageshow", e => {
+    if (!e.persisted) return;
+    const y = Number(sessionStorage.getItem(KEY) || 0);
+    if (y > 0) scrollTo(0, y);
+  });
+})();

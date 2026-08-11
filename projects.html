@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects — DEAR®</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=202608111921">
+</head>
+<body>
+
+<!-- ===== NAV (same simplified bar as the case pages) ===== -->
+<nav class="nav pj-nav">
+  <a class="nav-brand" href="index.html">
+    <span class="nav-logo">✦</span>
+    <span class="nav-name">DEAR®</span>
+  </a>
+  <a href="index.html" class="btn btn-green btn-roll">
+    <span class="roll"><span id="backLabel">← Home</span><span id="backLabel2">← Home</span></span>
+  </a>
+</nav>
+
+<main class="section all-main">
+  <header class="section-head">
+    <div class="head-left">
+      <h2 class="giant" id="allTitle">All Projects.</h2>
+      <span class="count" id="allCount">(06)</span>
+    </div>
+  </header>
+
+  <!-- static grid: everything sits still so it can actually be read -->
+  <div class="all-grid" id="allGrid"></div>
+</main>
+
+<footer class="footer">
+  <span class="footer-copy" id="allCopy">© 2026 Suprawee Mathusen. All rights reserved.</span>
+  <nav class="footer-nav">
+    <a href="index.html" id="fnHome">Home</a>
+    <a href="index.html#about">Tech Stack</a>
+    <a href="https://instagram.com/hidearkub" target="_blank" rel="noopener">Instagram</a>
+  </nav>
+</footer>
+
+<script src="projects-list.js?v=202608111921"></script>
+<script>
+const lang = localStorage.getItem("lang") === "th" ? "th" : "en";
+document.documentElement.lang = lang;
+if (lang === "th") {
+  document.getElementById("allTitle").textContent = "ผลงานทั้งหมด.";
+  document.getElementById("backLabel").textContent = "← หน้าแรก";
+  document.getElementById("backLabel2").textContent = "← หน้าแรก";
+  document.getElementById("allCopy").textContent = "© 2026 สุปวีร์ มะธุเสน สงวนลิขสิทธิ์";
+  document.getElementById("fnHome").textContent = "หน้าแรก";
+}
+document.getElementById("allCount").textContent = "(" + String(PROJECTS.length).padStart(2, "0") + ")";
+
+// same list, same card renderer as the home-page ticker
+document.getElementById("allGrid").innerHTML =
+  PROJECTS.map(p => projectCard(p, "all-card")).join("");
+</script>
+</body>
+</html>

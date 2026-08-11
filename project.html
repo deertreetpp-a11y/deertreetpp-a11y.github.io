@@ -7,18 +7,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@400..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=202608111921">
 </head>
 <body>
 
-<!-- ===== NAV (simplified: brand goes home, back goes to the ticker) ===== -->
+<!-- ===== NAV (brand goes home; the button goes FORWARD to the full list) ===== -->
 <nav class="nav pj-nav">
   <a class="nav-brand" href="index.html">
     <span class="nav-logo">✦</span>
     <span class="nav-name">DEAR®</span>
   </a>
-  <a href="index.html#projects" class="btn btn-green btn-roll">
-    <span class="roll"><span id="backLabel">← All Projects</span><span id="backLabel2">← All Projects</span></span>
+  <a href="index.html" class="pj-goback" id="goBack">← <span id="goBackLabel">Back</span></a>
+  <a href="projects.html" class="btn btn-green btn-roll">
+    <span class="roll"><span id="backLabel">All Projects →</span><span id="backLabel2">All Projects →</span></span>
   </a>
 </nav>
 
@@ -36,12 +37,27 @@
 
   <p class="pj-desc" id="pjDesc"></p>
 
-  <a href="index.html#contact" class="btn btn-white btn-lg btn-roll pj-cta">
-    <span class="roll"><span id="ctaLabel">Work with me →</span><span id="ctaLabel2">Work with me →</span></span>
-  </a>
+  <!-- STAR's R: kept in its own block so "how did it end" is never buried in prose -->
+  <div class="pj-result" id="pjResult" style="display:none">
+    <span class="pj-result-label" id="pjResultLabel">Result</span>
+    <p class="pj-result-text" id="pjResultText"></p>
+  </div>
+
+  <div class="pj-cta-row">
+    <a href="index.html#contact" class="btn btn-white btn-lg btn-roll pj-cta">
+      <span class="roll"><span id="ctaLabel">Work with me →</span><span id="ctaLabel2">Work with me →</span></span>
+    </a>
+    <a href="#" id="pjDownload" class="btn btn-green btn-lg btn-roll pj-cta" style="display:none" download>
+      <span class="roll"><span id="dlLabel"></span><span id="dlLabel2"></span></span>
+    </a>
+    <!-- same slot, but for opening a live site instead of downloading a file -->
+    <a href="#" id="pjVisit" class="btn btn-green btn-lg btn-roll pj-cta" style="display:none" target="_blank" rel="noopener">
+      <span class="roll"><span id="vsLabel"></span><span id="vsLabel2"></span></span>
+    </a>
+  </div>
 </main>
 
-<script src="project-data.js"></script>
+<script src="project-data.js?v=202608111921"></script>
 <script>
 (function () {
   const lang = (localStorage.getItem("lang") === "th") ? "th" : "en";
@@ -58,14 +74,46 @@
   document.getElementById("pjYear").textContent = p.year;
 
   const L = {
-    th: { service: "บริการ", client: "ลูกค้า/งาน", year: "ปี", back: "← ผลงานทั้งหมด", cta: "ร่วมงานกับผม →" },
-    en: { service: "Service", client: "Client", year: "Year", back: "← All Projects", cta: "Work with me →" },
+    th: { service: "บริการ", client: "ลูกค้า/งาน", year: "ปี", back: "ผลงานทั้งหมด →", cta: "ร่วมงานกับผม →", goBack: "ย้อนกลับ" },
+    en: { service: "Service", client: "Client", year: "Year", back: "All Projects →", cta: "Work with me →", goBack: "Back" },
   }[lang];
+  document.getElementById("goBackLabel").textContent = L.goBack;
+
+  if (p.result) {
+    document.getElementById("pjResult").style.display = "";
+    document.getElementById("pjResultLabel").textContent = lang === "th" ? "ผลลัพธ์" : "Result";
+    document.getElementById("pjResultText").textContent = p.result[lang];
+  }
+
+  // go back to wherever they actually came from (ticker or the grid);
+  // falls back to the home page when the case page was opened directly
+  document.getElementById("goBack").addEventListener("click", e => {
+    if (history.length > 1 && document.referrer && new URL(document.referrer).origin === location.origin) {
+      e.preventDefault();
+      history.back();
+    }
+  });
   document.querySelectorAll(".pj-meta-label").forEach(e => (e.textContent = L[e.dataset.l]));
   document.getElementById("backLabel").textContent = L.back;
   document.getElementById("backLabel2").textContent = L.back;
   document.getElementById("ctaLabel").textContent = L.cta;
   document.getElementById("ctaLabel2").textContent = L.cta;
+
+  if (p.download) {
+    const dl = document.getElementById("pjDownload");
+    dl.href = p.download.href;
+    dl.style.display = "";
+    document.getElementById("dlLabel").textContent = p.download.label[lang];
+    document.getElementById("dlLabel2").textContent = p.download.label[lang];
+  }
+
+  if (p.visit) {
+    const vs = document.getElementById("pjVisit");
+    vs.href = p.visit.href;
+    vs.style.display = "";
+    document.getElementById("vsLabel").textContent = p.visit.label[lang];
+    document.getElementById("vsLabel2").textContent = p.visit.label[lang];
+  }
 
   const media = document.getElementById("pjMedia");
   if (p.media && p.media.length) {
@@ -77,10 +125,29 @@
         : el;
       if (m.type === "row")
         return `<div class="pj-row">${m.items.map(render).join("")}</div>`;
+      // optional per-item crop focus for object-fit:cover (e.g. pos:"50% 80%")
+      const pos = m.pos ? ` style="object-position:${m.pos}"` : "";
       if (m.type === "img")
-        return phone(`<img src="${m.src}" alt="${p.title}" loading="lazy">`);
-      if (m.type === "video")
-        return phone(`<video src="${m.src}" controls playsinline preload="metadata"></video>`);
+        return phone(`<img src="${m.src}" alt="${p.title}" loading="lazy"${pos}>`);
+      if (m.type === "video") {
+        // sound-toggle videos preload fully so scrubbing works without server range-request support
+        const vid = `<video src="${m.src}" playsinline autoplay muted${m.loop === false ? "" : " loop"} preload="${m.sound ? "auto" : "metadata"}"${pos}></video>`;
+        return m.sound ? `<div class="pj-video-wrap">${vid}<button class="pj-mute-btn" aria-label="toggle sound">🔇</button><div class="pj-seek"><div class="pj-seek-fill"></div></div></div>` : phone(vid);
+      }
+      if (m.type === "elements") {
+        return `
+        <div class="pj-elements">
+          <div class="pj-elements-head">${m.heading || "Elements — Higgsfield.ai"}</div>
+          <div class="pj-elements-grid">
+            ${m.items.map(it => `
+              <div class="pj-element">
+                <img src="${it.img}" alt="${it.label}" loading="lazy">
+                <div class="pj-element-label">${it.label}</div>
+                <div class="pj-element-cat">${it.category}</div>
+              </div>`).join("")}
+          </div>
+        </div>`;
+      }
       if (m.type === "slides") {
         const srcs = Array.from({ length: m.count }, (_, i) => `${m.base}${String(i + 1).padStart(2, "0")}.jpg`);
         return `
@@ -94,6 +161,33 @@
       return "";
     };
     media.innerHTML = p.media.map(render).join("");
+
+    // sound-toggle video: starts muted (autoplay requires it), button unmutes
+    document.querySelectorAll(".pj-video-wrap").forEach(wrap => {
+      const v = wrap.querySelector("video"), btn = wrap.querySelector(".pj-mute-btn");
+      btn.addEventListener("click", () => {
+        v.muted = !v.muted;
+        btn.textContent = v.muted ? "🔇" : "🔊";
+        if (!v.muted) v.play();
+      });
+
+      // seek bar: click or drag across the strip to scrub forward/back
+      const seek = wrap.querySelector(".pj-seek"), fill = wrap.querySelector(".pj-seek-fill");
+      v.addEventListener("timeupdate", () => {
+        if (v.duration) fill.style.width = (v.currentTime / v.duration * 100) + "%";
+      });
+      const seekTo = clientX => {
+        const r = seek.getBoundingClientRect();
+        const frac = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+        if (v.duration) v.currentTime = frac * v.duration;
+      };
+      let dragging = false;
+      seek.addEventListener("mousedown", e => { dragging = true; seekTo(e.clientX); });
+      window.addEventListener("mousemove", e => { if (dragging) seekTo(e.clientX); });
+      window.addEventListener("mouseup", () => { dragging = false; });
+      seek.addEventListener("touchstart", e => seekTo(e.touches[0].clientX));
+      seek.addEventListener("touchmove", e => seekTo(e.touches[0].clientX));
+    });
 
     // slide decks: arrows or a tap on the image flip through the pages
     document.querySelectorAll(".pj-slides").forEach(box => {

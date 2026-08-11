@@ -226,6 +226,7 @@ main{display:block}
   margin-bottom:64px;flex-wrap:wrap;
 }
 .head-left{display:flex;align-items:flex-end;gap:8px}
+.proj-lede{color:var(--muted,#9a9a9a);font-size:15px;margin:0 0 14px 22px;max-width:300px;line-height:1.5}
 
 /* scroll reveal */
 .reveal{opacity:0;transform:translateY(calc(30px + var(--off,0px)));transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -239,7 +240,11 @@ main{display:block}
 }
 .word-reveal.in .w{opacity:1;transform:translateY(0)}
 
-/* ---------- INTRO ---------- */
+/* ---------- TECH STACK (heading + keyboard only) ---------- */
+.stack-head{display:flex;justify-content:center;align-items:flex-end;gap:8px}
+.stack .kb3d{margin-top:30px}
+
+/* ---------- INTRO (legacy — section removed 6 ก.ค., rules kept in case facts return) ---------- */
 .intro-grid{display:flex;gap:48px;align-items:flex-start}
 .intro-meta{width:30%;flex-shrink:0}
 .intro-facts{display:flex;flex-direction:column;gap:22px}
@@ -251,7 +256,7 @@ main{display:block}
 .intro-facts dd{font-size:16px;font-weight:500;line-height:1.4}
 .intro-body{flex:1}
 .intro-body .big-text{max-width:850px}
-.intro .kb3d{margin-top:72px}
+.intro .kb3d{margin-top:-60px;width:84%;margin-left:auto}
 .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .logo-cell{
   aspect-ratio:1.825;background:var(--card);border-radius:var(--radius);
@@ -268,7 +273,7 @@ main{display:block}
 .kb3d canvas:active{cursor:grabbing}
 /* pressed-key callout: big tilted 3D-ish name + one-liner (reference style) */
 .kb3d-callout{
-  position:absolute;z-index:3;left:2%;top:16%;max-width:44%;
+  position:absolute;z-index:3;left:33%;top:9%;max-width:44%;
   pointer-events:none;opacity:0;transform:rotate(-9deg) scale(.85);
 }
 .kb3d-callout.pop{
@@ -326,6 +331,17 @@ a.p-card:hover .p-title{color:#fff}
   font-size:64px;font-weight:900;color:rgba(255,255,255,.85);
   letter-spacing:-.05em;
 }
+.p-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+/* split card: video fills the left side, real stat numbers fill the right (no tag pill, no empty letterbox space) */
+.p-thumb-split::after{content:none}
+.p-split{position:absolute;inset:0;display:flex}
+.p-split-video{width:58%;height:100%;object-fit:contain;background:#0a0a0a;flex:none}
+.p-split-stats{
+  flex:1;background:#141414;display:flex;flex-direction:column;
+  justify-content:center;gap:16px;padding:0 20px;
+}
+.p-split-num{display:block;font-size:26px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.p-split-label{display:block;font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
 .p-tag{
   position:absolute;top:10px;right:10px;z-index:2;
   background:var(--amber);color:#000;border-radius:999px;
@@ -377,7 +393,14 @@ a.p-card:hover .p-title{color:#fff}
 .sv-web{background-image:url("assets/services/web.jpg")}
 
 /* ---------- PROJECT CASE-STUDY PAGE (project.html) ---------- */
-.pj-nav{gap:0;justify-content:space-between;width:min(560px,calc(100vw - 48px))}
+.pj-nav{gap:0;justify-content:space-between;width:min(620px,calc(100vw - 48px))}
+/* quiet back link: returns to whatever page sent you here */
+.pj-goback{
+  margin-right:auto;padding-left:18px;
+  color:var(--grey);font-size:14px;font-weight:600;text-decoration:none;
+  transition:color .3s var(--ease);
+}
+.pj-goback:hover{color:#fff}
 .pj-main{
   max-width:1240px;margin:0 auto;padding:170px 24px 90px;
   display:flex;flex-direction:column;align-items:center;text-align:center;
@@ -398,11 +421,41 @@ a.p-card:hover .p-title{color:#fff}
   padding:9px 18px;font-size:15px;font-weight:700;
 }
 .pj-media{width:100%;margin-top:70px;display:flex;flex-direction:column;gap:14px}
-.pj-media img{width:100%;max-height:82vh;object-fit:cover;border-radius:22px;display:block}
+/* never crop or squash: fit by whichever side runs out first, keep the real ratio.
+   wide shots still fill the column; tall/square ones cap at 88vh and centre. */
+.pj-media img{
+  max-width:100%;max-height:88vh;width:auto;height:auto;
+  object-fit:contain;border-radius:22px;display:block;margin:0 auto;
+}
 .pj-media video{max-height:78vh;max-width:100%;margin:0 auto;border-radius:22px;display:block;background:#0a0a0a}
+/* video with a sound on/off control (main case-study cut, autoplay muted by default) */
+.pj-video-wrap{position:relative}
+.pj-mute-btn{
+  position:absolute;bottom:20px;right:20px;z-index:2;
+  width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(0,0,0,.55);color:#fff;font-size:19px;
+  backdrop-filter:blur(6px);transition:background .2s,transform .2s;
+}
+.pj-mute-btn:hover{background:var(--amber);color:#000;transform:scale(1.08)}
+/* click/drag strip along the bottom edge to seek forward/back */
+.pj-seek{
+  position:absolute;left:0;right:0;bottom:0;height:5px;
+  background:rgba(255,255,255,.22);cursor:pointer;z-index:2;
+  transition:height .15s;
+}
+.pj-seek:hover{height:9px}
+.pj-seek-fill{height:100%;width:0;background:var(--amber);pointer-events:none}
+/* Higgsfield.ai element gallery (Character/Prop/Location assets used to build the ad) */
+.pj-elements{width:100%}
+.pj-elements-head{margin-bottom:16px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.pj-elements-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.pj-element{background:var(--card);border-radius:16px;overflow:hidden}
+.pj-element img{width:100%;aspect-ratio:1.3;object-fit:cover;display:block}
+.pj-element-label{padding:10px 12px 3px;font-size:13px;font-weight:600;color:#e8e8e8}
+.pj-element-cat{padding:0 12px 10px;font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 /* paired media (e.g. portrait photo + portrait video) share one row, equal height */
-.pj-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
-.pj-row img,.pj-row video{width:100%;height:100%;max-height:74vh;object-fit:cover;margin:0}
+.pj-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.pj-row img,.pj-row video{width:100%;height:auto;max-height:74vh;object-fit:contain;margin:0}
 /* portrait media inside an iPhone mockup on a brand-colored panel */
 .pj-phone-wrap{
   display:flex;align-items:center;justify-content:center;
@@ -443,8 +496,67 @@ a.p-card:hover .p-title{color:#fff}
   display:flex;align-items:center;justify-content:center;
 }
 .pj-placeholder span{font-size:clamp(80px,12vw,170px);font-weight:900;color:rgba(255,255,255,.85);letter-spacing:-.05em}
-.pj-desc{max-width:680px;margin-top:44px;color:var(--grey);font-size:17px;line-height:1.65}
+/* pre-line so a blank line in desc[] renders as a real paragraph break (desc is set via textContent) */
+.pj-desc{max-width:680px;margin-top:44px;color:var(--grey);font-size:17px;line-height:1.65;white-space:pre-line}
+/* the closing "so how did it end" block — deliberately separate from the story */
+.pj-result{
+  max-width:680px;width:100%;margin-top:38px;padding:26px 30px;
+  background:var(--card);border-radius:22px;border-left:3px solid var(--amber);
+  text-align:left;
+}
+.pj-result-label{
+  display:block;font-size:12px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:10px;
+}
+.pj-result-text{color:#fff;font-size:17px;line-height:1.6;margin:0}
+@media (max-width:809px){ .pj-result{padding:20px 22px} }
+
+.pj-cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .pj-cta{margin-top:44px}
+
+/* ---------- ALL PROJECTS (static grid page) ---------- */
+/* Thai headings run tall (ทั้ง stacks two marks); leave room so the giant
+   title never rides up into the fixed nav */
+.all-main{padding-top:180px;min-height:70vh}
+.all-main .section-head{margin-bottom:48px}
+.all-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+  gap:34px 26px;
+}
+.all-card{display:block;text-decoration:none;color:inherit}
+.all-card .p-thumb{transition:transform .5s var(--ease)}
+.all-card:hover .p-thumb{transform:scale(.98)}
+.all-card:hover .p-title{color:#fff}
+@media (max-width:809px){
+  .all-main{padding-top:140px}
+  .all-grid{grid-template-columns:1fr;gap:26px}
+}
+
+/* ---------- EXPERIENCE ---------- */
+.xp-lede{max-width:340px}
+.xp-list{display:flex;flex-direction:column;gap:12px}
+.xp-item{
+  display:flex;align-items:center;gap:24px;
+  background:var(--card);border-radius:20px;padding:20px 26px;
+  color:inherit;text-decoration:none;
+  transition:opacity .9s var(--ease),transform .9s var(--ease),background .35s var(--ease);
+  transition-delay:calc(var(--d,0)*90ms);
+}
+a.xp-item:hover{background:var(--card-2)}
+.xp-logo{
+  flex:none;width:78px;height:78px;border-radius:16px;background:#fff;
+  display:flex;align-items:center;justify-content:center;padding:11px;
+}
+.xp-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.xp-body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.xp-org{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.xp-role{color:var(--grey);font-size:15px;line-height:1.55;max-width:620px}
+.xp-arrow{
+  margin-left:auto;padding-left:16px;color:var(--amber);font-size:20px;
+  opacity:0;transform:translateX(-8px);
+  transition:opacity .35s var(--ease),transform .35s var(--ease);
+}
+a.xp-item:hover .xp-arrow{opacity:1;transform:none}
 
 /* ---------- STATS ---------- */
 .stats-lede{max-width:920px;margin-bottom:80px}
@@ -558,8 +670,13 @@ main{position:relative;z-index:2;background:var(--bg)}
   .intro-grid{flex-direction:column;gap:32px}
   .intro-meta{width:100%}
   .intro-facts{flex-direction:row;flex-wrap:wrap;gap:16px 28px}
-  .intro .kb3d{margin-top:40px}
+  .stack .kb3d{margin-top:0}
   .logo-grid{grid-template-columns:repeat(2,1fr)}
+  .xp-item{gap:16px;padding:16px 18px;align-items:flex-start}
+  .xp-logo{width:60px;height:60px;border-radius:13px;padding:8px}
+  .xp-org{font-size:17px}
+  .xp-role{font-size:14px}
+  .xp-arrow{display:none}
   .stats-grid .stat-card{width:100%;margin:4px 0;--off:0px!important}
   .stats-grid{flex-direction:column}
   .pj-row{grid-template-columns:1fr}
