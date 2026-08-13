@@ -9,14 +9,14 @@
 // Each entry: [selector, [thai strings in document order]]
 // A null in the array = leave that matched element untouched.
 const I18N_TH = [
-  [".nav-links a", ["Tech Stack", "ผลงาน <sup>07</sup>"]],
+  [".nav-links a", ["Tool Stack", "ผลงาน <sup>07</sup>"]],
   [".nav > .btn .roll span", ["ติดต่อ", "ติดต่อ"]],
 
   [".hero-est", ["(สุปวีร์ มะธุเสน — ขอนแก่น, ประเทศไทย)"]],
   [".hero-desc", ["ผมชื่อเดียร์ — CREATIVE TECHNOLOGIST &amp; AI CREATOR <span>ไอเดียไม่ควรต้องรอ — ผมเปลี่ยนมันให้เป็นงานจริงที่จับต้องได้</span> เร็ว ด้วย AI และหัวคิดแบบคนทำธุรกิจ"]],
   [".hero-tags", ["คอนเทนต์ AI <i>/</i> ระบบอัตโนมัติ <i>/</i> เว็บ &amp; วิจัย"]],
 
-  [".divider .pill", ["✦ (Tech Stack)", "✦ (ผลงาน)", "✦ (ประสบการณ์)", "✦ (บริการ)", "✦ (ตัวเลข)"]],
+  [".divider .pill", ["✦ (Tool Stack)", "✦ (ผลงาน)", "✦ (ประสบการณ์)", "✦ (บริการ)", "✦ (ตัวเลข)"]],
 
   [".kb3d-tip", ["ชุดเครื่องมือ AI ของผม — (ลองกดปุ่มดูสิ)"]],
 
@@ -54,7 +54,7 @@ const I18N_TH = [
   [".contact-top .roll span", ["กลับขึ้นบน ↑", "กลับขึ้นบน ↑"]],
 
   [".footer-copy", ["© 2026 สุปวีร์ มะธุเสน สงวนลิขสิทธิ์"]],
-  [".footer-nav a", ["หน้าแรก", "Tech Stack", "ผลงาน", "อินสตาแกรม"]],
+  [".footer-nav a", ["หน้าแรก", "Tool Stack", "ผลงาน", "อินสตาแกรม"]],
 ];
 
 // Typewriter phrases — script.js reads these live via window.i18nPhrases[window.currentLang]
