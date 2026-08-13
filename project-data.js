@@ -118,6 +118,29 @@ const PROJECT_PAGES = {
     },
     media: [],
   },
+  jump: {
+    title: "JUMP THAILAND Hackathon 2026",
+    service: "Hackathon", client: "AIS Academy × NIA", year: "2026",
+    bg: "linear-gradient(135deg,#0A3B2C,#1B8A63)", glyph: "JT",
+    tagline: {
+      en: "First place in the regional round — a classroom platform where AI reads handwritten homework and the teacher makes the call.",
+      th: "รางวัลชนะเลิศ การแข่งขันระดับภูมิภาค — แพลตฟอร์มห้องเรียนที่ AI อ่านการบ้านลายมือ แล้วครูเป็นคนตัดสิน",
+    },
+    desc: {
+      en: "Thai teachers mark homework by hand, book after book. The part that actually helps a student — finding the line where they went wrong and telling them why — is the first thing to get dropped when there are forty books left.\n\nJUMP THAILAND Hackathon 2026, run by AIS Academy with NIA, gave us a deadline to turn that into something judges could watch working.\n\nWe built a classroom platform of our own rather than an add-on to someone else's: a teacher opens a class and sets the work, students photograph and submit it themselves, and an AI layer reads the handwriting and points at the line that looks wrong. It proposes — the teacher decides, and the teacher is the only one who sends anything back to a student. That line is deliberate. A machine that quietly hands out marks is not something a teacher can stand behind in front of a parent.",
+      th: "ครูไทยตรวจการบ้านด้วยมือทีละเล่ม และส่วนที่ช่วยเด็กได้จริง ๆ — คือการหาให้เจอว่าเด็กพลาดตรงบรรทัดไหนแล้วบอกเขาว่าทำไม — คือส่วนแรกที่ถูกตัดทิ้งเมื่อยังเหลืออีกสี่สิบเล่ม\n\nเวที JUMP THAILAND HACKATHON 2026 ของ AIS Academy ร่วมกับ NIA ให้เส้นตายมาก้อนหนึ่งเพื่อเปลี่ยนเรื่องนี้ให้เป็นของที่กรรมการเห็นมันทำงานได้จริง\n\nเราทำเป็นแพลตฟอร์มห้องเรียนของเราเอง ไม่ใช่ส่วนเสริมของระบบคนอื่น — ครูเปิดชั้นเรียนและสั่งงาน นักเรียนถ่ายรูปและส่งงานด้วยตัวเอง แล้วชั้น AI เป็นคนอ่านลายมือและชี้ว่าบรรทัดไหนดูจะผิด มันแค่เสนอ ครูเป็นคนตัดสิน และครูเป็นคนเดียวที่ส่งอะไรกลับไปหาเด็ก เส้นนี้เราขีดไว้ตั้งใจ เพราะเครื่องที่แอบให้คะแนนเงียบ ๆ ไม่ใช่ของที่ครูจะยืนยันกับผู้ปกครองได้",
+    },
+    result: {
+      en: "First place in the regional round, judged on a pitch. The team carries it into the national stage next — an online round that cuts the field to ten, with the live demo after that.",
+      th: "ได้รางวัลชนะเลิศในการแข่งขันระดับภูมิภาค จากการพิตช์ ทีมได้ไปต่อรอบระดับประเทศ — รอบออนไลน์ที่จะคัดให้เหลือสิบทีม แล้วจึงถึงรอบสาธิตของจริง",
+    },
+    media: [
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/jump/win.jpg" },
+        { type: "img", src: "assets/projects/jump/team.jpg" },
+      ]},
+    ],
+  },
   krungsri: {
     title: "Krungsri UniVerse 2025",
     service: "Hackathon", client: "Krungsri", year: "2025",
@@ -203,9 +226,16 @@ const PROJECT_PAGES = {
       th: "Ready or Not เป็นเกมแนว tactical shooter ที่มีคนไทยเล่นเยอะมากแต่ไม่มีภาษาไทย คนถามหากันมาหลายปีแล้วไม่มีใครทำออกมาได้ — เพราะเกมนี้บทพูดเยอะมาก และแพตช์ที่แปลครึ่ง ๆ กลาง ๆ แย่กว่าไม่มีเลย\n\nโจทย์เลยเป็นว่าต้องแปลให้ครบทั้งเกม ไม่ใช่แปลเฉพาะส่วนที่ง่าย แล้วเอาไปแจกฟรี\n\nแปลบทพูดไปกว่า 40,000 บรรทัด ครอบคลุมทั้งทีม SWAT พลเรือน และผู้ต้องสงสัย บวก UI กับเมนูในเกมทั้งหมด 12,002 รายการ และชื่อตัวละครอีก 91 รายการ ตัวติดตั้งหาโฟลเดอร์เกมให้เอง ผู้เล่นไม่ต้องมานั่งย้ายไฟล์เอง ในเว็บมีทั้งวิธีลง หน้าแจ้งบัค และกระดานให้คนเสนอเกมถัดไปแล้วโหวตกัน",
     },
     result: {
-      en: "Shipped and still shipping — v15 is live, free to anyone, no paywall and no ads. A second game, Fears to Fathom: Scratch Creek, is translated and out, and the players are voting on which one gets done next.",
-      th: "ปล่อยแล้วและยังปล่อยต่อ — v15 ใช้งานอยู่จริง โหลดฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา เกมที่สองอย่าง Fears to Fathom: Scratch Creek แปลเสร็จและปล่อยแล้วเหมือนกัน ส่วนเกมถัดไปผู้เล่นกำลังโหวตเลือกกันเอง",
+      en: "Shipped and still shipping — v15 is live, free to anyone, no paywall and no ads. The release post in the Thai game-mod community group drew 301 reactions, 99 shares and 36 comments, most of them players saying the missions finally make sense to them and the game is more fun to play. A second game, Fears to Fathom: Scratch Creek, is translated and out, and the players are voting on which one gets done next.",
+      th: "ปล่อยแล้วและยังปล่อยต่อ — v15 ใช้งานอยู่จริง โหลดฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา โพสต์แจกในกลุ่มรวมม็อดภาษาไทยได้ 301 ไลก์ 99 แชร์ และ 36 คอมเมนต์ ส่วนใหญ่เป็นผู้เล่นที่บอกว่าเข้าใจภารกิจมากขึ้นและเล่นสนุกขึ้น เกมที่สองอย่าง Fears to Fathom: Scratch Creek แปลเสร็จและปล่อยแล้วเหมือนกัน ส่วนเกมถัดไปผู้เล่นกำลังโหวตเลือกกันเอง",
     },
+    // the reception, sat next to the result rather than in the gallery
+    proof: [
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/modkrub/fb-post.jpg" },
+        { type: "img", src: "assets/projects/modkrub/fb-comments.jpg" },
+      ]},
+    ],
     media: [
       { type: "img", src: "assets/projects/modkrub/menu.jpg" },
       { type: "row", items: [

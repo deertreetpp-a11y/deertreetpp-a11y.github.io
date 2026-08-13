@@ -39,6 +39,9 @@
 
   <p class="pj-desc" id="pjDesc"></p>
 
+  <!-- evidence that belongs next to the outcome, not up in the gallery -->
+  <div class="pj-media pj-proof" id="pjProof"></div>
+
   <!-- STAR's R: kept in its own block so "how did it end" is never buried in prose -->
   <div class="pj-result" id="pjResult" style="display:none">
     <span class="pj-result-label" id="pjResultLabel">Result</span>
@@ -166,6 +169,23 @@
       return "";
     };
     media.innerHTML = p.media.map(render).join("");
+
+    // same renderer, but these sit down by the result block instead of the gallery
+    const proof = document.getElementById("pjProof");
+    if (p.proof && p.proof.length) {
+      proof.innerHTML = p.proof.map(render).join("");
+      // a proof shot is supporting evidence, not the story: if one is missing it
+      // drops out quietly rather than leaving a broken-image box above the result
+      proof.querySelectorAll("img").forEach(img => {
+        img.addEventListener("error", () => {
+          const row = img.closest(".pj-row");
+          img.remove();
+          // a pair that loses one half would sit in a lopsided column — go full width
+          if (row && row.children.length === 1) row.style.gridTemplateColumns = "1fr";
+          if (!proof.querySelector("img")) proof.innerHTML = "";
+        });
+      });
+    }
 
     // sound-toggle video: starts muted (autoplay requires it), button unmutes
     document.querySelectorAll(".pj-video-wrap").forEach(wrap => {

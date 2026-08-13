@@ -428,6 +428,12 @@ a.p-card:hover .p-title{color:#fff}
   object-fit:contain;border-radius:22px;display:block;margin:0 auto;
 }
 .pj-media video{max-height:78vh;max-width:100%;margin:0 auto;border-radius:22px;display:block;background:#0a0a0a}
+/* proof shots that live beside the result block. these are 2x screen captures of a
+   ~620pt window, so the pair runs the full column width — any narrower and the text
+   inside them lands below its original size and stops being readable. */
+.pj-proof{margin-top:46px;gap:12px}
+.pj-proof:empty{display:none}
+.pj-proof img{max-height:none;border-radius:16px;border:1px solid rgba(255,255,255,.09)}
 /* video with a sound on/off control (main case-study cut, autoplay muted by default) */
 .pj-video-wrap{position:relative}
 .pj-mute-btn{
