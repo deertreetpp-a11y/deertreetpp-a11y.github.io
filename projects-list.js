@@ -12,7 +12,7 @@ const PROJECTS = [
   { title: "Coca-Cola — Unleash the Game", tag: "AI Video", video: "assets/projects/coke/cover.mp4", page: "coke" },
   { title: "KKU Report — Free Skill Giveaway", split: true, video: "assets/projects/kku/clip.mp4",
     statsList: [{ num: "204K", label: "views" }, { num: "11K", label: "likes" }, { num: "8.6K", label: "shares" }], page: "kku" },
-  { title: "JUMP THAILAND Hackathon 2026", tag: "Regional Champion", img: "assets/projects/jump-card.jpg", page: "jump" },
+  { title: "JUMP THAILAND Hackathon 2026", tag: "Regional Champion", img: "assets/projects/jump-card.jpg?v=202608140115", page: "jump" },
   { title: "ModKrub — Thai Game Mods", tag: "Free for everyone", img: "assets/projects/modkrub.jpg", page: "modkrub" },
   { title: "Krungsri UniVerse 2025", tag: "Hackathon Win", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
   { title: "Torb Hai — Auto-reply SaaS", tag: "Own Business", img: "assets/projects/torbhai.jpg", page: "torbhai" },

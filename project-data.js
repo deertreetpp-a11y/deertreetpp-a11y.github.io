@@ -139,6 +139,7 @@ const PROJECT_PAGES = {
         { type: "img", src: "assets/projects/jump/win.jpg" },
         { type: "img", src: "assets/projects/jump/team.jpg" },
       ]},
+      { type: "img", src: "assets/projects/jump/cert.jpg" },
     ],
   },
   krungsri: {
