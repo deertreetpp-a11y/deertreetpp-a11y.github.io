@@ -16,7 +16,7 @@ const PROJECTS = [
   { title: "ModKrub — Thai Game Mods", tag: "Free for everyone", img: "assets/projects/modkrub.jpg", page: "modkrub" },
   { title: "Krungsri UniVerse 2025", tag: "Hackathon Win", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
   { title: "Torb Hai — Auto-reply SaaS", tag: "Own Business", img: "assets/projects/torbhai.jpg", page: "torbhai" },
-  { title: "Haru — Pocket Watercolor Kit", tag: "Own Business", img: "assets/projects/haru.jpg", page: "haru" },
+  { title: "Haru — Pocket Watercolor Kit", tag: "Own Business", img: "assets/projects/haru-card.jpg", page: "haru" },
 ];
 
 // the inside of a card (thumb + title) — identical everywhere it's used
