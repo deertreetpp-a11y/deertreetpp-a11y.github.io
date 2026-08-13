@@ -135,9 +135,7 @@ main{display:block}
 .nav.nav-mini:hover .nav-dots{max-width:0;opacity:0;margin-left:0}
 @keyframes navDrop{from{opacity:0;transform:translate(-50%,-30px)}to{opacity:1;transform:translate(-50%,0)}}
 .nav-brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.04px}
-.nav-logo{color:var(--amber);display:flex}
-/* pixel-art mark: keep the hard pixel edges instead of letting the browser blur them */
-.nav-logo img{width:22px;height:22px;border-radius:6px;display:block;image-rendering:pixelated}
+.nav-logo{color:var(--amber)}
 .nav-links{display:flex;gap:24px;font-weight:600;font-size:16px}
 .nav-links a{opacity:.9;transition:opacity .2s}
 .nav-links a:hover{opacity:.6}
