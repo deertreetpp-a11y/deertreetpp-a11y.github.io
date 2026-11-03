@@ -9,7 +9,7 @@
 // Each entry: [selector, [thai strings in document order]]
 // A null in the array = leave that matched element untouched.
 const I18N_TH = [
-  [".nav-links a", ["ฝึกงาน", "ผลงาน <sup>09</sup>"]],
+  [".nav-links a", ["ฝึกงาน", "ผลงาน <sup>11</sup>"]],
   [".nav > .btn .roll span", ["ติดต่อ", "ติดต่อ"]],
 
   [".hero-est", ["(สุปวีร์ มะธุเสน — ขอนแก่น, ประเทศไทย)"]],

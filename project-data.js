@@ -320,10 +320,10 @@ const PROJECT_PAGES = {
     },
     decisions: {
       en: [
-        "Let tourists keep the apps they already use instead of asking them to open a Thai bank account",
+        "Let tourists pay from the apps they already use instead of opening a Thai bank account — and shops keep taking PromptPay exactly as they do today",
       ],
       th: [
-        "ให้นักท่องเที่ยวใช้แอปที่มีอยู่แล้ว แทนการให้ไปเปิดบัญชีธนาคารไทย",
+        "เลือกให้นักท่องเที่ยวจ่ายผ่านแอปที่ใช้อยู่แล้ว แทนการต้องไปเปิดบัญชีธนาคารไทย ส่วนร้านค้าก็รับ PromptPay ได้เหมือนเดิมทุกอย่าง",
       ],
     },
     numbers: [
@@ -414,10 +414,10 @@ const PROJECT_PAGES = {
     },
     decisions: {
       en: [
-        "Build my own instead of paying monthly, and keep it free through Google AI Studio",
+        "Instead of paying for a monthly app, build my own around how I actually work every day — meetings, classes and pitches — and keep it free through Google AI Studio",
       ],
       th: [
-        "สร้างเองแทนการจ่ายรายเดือน และทำให้ใช้ฟรีผ่าน Google AI Studio",
+        "แทนที่จะจ่ายค่าแอปรายเดือน ผมเลือกสร้างเองให้ตรงกับที่ใช้จริงทุกวัน ทั้งประชุม เรียน และพิตช์ แล้วทำให้ใช้ฟรีผ่าน Google AI Studio",
       ],
     },
     numbers: [
@@ -467,10 +467,10 @@ const PROJECT_PAGES = {
     },
     decisions: {
       en: [
-        "Give it away free",
+        "Give it away free instead of selling it, so as many students as possible could use it — and the giveaway clip became the way people found me",
       ],
       th: [
-        "แจกฟรี",
+        "เลือกแจกฟรีแทนการขาย ให้นักศึกษาใช้ได้มากที่สุด และคลิปแจกกลายเป็นช่องทางที่ทำให้คนรู้จักผม",
       ],
     },
     numbers: [
@@ -526,10 +526,10 @@ const PROJECT_PAGES = {
     },
     decisions: {
       en: [
-        "I liked how systematic the work was, but it showed me I want work that needs skills only a few people have",
+        "I liked how systematic the work was, and it showed me where I want to grow next: work where I solve problems for people and try new things",
       ],
       th: [
-        "ชอบความเป็นระบบของงานนี้ แต่ทำให้รู้ว่าอยากทำงานที่ต้องใช้ทักษะเฉพาะ ที่คนกลุ่มน้อยทำได้",
+        "ชอบความเป็นระบบของงานนี้ และทำให้เห็นว่าอยากเติบโตต่อไปในงานที่ได้แก้ปัญหาให้ผู้คนและได้ลองสิ่งใหม่",
       ],
     },
     numbers: [
@@ -548,6 +548,92 @@ const PROJECT_PAGES = {
     learned: {
       en: "Being systematic, attention to detail and patience — from the mindset of the people I worked with.",
       th: "ความเป็นระบบ ความละเอียด และความอดทน จากมายด์เซ็ตของพี่ ๆ ที่ทำงาน",
+    },
+  },
+
+  mitrphol: {
+    title: "Mitr Phol — Allulose Brief",
+    service: "Product concept", client: "Mitr Phol · Team GOAT", year: "2026",
+    bg: "linear-gradient(135deg,#0f1a2b,#1657a8)", glyph: "MP",
+    tagline: {
+      en: "A premium flavoured-syrup gift set, pitched at the Mitr Phol Innovation & Research Centre — our answer to Mitr Phol's brief to invent a consumer product around their zero-calorie allulose syrup.",
+      th: "ไซรัปพรีเมียมหลายรสในเซ็ตของขวัญ นำไปพิตช์ที่ Mitr Phol Innovation & Research Centre เป็นคำตอบของโจทย์มิตรผลที่ให้คิดสินค้าใหม่จากไซรัปแอลลูโลส 0 แคลอรี",
+    },
+    role: {
+      en: "Member of team GOAT, developing the product concept with the team.",
+      th: "สมาชิกทีม GOAT ร่วมพัฒนาคอนเซปต์สินค้ากับทีม",
+    },
+    problem: {
+      en: "Design a new consumer product built on Mitr Phol's allulose syrup — a sugar-free sweetener with monk fruit extract, zero calories, a one-to-one swap for sugar.",
+      th: "ออกแบบสินค้าใหม่จากไซรัปแอลลูโลสของมิตรผล สารให้ความหวานแทนน้ำตาลผสมสารสกัดหล่อฮังก๊วย 0 แคลอรี ใช้แทนน้ำตาลได้ 1 ต่อ 1",
+    },
+    did: {
+      en: [
+        "Developed it into a premium flavoured syrup line",
+        "Packaged it as a gift set",
+        "Pitched it at the Mitr Phol Innovation & Research Centre",
+      ],
+      th: [
+        "พัฒนาเป็นไซรัปพรีเมียมหลายรส",
+        "จัดเป็นเซ็ตของขวัญ",
+        "นำไปพิตช์ที่ Mitr Phol Innovation & Research Centre",
+      ],
+    },
+    media: [
+      { type: "img", src: "assets/projects/mitrphol/brief-allulose.jpg", cap: { en: "The brief", th: "โจทย์จากมิตรผล" } },
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/mitrphol/team.jpg", cap: { en: "Team GOAT", th: "ทีม GOAT" } },
+        { type: "img", src: "assets/projects/mitrphol/centre.jpg", cap: { en: "Mitr Phol Innovation & Research Centre", th: "Mitr Phol Innovation & Research Centre" } },
+      ]},
+    ],
+  },
+
+  muvita: {
+    title: "MUVITA — R2M 2025",
+    service: "Research to Market", client: "R2M 2025 · Team I'm the boss", year: "2025",
+    bg: "linear-gradient(135deg,#1b2926,#0f8071)", glyph: "MU",
+    tagline: {
+      en: "A new positioning and route to market for MUVITA, a soy protein drink already on shelves — by finding that it wasn't losing on the science but on clarity, and re-anchoring it on plant protein.",
+      th: "ได้จุดยืนใหม่และเส้นทางสู่ตลาดให้ MUVITA เครื่องดื่มโปรตีนถั่วเหลืองที่วางขายอยู่จริง โดยพบว่าสินค้าไม่ได้แพ้ที่วิทยาศาสตร์ แต่แพ้ที่ความชัด จึงวางจุดยืนใหม่ที่ “โปรตีนจากพืช”",
+    },
+    role: {
+      en: "Member of team I'm the boss, working on the market-feasibility side.",
+      th: "สมาชิกทีม I'm the boss ทำฝั่งความเป็นไปได้ทางการตลาด",
+    },
+    problem: {
+      en: "R2M hands university research to student teams as a brief. Ours was MUVITA — a soy protein drink built on plant-extract research (Vietnamese coriander and mulberry leaf), made to GHPs/HACCP standards. The question: what can this become commercially, and does the market side hold up?",
+      th: "R2M ส่งงานวิจัยของมหาวิทยาลัยมาเป็นโจทย์ให้ทีมนักศึกษา ของทีมเราคือ MUVITA เครื่องดื่มโปรตีนถั่วเหลืองที่ต่อยอดจากงานวิจัยสารสกัดผักแพวและใบหม่อน ผลิตตามมาตรฐาน GHPs/HACCP คำถามคือจะไปเป็นสินค้าอะไร และฝั่งตลาดเป็นไปได้จริงไหม",
+    },
+    did: {
+      en: [
+        "Worked out who the real buyer is",
+        "Found what the product needs to stand for before that buyer recognises themselves in it",
+        "Mapped which channels actually reach them",
+      ],
+      th: [
+        "หาว่าใครคือคนซื้อตัวจริง",
+        "หาว่าสินค้าต้องยืนอยู่บนอะไร คนกลุ่มนั้นถึงจะรู้สึกว่า “นี่ของฉัน”",
+        "หาช่องทางที่เข้าถึงเขาได้จริง",
+      ],
+    },
+    decisions: {
+      en: [
+        "Re-anchor the product on “plant protein” — a claim a shopper can place themselves against instantly — and rebuild the route to market from there",
+      ],
+      th: [
+        "วางจุดยืนใหม่ที่ “โปรตีนจากพืช” คำที่คนฟังแล้ววัดตัวเองได้ทันที แล้ววางเส้นทางสู่ตลาดใหม่จากตรงนั้น",
+      ],
+    },
+    media: [
+      { type: "img", src: "assets/projects/muvita/product.jpg", cap: { en: "MUVITA", th: "MUVITA" } },
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/muvita/pitch-01.jpg" },
+        { type: "img", src: "assets/projects/muvita/pitch-02.jpg" },
+      ]},
+    ],
+    learned: {
+      en: "How to take real university research through to a commercial answer.",
+      th: "การเอางานวิจัยของมหาวิทยาลัยมาตอบโจทย์เชิงพาณิชย์",
     },
   },
 };

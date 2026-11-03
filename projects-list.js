@@ -19,6 +19,8 @@ const PROJECTS = [
   { title: "KKU Report Skill", split: true, video: "assets/projects/kku/clip.mp4",
     statsList: [{ num: "204K", label: "views" }, { num: "11K", label: "likes" }, { num: "8.6K", label: "shares" }], page: "kku" },
   { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611040300", page: "central" },
+  { title: "MUVITA — R2M 2025", tag: "Research to Market", img: "assets/projects/muvita/product.jpg", page: "muvita" },
+  { title: "Mitr Phol — Allulose Brief", tag: "Product concept", img: "assets/projects/mitrphol/centre.jpg", page: "mitrphol" },
 ];
 
 // the inside of a card (thumb + title) — identical everywhere it's used
