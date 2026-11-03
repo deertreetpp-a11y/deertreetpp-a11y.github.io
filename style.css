@@ -716,3 +716,81 @@ main{position:relative;z-index:2;background:var(--bg)}
   .section{padding:60px 15px}
   .hero{margin:0}
 }
+
+/* ---------- CASE PAGE STORY (project.html, 2026-11 rewrite) ----------
+   prefix pjx- so nothing here can collide with the older pj- rules */
+.pjx-story{width:100%;max-width:820px;margin-top:64px;display:flex;flex-direction:column;gap:14px;text-align:left}
+.pjx-story:empty{display:none}
+.pjx-block{background:var(--card);border-radius:22px;padding:26px 30px;min-width:0}
+.pjx-label{
+  display:block;font-size:12px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:12px;
+}
+.pjx-sublabel{
+  display:block;font-size:12px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);margin:20px 0 10px;
+}
+.pjx-text{color:var(--grey);font-size:17px;line-height:1.65;margin:0}
+.pjx-strong{color:#fff;font-weight:600}
+.pjx-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pjx-list li{position:relative;padding-left:22px;color:var(--grey);font-size:16px;line-height:1.6}
+.pjx-list li::before{content:"✦";position:absolute;left:0;top:0;color:var(--amber);font-size:12px;line-height:27px}
+.pjx-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}
+/* Thai has no capitals: tracking that reads as "label" in English just pulls Thai words apart */
+html[lang="th"] .pjx-label,html[lang="th"] .pjx-sublabel{letter-spacing:.02em;text-transform:none;font-size:14px}
+.pjx-num{background:#1d1d1d;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 18px;min-width:0}
+.pjx-num b{display:block;font-size:clamp(24px,2.4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#fff;white-space:nowrap}
+.pjx-num span{display:block;margin-top:6px;font-size:14px;line-height:1.45;color:var(--muted)}
+.pjx-note{margin:14px 0 0;color:var(--grey);font-size:15px;line-height:1.55}
+.pjx-asof{margin:12px 0 0;color:var(--muted);font-size:13px}
+.pjx-fig{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.pjx-cap{color:var(--muted);font-size:14px;line-height:1.45;text-align:center}
+.pj-row.pjx-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pj-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pj-row > *{min-width:0}
+.pjx-learned{
+  width:100%;max-width:820px;margin-top:56px;padding:30px 32px;text-align:left;
+  border-radius:22px;background:var(--green);
+}
+.pjx-learned .pjx-label{color:#c9f5e3}
+.pjx-quote{margin:0;font-size:clamp(20px,2.3vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1.4;text-wrap:balance}
+@media (max-width:809px){
+  .pjx-story{margin-top:44px}
+  .pjx-block{padding:20px 20px}
+  .pjx-text{font-size:16px}
+  .pjx-list li{font-size:15px}
+  .pj-row{grid-template-columns:minmax(0,1fr)}
+  .pj-row.pjx-cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pjx-learned{padding:24px 22px}
+  .pjx-nums{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pjx-num{padding:14px 14px}
+  .pjx-num b{font-size:22px}
+  .pjx-num span{font-size:13px}
+}
+
+/* ---------- HOME: INTERNSHIP BLOCK (ix- prefix) ---------- */
+.ix-who{max-width:880px;margin-top:28px;font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1.4}
+.ix-who span{color:var(--muted);font-weight:600}
+.ix-pitch{max-width:760px;margin-top:18px;color:var(--grey);font-size:17px;line-height:1.65}
+.ix-tracks{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.ix-track{background:#1d1d1d;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:600}
+.ix-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
+.ix-card{
+  display:flex;flex-direction:column;gap:10px;min-width:0;
+  background:var(--card);border-radius:22px;padding:24px 24px 22px;
+  color:inherit;text-decoration:none;transition:background .35s var(--ease);
+}
+a.ix-card:hover{background:var(--card-2)}
+.ix-card .ix-num{font-size:clamp(34px,3.6vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--amber)}
+.ix-card b{font-size:17px;font-weight:700;letter-spacing:-.2px}
+.ix-card > span:not(.ix-num){color:var(--grey);font-size:15px;line-height:1.55}
+.ix-card small{margin-top:auto;padding-top:6px;color:var(--muted);font-size:12.5px}
+.ix-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-top:36px}
+.ix-when{font-size:16px;font-weight:700;margin-right:auto}
+.ix-when em{font-style:normal;color:var(--amber)}
+@media (max-width:1023px){ .ix-proof{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:809px){
+  .ix-pitch{font-size:16px}
+  .ix-foot{flex-direction:column;align-items:stretch}
+  .ix-foot .btn{justify-content:center;text-align:center}
+}

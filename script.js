@@ -46,7 +46,7 @@ const counterIO = new IntersectionObserver(entries => {
     (function tick(now) {
       const p = Math.min((now - t0) / dur, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased);
+      el.textContent = Math.round(target * eased).toLocaleString("en-US");
       if (p < 1) requestAnimationFrame(tick);
     })(t0);
   }

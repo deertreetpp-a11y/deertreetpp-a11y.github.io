@@ -6,13 +6,19 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project — DEAR®</title>
+<meta name="description" content="Suprawee Mathusen (Dear) — projects with real results: ORTHIVA, JUMP THAILAND, Singlty, BTC SONE LIGHT, Krungsri, ISAN Aesthetic, Sherlock, KKU Report Skill, Central.">
+<link rel="canonical" id="canon" href="https://suprawee.me/project.html">
+<meta property="og:type" content="website">
+<meta property="og:url" id="ogUrl" content="https://suprawee.me/project.html">
+<meta property="og:title" content="Project — DEAR® | Suprawee Mathusen">
+<meta property="og:image" content="https://suprawee.me/assets/hero-bg.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@400..900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="256x256" href="assets/tab-icon-202608132319.png">
 <link rel="shortcut icon" type="image/png" href="assets/tab-icon-202608132319.png">
 <link rel="apple-touch-icon" href="assets/tab-icon-202608132319.png">
-<link rel="stylesheet" href="style.css?v=202608140115">
+<link rel="stylesheet" href="style.css?v=202611040300">
 </head>
 <body>
 
@@ -30,6 +36,7 @@
 
 <main class="pj-main">
   <h1 class="pj-title" id="pjTitle">—</h1>
+  <!-- the outcome comes first: "got X, measured by Y, by doing Z" -->
   <p class="pj-tagline" id="pjTagline"></p>
 
   <div class="pj-meta">
@@ -38,17 +45,14 @@
     <div><span class="pj-meta-label" data-l="year">Year</span><span class="pj-pill" id="pjYear"></span></div>
   </div>
 
+  <!-- role → problem → decisions → numbers → evidence → learned -->
+  <div class="pjx-story" id="pjStory"></div>
+
   <div class="pj-media" id="pjMedia"></div>
 
-  <p class="pj-desc" id="pjDesc"></p>
-
-  <!-- evidence that belongs next to the outcome, not up in the gallery -->
-  <div class="pj-media pj-proof" id="pjProof"></div>
-
-  <!-- STAR's R: kept in its own block so "how did it end" is never buried in prose -->
-  <div class="pj-result" id="pjResult" style="display:none">
-    <span class="pj-result-label" id="pjResultLabel">Result</span>
-    <p class="pj-result-text" id="pjResultText"></p>
+  <div class="pjx-learned" id="pjLearned" style="display:none">
+    <span class="pjx-label" id="pjLearnedLabel">What I learned</span>
+    <p class="pjx-quote" id="pjLearnedText"></p>
   </div>
 
   <div class="pj-cta-row">
@@ -65,7 +69,7 @@
   </div>
 </main>
 
-<script src="project-data.js?v=202608140115"></script>
+<script src="project-data.js?v=202611040300"></script>
 <script>
 (function () {
   const lang = (localStorage.getItem("lang") === "th") ? "th" : "en";
@@ -75,11 +79,15 @@
   const p = (slug && Object.prototype.hasOwnProperty.call(PROJECT_PAGES, slug))
     ? PROJECT_PAGES[slug] : null;
   if (!p) { location.replace("projects.html"); return; }
+  document.documentElement.lang = lang;
 
   document.title = p.title + " — DEAR®";
+  // one canonical URL per case page (the static tag only knows project.html)
+  const url = "https://suprawee.me/project.html?p=" + encodeURIComponent(slug);
+  document.getElementById("canon").href = url;
+  document.getElementById("ogUrl").content = url;
   document.getElementById("pjTitle").textContent = p.title;
   document.getElementById("pjTagline").textContent = p.tagline[lang];
-  document.getElementById("pjDesc").textContent = p.desc[lang];
   document.getElementById("pjService").textContent = p.service;
   document.getElementById("pjClient").textContent = p.client;
   document.getElementById("pjYear").textContent = p.year;
@@ -90,10 +98,30 @@
   }[lang];
   document.getElementById("goBackLabel").textContent = L.goBack;
 
-  if (p.result) {
-    document.getElementById("pjResult").style.display = "";
-    document.getElementById("pjResultLabel").textContent = lang === "th" ? "ผลลัพธ์" : "Result";
-    document.getElementById("pjResultText").textContent = p.result[lang];
+  // ---- the story blocks, in reading order ----
+  const esc = t => String(t).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const S = {
+    th: { role: "บทบาทของผม", problem: "โจทย์", did: "สิ่งที่ผมทำ", decisions: "ตัดสินใจอะไร · ลองแล้วเลิกอะไร", numbers: "ตัวเลข", learned: "ได้เรียนรู้อะไร" },
+    en: { role: "My role", problem: "The problem", did: "What I did", decisions: "Decisions · what I tried and dropped", numbers: "Numbers", learned: "What I learned" },
+  }[lang];
+  const block = (label, inner, cls = "") => `<section class="pjx-block ${cls}"><span class="pjx-label">${label}</span>${inner}</section>`;
+  const list = arr => `<ul class="pjx-list">${arr.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`;
+  let story = "";
+  if (p.role) story += block(S.role, `<p class="pjx-text pjx-strong">${esc(p.role[lang])}</p>`);
+  if (p.problem) story += block(S.problem, `<p class="pjx-text">${esc(p.problem[lang])}</p>` +
+    (p.did ? `<span class="pjx-sublabel">${S.did}</span>${list(p.did[lang])}` : ""));
+  if (p.decisions) story += block(S.decisions, list(p.decisions[lang]));
+  if (p.numbers && p.numbers.length) {
+    const nums = p.numbers.map(n => `<div class="pjx-num"><b>${esc(typeof n.v === "object" ? n.v[lang] : n.v)}</b><span>${esc(n[lang])}</span></div>`).join("");
+    story += block(S.numbers, `<div class="pjx-nums">${nums}</div>` +
+      (p.note ? `<p class="pjx-note">${esc(p.note[lang])}</p>` : "") +
+      (p.asOf ? `<p class="pjx-asof">${esc(p.asOf[lang])}</p>` : ""), "pjx-block-nums");
+  }
+  document.getElementById("pjStory").innerHTML = story;
+  if (p.learned) {
+    document.getElementById("pjLearned").style.display = "";
+    document.getElementById("pjLearnedLabel").textContent = S.learned;
+    document.getElementById("pjLearnedText").textContent = p.learned[lang];
   }
 
   // go back to wherever they actually came from (ticker or the grid);
@@ -134,12 +162,19 @@
       const phone = el => m.phone
         ? `<div class="pj-phone-wrap" style="background:${p.bg}"><div class="pj-phone">${el}</div></div>`
         : el;
-      if (m.type === "row")
-        return `<div class="pj-row">${m.items.map(render).join("")}</div>`;
+      // optional caption under any item (proof needs a label to be read as proof)
+      const cap = m.cap ? `<figcaption class="pjx-cap">${esc(m.cap[lang])}</figcaption>` : "";
+      if (m.type === "row") {
+        const cols = m.cols ? ` pjx-cols-${m.cols}` : "";
+        const row = `<div class="pj-row${cols}">${m.items.map(render).join("")}</div>`;
+        return cap ? `<figure class="pjx-fig">${row}${cap}</figure>` : row;
+      }
       // optional per-item crop focus for object-fit:cover (e.g. pos:"50% 80%")
       const pos = m.pos ? ` style="object-position:${m.pos}"` : "";
-      if (m.type === "img")
-        return phone(`<img src="${m.src}" alt="${p.title}" loading="lazy"${pos}>`);
+      if (m.type === "img") {
+        const im = phone(`<img src="${m.src}" alt="${esc(m.cap ? m.cap[lang] : p.title)}" loading="lazy"${pos}>`);
+        return cap ? `<figure class="pjx-fig">${im}${cap}</figure>` : im;
+      }
       if (m.type === "video") {
         // sound-toggle videos preload fully so scrubbing works without server range-request support
         const vid = `<video src="${m.src}" playsinline autoplay muted${m.loop === false ? "" : " loop"} preload="${m.sound ? "auto" : "metadata"}"${pos}></video>`;
@@ -172,23 +207,6 @@
       return "";
     };
     media.innerHTML = p.media.map(render).join("");
-
-    // same renderer, but these sit down by the result block instead of the gallery
-    const proof = document.getElementById("pjProof");
-    if (p.proof && p.proof.length) {
-      proof.innerHTML = p.proof.map(render).join("");
-      // a proof shot is supporting evidence, not the story: if one is missing it
-      // drops out quietly rather than leaving a broken-image box above the result
-      proof.querySelectorAll("img").forEach(img => {
-        img.addEventListener("error", () => {
-          const row = img.closest(".pj-row");
-          img.remove();
-          // a pair that loses one half would sit in a lopsided column — go full width
-          if (row && row.children.length === 1) row.style.gridTemplateColumns = "1fr";
-          if (!proof.querySelector("img")) proof.innerHTML = "";
-        });
-      });
-    }
 
     // sound-toggle video: starts muted (autoplay requires it), button unmutes
     document.querySelectorAll(".pj-video-wrap").forEach(wrap => {

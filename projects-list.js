@@ -9,14 +9,16 @@
    `split` uses the wide card: video on the left, real stats on the right
    ============================================================ */
 const PROJECTS = [
-  { title: "Coca-Cola — Unleash the Game", tag: "AI Video", video: "assets/projects/coke/cover.mp4", page: "coke" },
-  { title: "KKU Report — Free Skill Giveaway", split: true, video: "assets/projects/kku/clip.mp4",
+  { title: "JUMP THAILAND — LearnLy", tag: "Top 10 of 603 · CEO", img: "assets/projects/jump-card.jpg?v=202611040300", page: "jump" },
+  { title: "ORTHIVA — My Own Brand", tag: "฿5,360 sales", img: "assets/projects/orthiva-card.jpg?v=202611040300", page: "orthiva" },
+  { title: "Singlty — AI Video Editor", tag: "฿120K startup grant", img: "assets/projects/singlty-card.jpg?v=202611040300", page: "singlty" },
+  { title: "BTC SONE LIGHT", tag: "Partner · live site", img: "assets/projects/btc-card.jpg?v=202611040300", page: "btc" },
+  { title: "Krungsri UniVerse Hackathon", tag: "1st · ฿30,000", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
+  { title: "Reimagine ISAN Aesthetic", tag: "1st · ฿25,000", img: "assets/projects/isan-card.jpg?v=202611040300", page: "isan" },
+  { title: "Sherlock — AI Meeting Notes", tag: "Top score in class", img: "assets/projects/sherlock-card.jpg?v=202611040300", page: "sherlock" },
+  { title: "KKU Report Skill", split: true, video: "assets/projects/kku/clip.mp4",
     statsList: [{ num: "204K", label: "views" }, { num: "11K", label: "likes" }, { num: "8.6K", label: "shares" }], page: "kku" },
-  { title: "JUMP THAILAND Hackathon 2026", tag: "Regional Champion", img: "assets/projects/jump-card.jpg?v=202608140115", page: "jump" },
-  { title: "ModKrub — Thai Game Mods", tag: "Free for everyone", img: "assets/projects/modkrub.jpg", page: "modkrub" },
-  { title: "Krungsri UniVerse 2025", tag: "Hackathon Win", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
-  { title: "Torb Hai — Auto-reply SaaS", tag: "Own Business", img: "assets/projects/torbhai.jpg", page: "torbhai" },
-  { title: "Haru — Pocket Watercolor Kit", tag: "Own Business", img: "assets/projects/haru-card.jpg", page: "haru" },
+  { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611040300", page: "central" },
 ];
 
 // the inside of a card (thumb + title) — identical everywhere it's used
