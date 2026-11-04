@@ -18,7 +18,7 @@ const PROJECTS = [
   { title: "Sherlock — AI Meeting Notes", tag: "Top score in class", img: "assets/projects/sherlock-card.jpg?v=202611040300", page: "sherlock" },
   { title: "KKU Report Skill", split: true, video: "assets/projects/kku/clip.mp4",
     statsList: [{ num: "204K", label: "views" }, { num: "11K", label: "likes" }, { num: "8.6K", label: "shares" }], page: "kku" },
-  { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611041215", page: "central" },
+  { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611041230", page: "central" },
   { title: "ModKrub — Thai Game Mods", tag: "Free for everyone", img: "assets/projects/modkrub.jpg", page: "modkrub" },
   { title: "Coca-Cola — Unleash the Game", tag: "AI Video", video: "assets/projects/coke/cover.mp4", page: "coke" },
   { title: "MUVITA — R2M 2025", tag: "Research to Market", img: "assets/projects/muvita/product.jpg", page: "muvita" },
