@@ -541,7 +541,7 @@ const PROJECT_PAGES = {
         { type: "img", src: "assets/projects/central/desk.jpg" },
         { type: "img", src: "assets/projects/central/docs.jpg" },
       ]},
-      { type: "img", src: "assets/projects/central/cert.jpg?v=202611041230", cap: { en: "Certificate", th: "ใบประกาศ" } },
+      { type: "img", src: "assets/projects/central/cert.jpg?v=202611041245", cap: { en: "Certificate", th: "ใบประกาศ" } },
     ],
     learned: {
       en: "Being systematic, attention to detail and patience — from the mindset of the people I worked with.",
