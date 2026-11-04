@@ -9,18 +9,20 @@
    `split` uses the wide card: video on the left, real stats on the right
    ============================================================ */
 const PROJECTS = [
-  { title: "JUMP THAILAND — LearnLy", tag: "Top 10 of 603 · CEO", img: "assets/projects/jump-card.jpg?v=202611040300", page: "jump" },
-  { title: "ORTHIVA — My Own Brand", tag: "฿5,360 sales", img: "assets/projects/orthiva-card.jpg?v=202611040300", page: "orthiva" },
-  { title: "Singlty — AI Video Editor", tag: "฿120K startup grant", img: "assets/projects/singlty-card.jpg?v=202611040300", page: "singlty" },
+  { title: "JUMP THAILAND — LearnLy", tag: "Top 10 of 603 · CEO", img: "assets/projects/jump-card.jpg?v=202611041200", page: "jump" },
+  { title: "ORTHIVA — My Own Brand", tag: "Own brand · selling now", img: "assets/projects/orthiva-card.jpg?v=202611041200", page: "orthiva" },
+  { title: "Singlty — AI Video Editor", tag: "฿120K startup grant", img: "assets/projects/singlty-card.jpg?v=202611041200", page: "singlty" },
   { title: "BTC SONE LIGHT", tag: "Partner · live site", img: "assets/projects/btc-card.jpg?v=202611040300", page: "btc" },
   { title: "Krungsri UniVerse Hackathon", tag: "1st · ฿30,000", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
   { title: "Reimagine ISAN Aesthetic", tag: "1st · ฿25,000", img: "assets/projects/isan-card.jpg?v=202611040300", page: "isan" },
   { title: "Sherlock — AI Meeting Notes", tag: "Top score in class", img: "assets/projects/sherlock-card.jpg?v=202611040300", page: "sherlock" },
   { title: "KKU Report Skill", split: true, video: "assets/projects/kku/clip.mp4",
     statsList: [{ num: "204K", label: "views" }, { num: "11K", label: "likes" }, { num: "8.6K", label: "shares" }], page: "kku" },
-  { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611040300", page: "central" },
+  { title: "Central — Goods Receiving", tag: "Internship", img: "assets/projects/central-card.jpg?v=202611041200", page: "central" },
+  { title: "ModKrub — Thai Game Mods", tag: "Free for everyone", img: "assets/projects/modkrub.jpg", page: "modkrub" },
+  { title: "Coca-Cola — Unleash the Game", tag: "AI Video", video: "assets/projects/coke/cover.mp4", page: "coke" },
   { title: "MUVITA — R2M 2025", tag: "Research to Market", img: "assets/projects/muvita/product.jpg", page: "muvita" },
-  { title: "Mitr Phol — Allulose Brief", tag: "Product concept", img: "assets/projects/mitrphol/centre.jpg", page: "mitrphol" },
+  { title: "Mitr Phol — Allulose Brief", tag: "Product concept", img: "assets/projects/mitrphol-card.jpg?v=202611041200", page: "mitrphol" },
 ];
 
 // the inside of a card (thumb + title) — identical everywhere it's used

@@ -84,8 +84,8 @@ const PROJECT_PAGES = {
     service: "Own brand", client: "Bunion corrector · sold on Facebook", year: "2026",
     bg: "linear-gradient(135deg,#0b2a6b,#1f6bff)", glyph: "OR",
     tagline: {
-      en: "Sold ฿5,360 with ฿1,894 net profit after product, ads and shipping — measured in my own back office and Meta Ads Manager — by running the whole brand myself: sourcing in China, ads, an AI chat bot, the back office and packing.",
-      th: "ขายได้ ฿5,360 กำไรสุทธิ ฿1,894 หลังหักค่าของ ค่าแอด และค่าส่ง วัดจากระบบหลังบ้านและ Ads Manager โดยทำเองทั้งแบรนด์ ตั้งแต่หาโรงงานจีน ยิงแอด บอท AI ตอบแชท ระบบหลังบ้าน จนแพ็กของส่ง",
+      en: "A bunion-support brand I run end to end myself: sourcing in China, Facebook ads, an AI chat bot that closes sales, the back office and packing.",
+      th: "แบรนด์อุปกรณ์พยุงนิ้วโป้งเท้าเอียงที่ผมทำเองทั้งแบรนด์ ตั้งแต่หาโรงงานจีน ยิงแอด Facebook บอท AI ปิดการขาย ระบบหลังบ้าน จนแพ็กของส่ง",
     },
     role: {
       en: "Owner. I did every step myself, using AI to help — from finding the factory to printing the shipping labels.",
@@ -122,8 +122,6 @@ const PROJECT_PAGES = {
       ],
     },
     numbers: [
-      { v: "฿5,360", en: "sales, first 4 orders", th: "ยอดขาย 4 ออเดอร์แรก" },
-      { v: "฿1,894", en: "net profit after everything", th: "กำไรสุทธิหลังหักทุกอย่าง" },
       { v: "1.83", en: "ROAS (break-even 1.45)", th: "ROAS (จุดเสมอทุน 1.45)" },
       { v: "฿2,932", en: "total ad spend incl. VAT", th: "ค่าแอดทั้งหมด รวม VAT" },
       { v: "47", en: "people messaged from the ads", th: "คนทักแชทจากแอด" },
@@ -551,6 +549,72 @@ const PROJECT_PAGES = {
     },
   },
 
+  coke: {
+    title: "Coca-Cola — Unleash the Game",
+    service: "AI Video", client: "Coca-Cola (concept)", year: "2026",
+    bg: "linear-gradient(135deg,#2a0f0f,#a30000)", glyph: "CC",
+    tagline: {
+      en: "A concept Coca-Cola × FIFA World Cup ad — one can turns an ordinary street into a robotic football arena, entirely generated with Higgsfield.ai.",
+      th: "โฆษณาคอนเซปต์ Coca-Cola × FIFA World Cup — โค้กหนึ่งกระป๋องเปลี่ยนถนนธรรมดาให้กลายเป็นสนามฟุตบอลหุ่นยนต์ สร้างสรรค์ทั้งหมดด้วย Higgsfield.ai",
+    },
+    desc: {
+      en: "A World Cup ad for Coca-Cola would normally mean a crew, a location permit, a stunt team and a budget none of which a student has.\n\nI set myself the brief anyway: make it look like it was shot, not generated. That meant a single continuous transformation — an ordinary street becoming a robotic football arena — because cuts are where generated video usually falls apart.\n\nEvery element was built first and separately in Higgsfield.ai: a custom robot suit, an energy football, a goal shield, a photoreal city street, and the characters themselves. Then they were composited into one sequence so the world stays consistent from the first frame to the last.",
+      th: "โฆษณาบอลโลกให้โค้กตามปกติแปลว่าต้องมีกองถ่าย ใบอนุญาตปิดถนน ทีมสตันต์ และงบที่นักศึกษาคนหนึ่งไม่มีสักอย่าง\n\nผมตั้งโจทย์ให้ตัวเองอยู่ดีว่า คลิปต้องออกมาเหมือน “ถ่ายมา” ไม่ใช่ “เจนมา” นั่นแปลว่าต้องเป็นฉากแปลงร่างต่อเนื่องช็อตเดียว — ถนนธรรมดากลายเป็นสนามฟุตบอลหุ่นยนต์ — เพราะรอยตัดคือจุดที่วิดีโอ AI มักหลุด\n\nทุกชิ้นถูกสร้างแยกกันก่อนใน Higgsfield.ai: ชุดหุ่นยนต์ที่ออกแบบเอง ลูกบอลพลังงาน โกลชิลด์ ถนนในเมืองแบบภาพจริง และตัวละคร แล้วค่อยประกอบเข้าเป็นซีเควนซ์เดียว เพื่อให้โลกในเรื่องคงเส้นคงวาตั้งแต่เฟรมแรกจนเฟรมสุดท้าย",
+    },
+    result: {
+      en: "A finished 126-second video — no crew, no location, not one frame of live footage. Every element it was made from is laid out below.",
+      th: "วิดีโอความยาว 126 วินาทีที่เสร็จสมบูรณ์ — ไม่มีกองถ่าย ไม่มีสถานที่ ไม่มีฟุตเทจถ่ายจริงสักเฟรม ชิ้นส่วนทุกอย่างที่ใช้สร้างมันอยู่ด้านล่างนี้",
+    },
+    media: [
+      { type: "video", src: "assets/projects/coke/ad-full.mp4", sound: true },
+      { type: "elements", heading: "Elements — Higgsfield.ai", items: [
+        { img: "assets/projects/coke/elements/Suprawee.jpg",        label: "Suprawee",        category: "Character" },
+        { img: "assets/projects/coke/elements/Suprawee-robot.jpg",  label: "Suprawee — Robot", category: "Character" },
+        { img: "assets/projects/coke/elements/robo-player-2.jpg",   label: "Robo Player 2",   category: "Character" },
+        { img: "assets/projects/coke/elements/coke.jpg",            label: "Coke Can",        category: "Prop" },
+        { img: "assets/projects/coke/elements/ball-prop.jpg",       label: "Energy Ball",     category: "Prop" },
+        { img: "assets/projects/coke/elements/goal-shield.jpg",     label: "Goal Shield",     category: "Prop" },
+        { img: "assets/projects/coke/elements/city-location.jpg",   label: "City Street",     category: "Location" },
+        { img: "assets/projects/coke/elements/scheme.jpg",          label: "Location Scheme", category: "Location" },
+      ]},
+    ],
+  },
+  modkrub: {
+    title: "ModKrub — Thai Game Mods",
+    service: "Web & Product", client: "Own project · free to download", year: "2026",
+    bg: "linear-gradient(135deg,#1a1a1a,#c2571b)", glyph: "MK",
+    tagline: {
+      en: "A Thai subtitle mod for a game plenty of people wanted translated and nobody had translated — over 40,000 lines of it, given away free.",
+      th: "ม็อดซับไทยของเกมที่คนอยากให้แปลกันเยอะมาก แต่ยังไม่มีใครแปลได้ — กว่า 40,000 บรรทัด แจกฟรี",
+    },
+    desc: {
+      en: "Ready or Not is a tactical shooter with a large Thai player base and no Thai translation. People had been asking for one for years and nobody delivered — the game is dialogue-heavy, and a half-finished patch is worse than none.\n\nSo the job was to translate the whole thing, not the easy parts, and hand it over for free.\n\nOver 40,000 lines of spoken dialogue are translated — SWAT team, civilians and suspects — along with all 12,002 UI and menu entries, and 91 character names. It ships as an installer that finds the game folder by itself, so a player doesn't have to move files around to use it. The site carries the install guide, a bug-report page, and a board where players suggest and vote on the next game.",
+      th: "Ready or Not เป็นเกมแนว tactical shooter ที่มีคนไทยเล่นเยอะมากแต่ไม่มีภาษาไทย คนถามหากันมาหลายปีแล้วไม่มีใครทำออกมาได้ — เพราะเกมนี้บทพูดเยอะมาก และแพตช์ที่แปลครึ่ง ๆ กลาง ๆ แย่กว่าไม่มีเลย\n\nโจทย์เลยเป็นว่าต้องแปลให้ครบทั้งเกม ไม่ใช่แปลเฉพาะส่วนที่ง่าย แล้วเอาไปแจกฟรี\n\nแปลบทพูดไปกว่า 40,000 บรรทัด ครอบคลุมทั้งทีม SWAT พลเรือน และผู้ต้องสงสัย บวก UI กับเมนูในเกมทั้งหมด 12,002 รายการ และชื่อตัวละครอีก 91 รายการ ตัวติดตั้งหาโฟลเดอร์เกมให้เอง ผู้เล่นไม่ต้องมานั่งย้ายไฟล์เอง ในเว็บมีทั้งวิธีลง หน้าแจ้งบัค และกระดานให้คนเสนอเกมถัดไปแล้วโหวตกัน",
+    },
+    result: {
+      en: "Shipped and still shipping — v15 is live, free to anyone, no paywall and no ads. The release post in the Thai game-mod community group drew 301 reactions, 99 shares and 36 comments, most of them players saying the missions finally make sense to them and the game is more fun to play.",
+      th: "ปล่อยแล้วและยังปล่อยต่อ — v15 ใช้งานอยู่จริง โหลดฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา โพสต์แจกในกลุ่มรวมม็อดภาษาไทยได้ 301 ไลก์ 99 แชร์ และ 36 คอมเมนต์ ส่วนใหญ่เป็นผู้เล่นที่บอกว่าเข้าใจภารกิจมากขึ้นและเล่นสนุกขึ้น",
+    },
+    // the reception, sat next to the result rather than in the gallery
+    proof: [
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/modkrub/fb-post.jpg" },
+        { type: "img", src: "assets/projects/modkrub/fb-comments.jpg" },
+      ]},
+    ],
+    media: [
+      { type: "img", src: "assets/projects/modkrub/menu.jpg" },
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/modkrub/dialogue.jpg" },
+        { type: "img", src: "assets/projects/modkrub/commands.jpg" },
+      ]},
+      { type: "row", items: [
+        { type: "img", src: "assets/projects/modkrub/briefing.jpg" },
+        { type: "img", src: "assets/projects/modkrub/loadout.jpg" },
+      ]},
+    ],
+    visit: { href: "https://modkrub.vercel.app/", label: { en: "Open the site ↗", th: "เปิดเว็บจริง ↗" } },
+  },
   mitrphol: {
     title: "Mitr Phol — Allulose Brief",
     service: "Product concept", client: "Mitr Phol · Team GOAT", year: "2026",
