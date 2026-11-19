@@ -18,8 +18,8 @@ const PROJECT_PAGES = {
     service: "Hackathon · CEO", client: "AIS Academy × NIA", year: "2026",
     bg: "linear-gradient(135deg,#0A3B2C,#1B8A63)", glyph: "JT",
     tagline: {
-      en: "Cut the time teachers spend checking homework by 50% — timed in a real classroom — by building LearnLy, where the AI checks and suggests and the teacher gives the score. Top 10 of 603 teams nationwide.",
-      th: "ลดเวลาครูตรวจการบ้านลง 50% วัดจากการจับเวลาจริงในห้องเรียน โดยทำ LearnLy ให้ AI ตรวจและเสนอแนะ ส่วนครูเป็นคนให้คะแนน · ติด Top 10 จาก 603 ทีมทั่วประเทศ",
+      en: "As CEO of team TLDR, narrowed a wide-open brief down with field evidence and built LearnLy: AI checks homework, the teacher confirms every score. Timed classroom tests cut grading time by more than 50%. Northeast regional winner and Top 10 of 603 teams nationwide.",
+      th: "ในฐานะ CEO ทีม TLDR ผมพาทีมคัดจากโจทย์กว้างด้วยข้อมูลจากการลงพื้นที่ แล้วสร้าง LearnLy ให้ AI ช่วยตรวจการบ้าน ครูเป็นคนยืนยันคะแนน ทดลองจับเวลาในห้องเรียน ครูตรวจเร็วขึ้นกว่า 50% · ชนะเลิศรอบภาคอีสาน และ Top 10 จาก 603 ทีมทั่วประเทศ",
     },
     role: {
       en: "CEO of team TLDR. I led the team, built the web app's UX/UI and the AI system inside it myself, and pitched every round.",
@@ -84,8 +84,8 @@ const PROJECT_PAGES = {
     service: "Own brand", client: "Bunion corrector · sold on Facebook", year: "2026",
     bg: "linear-gradient(135deg,#0b2a6b,#1f6bff)", glyph: "OR",
     tagline: {
-      en: "A bunion-support brand I run end to end myself: sourcing in China, Facebook ads, an AI chat bot that closes sales, the back office and packing.",
-      th: "แบรนด์อุปกรณ์พยุงนิ้วโป้งเท้าเอียงที่ผมทำเองทั้งแบรนด์ ตั้งแต่หาโรงงานจีน ยิงแอด Facebook บอท AI ปิดการขาย ระบบหลังบ้าน จนแพ็กของส่ง",
+      en: "My own brand, with a sales system that runs itself. I dropped a first product with thin margins, found a bunion corrector for a problem affecting over 30% of women, tested demand with ads before importing, and built the chatbot and back office with AI.",
+      th: "แบรนด์ของผมเองที่ระบบขายรันเองทุกวัน สินค้าตัวแรกมาร์จิ้นต่ำ ผมเลยเลิกแล้วหาตัวใหม่ จนเจออุปกรณ์พยุงนิ้วโป้งเท้าเอียง ปัญหาที่พบในผู้หญิงกว่า 30% ทดสอบขายด้วยแอดก่อนสั่งของเข้า และใช้ AI สร้างบอทกับระบบหลังบ้านทั้งหมด",
     },
     role: {
       en: "Owner. I did every step myself, using AI to help — from finding the factory to printing the shipping labels.",
@@ -172,8 +172,8 @@ const PROJECT_PAGES = {
     service: "Startup · Co-founder", client: "Team I'm the boss", year: "2026",
     bg: "linear-gradient(135deg,#1b2b5a,#4f7cff)", glyph: "S",
     tagline: {
-      en: "Won a ฿120,000 startup grant from the faculty — 1 of 12 teams through the interview — by building an AI editor that lets a customer's own AI edit video like a professional.",
-      th: "ได้ทุนสตาร์ทอัป ฿120,000 จากคณะ เป็น 1 ใน 12 ทีมที่ผ่านสัมภาษณ์ โดยทำ AI ตัดต่อที่ช่วยให้ AI ของลูกค้าตัดต่อคลิปได้แบบมืออาชีพ",
+      en: "Won a ฿120,000 faculty startup grant, 1 of 12 teams through the interview, with Singlty: it lets the AI a customer already uses edit short videos like a pro. I built nearly all of the product and set the costs, pricing and business plan. In development before launch.",
+      th: "ได้ทุนสตาร์ทอัปจากคณะ ฿120,000 เป็น 1 ใน 12 ทีมที่ผ่านสัมภาษณ์ ด้วย Singlty ที่ทำให้ AI ที่ลูกค้าใช้อยู่แล้วตัดคลิปสั้นได้ระดับมืออาชีพ ผมพัฒนาตัวผลิตภัณฑ์เกือบทั้งหมด และวางต้นทุน ราคา และแผนธุรกิจ · กำลังพัฒนาก่อนเปิดตัว",
     },
     role: {
       en: "Co-founder. I built 99–100% of the product myself — thinking it through, tuning, testing and editing clips with it myself.",
@@ -230,8 +230,8 @@ const PROJECT_PAGES = {
     service: "Partner · Full-stack", client: "A friend's siren brand", year: "2026",
     bg: "linear-gradient(135deg,#0a0a0a,#00a9c7)", glyph: "BTC",
     tagline: {
-      en: "Took a friend's siren business from TikTok-only to an online store in 8 languages, ready to launch and scoring 95/100 for speed on mobile — by consulting first, then joining as a partner and building the whole site. Year-one sales target: ฿1 million.",
-      th: "พาธุรกิจกล่องเสียงไซเรนของเพื่อนจากขายแค่ TikTok มีเว็บขายของ 8 ภาษา พร้อมเปิดขาย คะแนนความเร็วบนมือถือ 95/100 โดยเริ่มจากคอนซัลต์ แล้วเข้าเป็นพาร์ตเนอร์และสร้างเว็บทั้งระบบ · เป้ายอดขายปีแรก ฿1 ล้าน",
+      en: "A friend sold siren kits only on TikTok. I advised first, then joined as a partner instead of just building a site: an 8-language store and back office, ready to launch, plus marketing and finance. Year-one sales target: ฿1 million.",
+      th: "เพื่อนขายกล่องเสียงไซเรนผ่าน TikTok ช่องทางเดียว ผมเริ่มจากให้คำปรึกษา แล้วเสนอตัวเป็นพาร์ตเนอร์แทนการรับจ้างทำเว็บ สร้างเว็บขาย 8 ภาษาพร้อมหลังบ้าน และดูแลการตลาดกับการเงิน · เว็บพร้อมเปิดขาย · เป้ายอดขายปีแรก ฿1 ล้าน",
     },
     role: {
       en: "Partner (60/40 split). I own the full stack: the storefront, the back office, the database, marketing and finance.",
@@ -293,8 +293,8 @@ const PROJECT_PAGES = {
     service: "Hackathon", client: "Krungsri × Khon Kaen University", year: "2025",
     bg: "linear-gradient(135deg,#241b29,#5c0f80)", glyph: "KU",
     tagline: {
-      en: "First place and the ฿30,000 prize, by coming up with Krungsri Tourist Pay: tourists top up from the apps they already use, then scan PromptPay QR codes at Thai markets.",
-      th: "ชนะเลิศ ได้เงินรางวัล ฿30,000 โดยคิด Krungsri Tourist Pay ให้นักท่องเที่ยวต่างชาติโอนเงินจากแอปที่ใช้อยู่แล้วเข้ามา แล้วสแกน QR PromptPay จ่ายตามตลาดนัดได้",
+      en: "First place and ฿30,000. Tourists can only pay by card, but Thai markets run on PromptPay, so we created Krungsri Tourist Pay: top up from apps tourists already use, then scan any PromptPay QR. I designed the fee model and payment flow and pitched.",
+      th: "ชนะเลิศ ฿30,000 นักท่องเที่ยวต่างชาติจ่ายได้แค่บัตร แต่ตลาดนัดไทยรับแต่ PromptPay ทีมเราจึงคิด Krungsri Tourist Pay ให้โอนจากแอปที่ใช้อยู่แล้ว แล้วสแกน PromptPay ได้ทุกร้าน ผมออกแบบโมเดลค่าธรรมเนียมและขั้นตอนจ่ายเงิน และขึ้นพิตช์",
     },
     role: {
       en: "I interviewed foreign visitors, came up with the idea, worked out the fees and the system, and pitched. The screens (UX/UI) were designed by a teammate from Computer Engineering.",
@@ -347,8 +347,8 @@ const PROJECT_PAGES = {
     service: "Digital service design", client: "KKBS × UD Clinic", year: "2026",
     bg: "linear-gradient(135deg,#3a1d0e,#c2571b)", glyph: "ISAN",
     tagline: {
-      en: "First place — a ฿10,000 scholarship plus ฿15,000 prize — for redesigning a beauty clinic's online service with an Isan identity, from walking in to follow-up after treatment.",
-      th: "ชนะเลิศ ได้ทุนการศึกษา ฿10,000 และเงินรางวัล ฿15,000 จากการออกแบบบริการดิจิทัลของคลินิกความงามให้มีความเป็นอีสาน ตั้งแต่เข้าร้านจนติดตามผลหลังทำ",
+      en: "First place, a ฿10,000 scholarship plus ฿15,000 prize, for a beauty clinic's digital service with an Isan identity, from the first visit to aftercare. I helped shape the service and built the AI that chats, scans faces and gives a first skin analysis.",
+      th: "ชนะเลิศ ทุนการศึกษา ฿10,000 และเงินรางวัล ฿15,000 จากการออกแบบบริการดิจิทัลของคลินิกความงามที่ใส่ความเป็นอีสาน ตั้งแต่เข้าร้านจนติดตามผล ผมร่วมวางภาพรวม และสร้าง AI ที่คุยกับลูกค้า สแกนหน้า และวิเคราะห์ผิวเบื้องต้น",
     },
     role: {
       en: "I helped shape the overall concept, and built the AI part: an assistant that can hold a conversation, scan a face and give a first analysis.",
@@ -385,8 +385,8 @@ const PROJECT_PAGES = {
     service: "AI app · Mac", client: "Own tool", year: "2026",
     bg: "linear-gradient(135deg,#0b2a6b,#2f7bff)", glyph: "SH",
     tagline: {
-      en: "Top score in my section for novelty and innovation when I presented it in class — an AI meeting-notes app I built entirely myself, free to use through Google AI Studio.",
-      th: "ได้คะแนนสูงสุดของเซกในหัวข้อความแปลกใหม่และนวัตกรรม ตอนพรีเซนต์ในรายวิชา โดยสร้างแอปสรุปประชุมด้วย AI เองทั้งหมด ใช้ฟรีผ่าน Google AI Studio",
+      en: "Meeting-note apps charge monthly and cap usage, so I built my own Mac app with AI and designed every screen. It pulls out decisions and action items and answers questions about the meeting. Top innovation score in my class section.",
+      th: "แอปสรุปประชุมที่มีขายต้องจ่ายรายเดือนและใช้ได้จำกัด ผมเลยใช้ AI สร้างแอปบน Mac ขึ้นมาใช้เอง และออกแบบหน้าตาเองทั้งหมด สรุปสิ่งที่ตกลง งานที่ต้องทำ และถามตอบจากประชุมได้ · คะแนนความแปลกใหม่สูงสุดของเซกในรายวิชา",
     },
     role: {
       en: "I built 100% of it myself, including the illustrations and the UX/UI.",
@@ -442,8 +442,8 @@ const PROJECT_PAGES = {
     service: "AI tool · free", client: "Instagram (@hidearkub)", year: "2026",
     bg: "linear-gradient(135deg,#1b1a2a,#5b21b6)", glyph: "KKU",
     tagline: {
-      en: "204,780 views on Instagram, 99.1% from people who had never heard of me — for a free Claude Skill I built that writes a complete, correctly formatted Khon Kaen University report.",
-      th: "คลิปแจกสกิลมีคนดู 204,780 ครั้งบน Instagram ซึ่ง 99.1% ไม่เคยรู้จักผมมาก่อน โดยทำสกิลให้ Claude สร้างรายงานรูปแบบ มข. ฉบับสมบูรณ์ ถูกหลัก สวย แล้วแจกฟรี",
+      en: "A free Claude Skill that writes a complete KKU-format report, saving students hours of formatting. The launch clip reached 204,780 views and 8,650 shares.",
+      th: "สกิล Claude แจกฟรี ให้ AI ทำรายงานรูปแบบ มข. ได้ครบเล่ม ช่วยนักศึกษาประหยัดเวลาจัดรูปเล่ม คลิปแจกสกิลมีคนดู 204,780 ครั้ง และถูกแชร์ 8,650 ครั้ง",
     },
     role: {
       en: "I built the Skill and made the clip that gave it away.",
@@ -499,8 +499,8 @@ const PROJECT_PAGES = {
     service: "Internship", client: "Central Department Store, Khon Kaen", year: "2026",
     bg: "linear-gradient(135deg,#2a0f16,#ff0037)", glyph: "GR",
     tagline: {
-      en: "Passed the assessment and received the certificate after nearly three months in Goods Receiving — handling stock from the moment it arrives until it goes up to the floor, on both the Credit and Consignment systems.",
-      th: "ผ่านการประเมินและได้ใบประกาศ หลังฝึกงานแผนกรับสินค้า (GR) เกือบ 3 เดือน ดูแลของตั้งแต่เข้าจนออก ทั้งระบบ Credit และ Consignment",
+      en: "Nearly three months in Goods Receiving: checked deliveries against documents on both the Credit and Consignment systems, entered stock and routed goods to the right floor. Learned the discipline of work inside a large organization.",
+      th: "ฝึกงานแผนกรับสินค้า (GR) เกือบ 3 เดือน ตรวจรับสินค้าเทียบเอกสารทั้งระบบ Credit และ Consignment บันทึกเข้าระบบ และส่งของขึ้นชั้นให้ถูกแผนก ได้เรียนรู้ความเป็นระบบและความละเอียดของงานในองค์กรใหญ่",
     },
     role: {
       en: "Intern, Goods Receiving (GR), from April 2026, 08:00–17:30.",
@@ -620,8 +620,8 @@ const PROJECT_PAGES = {
     service: "Product concept", client: "Mitr Phol · Team GOAT", year: "2026",
     bg: "linear-gradient(135deg,#0f1a2b,#1657a8)", glyph: "MP",
     tagline: {
-      en: "A premium flavoured-syrup gift set, pitched at the Mitr Phol Innovation & Research Centre — our answer to Mitr Phol's brief to invent a consumer product around their zero-calorie allulose syrup.",
-      th: "ไซรัปพรีเมียมหลายรสในเซ็ตของขวัญ นำไปพิตช์ที่ Mitr Phol Innovation & Research Centre เป็นคำตอบของโจทย์มิตรผลที่ให้คิดสินค้าใหม่จากไซรัปแอลลูโลส 0 แคลอรี",
+      en: "Our team found that convenience, not price, kept drink shops from using allulose, so we proposed a syrup that swaps 1:1 for regular syrup with no recipe changes, plus a three-phase \"Friendly Sweet\" campaign, pitched at the Mitr Phol Innovation & Research Centre.",
+      th: "ทีมพบว่าสิ่งที่ขวางร้านเครื่องดื่มไม่ให้ใช้แอลลูโลสคือความสะดวก ไม่ใช่ราคา จึงเสนอไซรัปที่ใช้แทนน้ำเชื่อมเดิมได้ 1:1 ไม่ต้องปรับสูตร พร้อมแคมเปญ “หวานแบบเป็นมิตร” 3 เฟส และพิตช์ที่ Mitr Phol Innovation & Research Centre",
     },
     role: {
       en: "Member of team GOAT, developing the product concept with the team.",
