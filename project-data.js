@@ -230,8 +230,8 @@ const PROJECT_PAGES = {
     service: "Partner · Full-stack", client: "A friend's siren brand", year: "2026",
     bg: "linear-gradient(135deg,#0a0a0a,#00a9c7)", glyph: "BTC",
     tagline: {
-      en: "Took a friend's siren business from TikTok-only to a live online store in 8 languages, scoring 95/100 for speed on mobile — by consulting first, then joining as a partner and building the whole site. Year-one sales target: ฿1 million.",
-      th: "พาธุรกิจกล่องเสียงไซเรนของเพื่อนจากขายแค่ TikTok มีเว็บขายของ 8 ภาษาขึ้นใช้งานจริง คะแนนความเร็วบนมือถือ 95/100 โดยเริ่มจากคอนซัลต์ แล้วเข้าเป็นพาร์ตเนอร์และสร้างเว็บทั้งระบบ · เป้ายอดขายปีแรก ฿1 ล้าน",
+      en: "Took a friend's siren business from TikTok-only to an online store in 8 languages, ready to launch and scoring 95/100 for speed on mobile — by consulting first, then joining as a partner and building the whole site. Year-one sales target: ฿1 million.",
+      th: "พาธุรกิจกล่องเสียงไซเรนของเพื่อนจากขายแค่ TikTok มีเว็บขายของ 8 ภาษา พร้อมเปิดขาย คะแนนความเร็วบนมือถือ 95/100 โดยเริ่มจากคอนซัลต์ แล้วเข้าเป็นพาร์ตเนอร์และสร้างเว็บทั้งระบบ · เป้ายอดขายปีแรก ฿1 ล้าน",
     },
     role: {
       en: "Partner (60/40 split). I own the full stack: the storefront, the back office, the database, marketing and finance.",
@@ -270,7 +270,7 @@ const PROJECT_PAGES = {
       { v: "฿1M", en: "year-one sales target (a goal, not a result)", th: "เป้ายอดขายปีแรก (เป็นเป้า ยังไม่ใช่ผล)" },
     ],
     media: [
-      { type: "img", src: "assets/projects/btc/home.jpg", cap: { en: "The live site on desktop", th: "เว็บจริงบนคอม" } },
+      { type: "img", src: "assets/projects/btc/home.jpg", cap: { en: "The site on desktop", th: "หน้าเว็บบนคอม" } },
       { type: "row", cols: 4, items: [
         { type: "img", src: "assets/projects/btc/home-mobile.jpg" },
         { type: "img", src: "assets/projects/btc/set-front.jpg" },

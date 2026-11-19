@@ -12,7 +12,7 @@ const PROJECTS = [
   { title: "JUMP THAILAND — LearnLy", tag: "Top 10 of 603 · CEO", img: "assets/projects/jump-card.jpg?v=202611041200", page: "jump" },
   { title: "ORTHIVA — My Own Brand", tag: "Own brand · selling now", img: "assets/projects/orthiva-card.jpg?v=202611041200", page: "orthiva" },
   { title: "Singlty — AI Video Editor", tag: "฿120K startup grant", img: "assets/projects/singlty-card.jpg?v=202611041200", page: "singlty" },
-  { title: "BTC SONE LIGHT", tag: "Partner · live site", img: "assets/projects/btc-card.jpg?v=202611040300", page: "btc" },
+  { title: "BTC SONE LIGHT", tag: "Partner · ready to launch", img: "assets/projects/btc-card.jpg?v=202611040300", page: "btc" },
   { title: "Krungsri UniVerse Hackathon", tag: "1st · ฿30,000", img: "assets/projects/krungsri-card.jpg", page: "krungsri" },
   { title: "Reimagine ISAN Aesthetic", tag: "1st · ฿25,000", img: "assets/projects/isan-card.jpg?v=202611040300", page: "isan" },
   { title: "Sherlock — AI Meeting Notes", tag: "Top score in class", img: "assets/projects/sherlock-card.jpg?v=202611040300", page: "sherlock" },
