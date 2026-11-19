@@ -177,7 +177,7 @@ main{display:block}
   white-space:nowrap;
 }
 .hero-name sup{font-size:.28em;font-weight:800;vertical-align:super}
-.hero-studio{font-size:.30em;font-weight:700;letter-spacing:0;margin-left:.18em}
+.hero-studio{font-size:.30em;font-weight:700;letter-spacing:0;margin-left:.5em}
 .hero-mid{display:flex;align-items:flex-end;gap:24px;margin-top:26px}
 .hero-desc{
   max-width:440px;flex:none;
