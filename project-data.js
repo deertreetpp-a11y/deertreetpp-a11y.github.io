@@ -18,16 +18,16 @@ const PROJECT_PAGES = {
     service: "Hackathon · CEO", client: "AIS Academy × NIA", year: "2026",
     bg: "linear-gradient(135deg,#0A3B2C,#1B8A63)", glyph: "JT",
     tagline: {
-      en: "As CEO of team TLDR, narrowed a wide-open brief down with field evidence and built LearnLy: AI checks homework, the teacher confirms every score. Timed classroom tests cut grading time by more than 50%. Northeast regional winner and Top 10 of 603 teams nationwide.",
+      en: "As CEO of team TLDR, I narrowed a wide-open brief down with field evidence and built LearnLy: AI checks homework, the teacher confirms every score. Timed classroom tests cut grading time by more than 50%. Northeast regional winner and Top 10 of 603 teams nationwide.",
       th: "ในฐานะ CEO ทีม TLDR ผมพาทีมคัดจากโจทย์กว้างด้วยข้อมูลจากการลงพื้นที่ แล้วสร้าง LearnLy ให้ AI ช่วยตรวจการบ้าน ครูเป็นคนยืนยันคะแนน ทดลองจับเวลาในห้องเรียน ครูตรวจเร็วขึ้นกว่า 50% · ชนะเลิศรอบภาคอีสาน และ Top 10 จาก 603 ทีมทั่วประเทศ",
     },
     role: {
-      en: "CEO of team TLDR. I led the team, built the web app's UX/UI and the AI system inside it myself, and pitched every round.",
-      th: "CEO ทีม TLDR · นำทีม ทำเองทั้งหน้าเว็บ UX/UI และระบบ AI ข้างใน และขึ้นพิตช์ทุกรอบ",
+      en: "CEO of team TLDR. I led the team, designed the web app, built its AI system and pitched every round.",
+      th: "CEO ทีม TLDR · นำทีม ออกแบบหน้าเว็บ สร้างระบบ AI และขึ้นพิตช์ทุกรอบ",
     },
     problem: {
-      en: "The brief was very wide: “use AI to improve Thai education”. Research showed one teacher looks after 3 classes, 120–150 students, and spends 1–2 hours a day checking homework.",
-      th: "โจทย์กว้างมาก “เอา AI มาช่วยพัฒนาการศึกษาไทย” ผมรีเสิร์ชจนเจอว่าครู 1 คนดูแล 3 ห้อง 120–150 คน ใช้เวลาตรวจการบ้านวันละ 1–2 ชั่วโมง",
+      en: "The brief was wide open: “use AI to improve Thai education.” I narrowed several ideas down with field evidence to one clear problem: one teacher looks after 3 classes, 120–150 students, and spends 1–2 hours a day checking homework.",
+      th: "โจทย์กว้างมาก “ใช้ AI ช่วยการศึกษาไทย” ผมพาทีมคัดจากหลายไอเดียด้วยข้อมูลจากการลงพื้นที่ จนเหลือปัญหาที่ชัดที่สุด ครู 1 คนดูแล 3 ห้อง 120–150 คน และตรวจการบ้านวันละ 1–2 ชั่วโมง",
     },
     did: {
       en: [
@@ -52,8 +52,8 @@ const PROJECT_PAGES = {
       ],
     },
     numbers: [
-      { v: "50%", en: "less time checking homework (timed in class)", th: "เวลาตรวจการบ้านที่ลดลง (จับเวลาจริง)" },
-      { v: { en: "1st", th: "ที่ 1" }, en: "Northeast regional round, 49 teams", th: "ชนะเลิศรอบภาคอีสาน 49 ทีม" },
+      { v: "50%+", en: "less time checking homework (timed in class)", th: "เวลาตรวจการบ้านที่ลดลง (จับเวลาในห้องเรียน)" },
+      { v: { en: "1st", th: "ที่ 1" }, en: "place, Northeast Regional Round (49 teams)", th: "ชนะเลิศรอบภาคอีสาน 49 ทีม" },
       { v: "Top 10", en: "nationwide, of 603 teams", th: "ทั่วประเทศ จาก 603 ทีม" },
       { v: "฿20,000", en: "Popular Vote, national final", th: "รางวัล Popular Vote รอบชิงระดับประเทศ" },
     ],
@@ -74,8 +74,8 @@ const PROJECT_PAGES = {
       { type: "img", src: "assets/projects/jump/cert.jpg", cap: { en: "Bootcamp Winner certificate", th: "ใบประกาศ Bootcamp Winner" } },
     ],
     learned: {
-      en: "Understanding the problem, talking and communicating with people, and designing the user journey.",
-      th: "เข้าใจปัญหา คุยและสื่อสารกับผู้คน และออกแบบ user journey",
+      en: "Understanding the problem, working with many different people, and designing the user journey.",
+      th: "เข้าใจปัญหา สื่อสารกับคนหลายฝ่าย และออกแบบเส้นทางการใช้งานของผู้ใช้",
     },
   },
 
@@ -88,78 +88,61 @@ const PROJECT_PAGES = {
       th: "แบรนด์ของผมเองที่ระบบขายรันเองทุกวัน สินค้าตัวแรกมาร์จิ้นต่ำ ผมเลยเลิกแล้วหาตัวใหม่ จนเจออุปกรณ์พยุงนิ้วโป้งเท้าเอียง ปัญหาที่พบในผู้หญิงกว่า 30% ทดสอบขายด้วยแอดก่อนสั่งของเข้า และใช้ AI สร้างบอทกับระบบหลังบ้านทั้งหมด",
     },
     role: {
-      en: "Owner. I did every step myself, using AI to help — from finding the factory to printing the shipping labels.",
-      th: "เจ้าของแบรนด์ · ทำเองทุกขั้น โดยใช้ AI ช่วย ตั้งแต่หาโรงงานจนปริ้นใบปะหน้า",
+      en: "Owner. I chose the product, tested the market and built the whole sales system with AI, from sourcing to shipping labels.",
+      th: "เจ้าของแบรนด์ · เลือกสินค้า ทดสอบตลาด และใช้ AI สร้างระบบขายทั้งหมด ตั้งแต่หาโรงงานจนปริ้นใบปะหน้า",
     },
     problem: {
-      en: "I wanted to run e-commerce, so I studied how to find a winning product to import from China. I found that over 30% of women have a bunion — not a mass market, but a real one.",
-      th: "อยากทำอีคอมเมิร์ซ เลยศึกษาหา winning product นำเข้าจากจีน แล้วพบว่าผู้หญิงกว่า 30% มีนิ้วโป้งเท้าเอียง ไม่ใช่ตลาดแมส แต่เป็นตลาดจริง",
+      en: "I wanted to build an e-commerce business, so I looked for a product with real demand to import from China. Over 30% of women have a bunion: not a mass market, but a clear one.",
+      th: "ผมอยากสร้างธุรกิจอีคอมเมิร์ซ จึงหาสินค้าที่มีความต้องการชัดเพื่อนำเข้าจากจีน แล้วพบว่าผู้หญิงกว่า 30% มีนิ้วโป้งเท้าเอียง ไม่ใช่ตลาดแมส แต่เป็นตลาดที่ชัด",
     },
     did: {
       en: [
-        "Product research, talking to dozens of factories, negotiating price and arranging shipping",
-        "Product photos, the Facebook page and product details, then Facebook ads",
-        "An AI chat bot that answers customers — when it can't, it sends a LINE alert to my phone",
-        "A back office: orders, stock, tax and accounts synced to the cloud and Excel, viewable on a phone",
-        "Packing and printing shipping labels",
+        "Researched the product, negotiated with dozens of factories and arranged shipping",
+        "Made the product photos, Facebook page and video ads",
+        "Built an AI chatbot that answers customers and closes sales, and sends me a LINE alert when it can't answer",
+        "Built a back office for orders, stock, tax and accounts, synced to the cloud and Excel and usable on a phone",
+        "Packed orders and printed shipping labels",
       ],
       th: [
-        "หาสินค้า รีเสิร์ช คุยโรงงานหลายสิบเจ้า ต่อรองราคา และคุยชิปปิ้ง",
-        "ทำรูป เพจ และรายละเอียดสินค้า แล้วยิงแอด Facebook",
-        "บอท AI ตอบแชท ถ้าบอทตอบไม่ได้จะส่ง LINE เข้ามือถือผม",
-        "ระบบหลังบ้าน ออเดอร์ สต็อก ภาษี บัญชี ซิงก์คลาวด์และ Excel ดูผ่านมือถือได้",
-        "แพ็กของ และปริ้นใบปะหน้า",
+        "หาสินค้า คุยโรงงานหลายสิบเจ้า ต่อรองราคา และจัดการขนส่ง",
+        "ทำรูปสินค้า เพจ Facebook และคลิปแอด",
+        "สร้างบอท AI ที่ตอบแชทและปิดการขาย ถ้าตอบไม่ได้จะส่ง LINE เข้ามือถือผม",
+        "สร้างหลังบ้านดูแลออเดอร์ สต็อก ภาษี และบัญชี ซิงก์คลาวด์และ Excel เปิดดูบนมือถือได้",
+        "แพ็กของและปริ้นใบปะหน้า",
       ],
     },
     decisions: {
       en: [
-        "The first product I tried was a watercolour set. It sold, but the profit per piece was too low, so I dropped it",
-        "This one I test-sold before importing: ads at ฿300/day for 3 days. After costs it was still profitable, so I ordered real stock",
+        "My first product sold, but the margins were too thin, so I dropped it and looked for a better one",
+        "I test-sold this one with ads before importing. It was still profitable after costs, so I ordered stock",
       ],
       th: [
-        "สินค้าแรกที่ลองคือชุดสีน้ำ ขายได้แต่กำไรต่อชิ้นต่ำ เลยเลิก",
-        "ตัวนี้ทดลองขายก่อนนำเข้า ยิงแอด ฿300/วัน 3 วัน หักต้นทุนแล้วยังกำไร จึงสั่งของจริง",
+        "สินค้าตัวแรกขายได้แต่มาร์จิ้นต่ำ ผมเลยเลิกแล้วหาตัวที่ดีกว่า",
+        "ตัวนี้ทดสอบขายด้วยแอดก่อนนำเข้า หักต้นทุนแล้วยังกำไร จึงสั่งของเข้า",
       ],
     },
     numbers: [
-      { v: "1.83", en: "ROAS (break-even 1.45)", th: "ROAS (จุดเสมอทุน 1.45)" },
-      { v: "฿2,932", en: "total ad spend incl. VAT", th: "ค่าแอดทั้งหมด รวม VAT" },
-      { v: "47", en: "people messaged from the ads", th: "คนทักแชทจากแอด" },
-      { v: "฿9", en: "AI cost for the whole month", th: "ค่า AI ทั้งเดือน" },
+      { v: "24/7", en: "the bot answers and closes sales", th: "บอทตอบและปิดการขายเอง" },
+      { v: "14", en: "pages in the back office", th: "หน้าในระบบหลังบ้าน" },
+      { v: "6.93%", en: "of people who saw the ad clicked", th: "ของคนที่เห็นแอดกดเข้ามาดู" },
     ],
     asOf: {
-      en: "Figures as of 3 Nov 2026, from the back office and Meta Ads Manager.",
-      th: "ตัวเลข ณ 3 พ.ย. 2569 จากระบบหลังบ้านและ Ads Manager",
+      en: "Click-through rate from Meta Ads Manager, Oct–Nov 2026.",
+      th: "อัตราการคลิกจาก Meta Ads Manager ช่วง ต.ค.–พ.ย. 2569",
     },
     media: [
       { type: "row", items: [
         { type: "img", src: "assets/projects/orthiva/ad.jpg", cap: { en: "Ad image", th: "ภาพโฆษณา" } },
-        { type: "img", src: "assets/projects/orthiva/pack.jpg", cap: { en: "Real packing", th: "แพ็กของจริง" } },
+        { type: "img", src: "assets/projects/orthiva/pack.jpg", cap: { en: "Packed for a customer", th: "แพ็กส่งลูกค้า" } },
       ]},
       { type: "row", cols: 4, items: [
         { type: "img", src: "assets/projects/orthiva/ad-f1.jpg" },
         { type: "img", src: "assets/projects/orthiva/ad-f2.jpg" },
         { type: "img", src: "assets/projects/orthiva/ad-f3.jpg" },
         { type: "img", src: "assets/projects/orthiva/ad-f4.jpg" },
-      ], cap: { en: "Frames from the live video ad", th: "เฟรมจากคลิปแอดที่ยิงจริง" } },
-      { type: "img", src: "assets/projects/orthiva/ads-manager.png", cap: { en: "Meta Ads Manager — AD1 got a chat for ฿44, almost half AD2's ฿77", th: "Ads Manager จริง · AD1 ได้แชทละ ฿44 ถูกกว่า AD2 (฿77) เกือบครึ่ง" } },
-      { type: "img", src: "assets/projects/orthiva/bot-reply.png", cap: { en: "The bot's own reply in Messenger: it confirms cash on delivery and sums up the order", th: "ข้อความที่บอทตอบลูกค้าจริงใน Messenger · ยืนยันเก็บเงินปลายทางและสรุปออเดอร์ให้เอง" } },
-      { type: "row", items: [
-        { type: "img", src: "assets/projects/orthiva/backoffice-info.jpg", cap: { en: "What the back office does", th: "ระบบหลังบ้านทำอะไรให้บ้าง" } },
-        { type: "img", src: "assets/projects/orthiva/bo-overview.jpg", cap: { en: "Business overview", th: "ภาพรวมธุรกิจ" } },
-      ]},
-      { type: "row", items: [
-        { type: "img", src: "assets/projects/orthiva/bo-pnl.jpg", cap: { en: "Profit & loss", th: "กำไรขาดทุน" } },
-        { type: "img", src: "assets/projects/orthiva/bo-costs.jpg", cap: { en: "Cost per unit", th: "ต้นทุนต่อชิ้น" } },
-      ]},
-      { type: "row", items: [
-        { type: "img", src: "assets/projects/orthiva/bo-stock.jpg", cap: { en: "Stock", th: "สต็อก" } },
-        { type: "img", src: "assets/projects/orthiva/bo-tx.jpg", cap: { en: "Daily, by channel", th: "รายวันแยกช่องทาง" } },
-      ]},
-      { type: "row", items: [
-        { type: "img", src: "assets/projects/orthiva/bo-tax.jpg", cap: { en: "Yearly tax", th: "ภาษีรายปี" } },
-        { type: "img", src: "assets/projects/orthiva/bo-kb.jpg", cap: { en: "What the bot knows", th: "บอทรู้อะไรบ้าง" } },
-      ]},
+      ], cap: { en: "Frames from the video ad", th: "เฟรมจากคลิปแอด" } },
+      { type: "img", src: "assets/projects/orthiva/bot-reply.png", cap: { en: "The bot's own reply in Messenger: it confirms cash on delivery and sums up the order", th: "ข้อความที่บอทตอบลูกค้าใน Messenger · ยืนยันเก็บเงินปลายทางและสรุปออเดอร์ให้เอง" } },
+      { type: "img", src: "assets/projects/orthiva/bo-kb.jpg", cap: { en: "The knowledge base the bot answers from", th: "คลังความรู้ที่บอทใช้ตอบลูกค้า" } },
     ],
     learned: {
       en: "Understanding the problem, and building a system that runs on its own.",
@@ -176,12 +159,12 @@ const PROJECT_PAGES = {
       th: "ได้ทุนสตาร์ทอัปจากคณะ ฿120,000 เป็น 1 ใน 12 ทีมที่ผ่านสัมภาษณ์ ด้วย Singlty ที่ทำให้ AI ที่ลูกค้าใช้อยู่แล้วตัดคลิปสั้นได้ระดับมืออาชีพ ผมพัฒนาตัวผลิตภัณฑ์เกือบทั้งหมด และวางต้นทุน ราคา และแผนธุรกิจ · กำลังพัฒนาก่อนเปิดตัว",
     },
     role: {
-      en: "Co-founder. I built 99–100% of the product myself — thinking it through, tuning, testing and editing clips with it myself.",
-      th: "Co-founder · ทำตัวสินค้าเอง 99–100% ทั้งคิด จูน เทส และทดลองตัดคลิปเอง",
+      en: "Co-founder. I built nearly all of the product, from concept and tuning to test edits.",
+      th: "Co-founder · พัฒนาตัวผลิตภัณฑ์เกือบทั้งหมด ตั้งแต่คิด ปรับ จนทดสอบตัดคลิป",
     },
     problem: {
-      en: "Editors spend an hour or more on every clip, even though AI has become very good.",
-      th: "คนตัดต่อใช้เวลาคลิปละเป็นชั่วโมง ทั้งที่ทุกวันนี้ AI เก่งขึ้นมาก",
+      en: "Creators spend an hour or more editing every short clip, even though AI can now do much of the work.",
+      th: "คนทำคอนเทนต์ใช้เวลาตัดคลิปละเป็นชั่วโมง ทั้งที่ทุกวันนี้ AI ทำงานแทนได้มาก",
     },
     did: {
       en: [
@@ -197,10 +180,10 @@ const PROJECT_PAGES = {
     },
     decisions: {
       en: [
-        "On cost: provide the AI for customers ourselves, or let customers connect their own AI through MCP — I chose the route that made sense for the cost",
+        "On cost: instead of paying for the AI ourselves, customers connect the AI they already use through MCP",
       ],
       th: [
-        "เรื่องต้นทุน จะเตรียม AI ให้ลูกค้าเอง หรือให้ลูกค้าต่อ AI ของเขาเข้ามาผ่าน MCP · เลือกทางที่สมเหตุสมผลกับต้นทุน",
+        "เรื่องต้นทุน แทนที่เราจะแบกค่า AI เอง ให้ลูกค้าต่อ AI ที่ใช้อยู่แล้วเข้ามาผ่าน MCP",
       ],
     },
     numbers: [
@@ -227,15 +210,15 @@ const PROJECT_PAGES = {
 
   btc: {
     title: "BTC SONE LIGHT",
-    service: "Partner · Full-stack", client: "A friend's siren brand", year: "2026",
+    service: "Partner", client: "A friend's siren brand", year: "2026",
     bg: "linear-gradient(135deg,#0a0a0a,#00a9c7)", glyph: "BTC",
     tagline: {
       en: "A friend sold siren kits only on TikTok. I advised first, then joined as a partner instead of just building a site: an 8-language store and back office, ready to launch, plus marketing and finance. Year-one sales target: ฿1 million.",
       th: "เพื่อนขายกล่องเสียงไซเรนผ่าน TikTok ช่องทางเดียว ผมเริ่มจากให้คำปรึกษา แล้วเสนอตัวเป็นพาร์ตเนอร์แทนการรับจ้างทำเว็บ สร้างเว็บขาย 8 ภาษาพร้อมหลังบ้าน และดูแลการตลาดกับการเงิน · เว็บพร้อมเปิดขาย · เป้ายอดขายปีแรก ฿1 ล้าน",
     },
     role: {
-      en: "Partner (60/40 split). I own the full stack: the storefront, the back office, the database, marketing and finance.",
-      th: "พาร์ตเนอร์ แบ่งหุ้น 60/40 · รับหน้าที่ full-stack ทั้งเว็บหน้าบ้าน หลังบ้าน ฐานข้อมูล การตลาด และการเงิน",
+      en: "Partner. I run the store, the back office, marketing and finance.",
+      th: "พาร์ตเนอร์ · ดูแลเว็บขาย หลังบ้าน การตลาด และการเงิน",
     },
     problem: {
       en: "My friend has experience selling sirens, but only on TikTok — no website, no way to sell abroad and no system to keep orders. He wanted to sell more.",
@@ -297,23 +280,23 @@ const PROJECT_PAGES = {
       th: "ชนะเลิศ ฿30,000 นักท่องเที่ยวต่างชาติจ่ายได้แค่บัตร แต่ตลาดนัดไทยรับแต่ PromptPay ทีมเราจึงคิด Krungsri Tourist Pay ให้โอนจากแอปที่ใช้อยู่แล้ว แล้วสแกน PromptPay ได้ทุกร้าน ผมออกแบบโมเดลค่าธรรมเนียมและขั้นตอนจ่ายเงิน และขึ้นพิตช์",
     },
     role: {
-      en: "I interviewed foreign visitors, came up with the idea, worked out the fees and the system, and pitched. The screens (UX/UI) were designed by a teammate from Computer Engineering.",
-      th: "สัมภาษณ์ชาวต่างชาติ คิดไอเดีย วางค่าธรรมเนียมและระบบ และขึ้นพิตช์ · หน้าจอ UX/UI เพื่อนในทีมสาย Computer เป็นคนออกแบบ",
+      en: "I designed the fee model and the payment flow and pitched, after interviewing tourists to confirm the problem. A Computer Engineering teammate designed the screens.",
+      th: "ผมออกแบบโมเดลค่าธรรมเนียมและขั้นตอนการจ่ายเงิน และขึ้นพิตช์ หลังคุยกับนักท่องเที่ยวเพื่อยืนยันปัญหา · หน้าจอเป็นงานของเพื่อนในทีมสาย Computer",
     },
     problem: {
-      en: "There was no fixed brief — just “build seamless payments”. Interviews with foreigners showed they can't use PromptPay, only cards, while Thai markets run on PromptPay.",
-      th: "ไม่มีโจทย์ตายตัว ให้พัฒนาการชำระเงินไร้รอยต่อ · สัมภาษณ์ชาวต่างชาติแล้วพบว่าใช้ PromptPay ไม่ได้ ใช้ได้แค่บัตร แต่ตลาดนัดไทยใช้ PromptPay",
+      en: "There was no fixed brief, just “build seamless payments.” Foreign tourists can only pay by card, but Thai street markets run on PromptPay.",
+      th: "ไม่มีโจทย์ตายตัว ให้พัฒนาการชำระเงินไร้รอยต่อ · นักท่องเที่ยวต่างชาติจ่ายได้แค่บัตร แต่ตลาดนัดไทยรับแต่ PromptPay",
     },
     did: {
       en: [
-        "Interviewed foreign visitors about how they pay",
-        "Designed the flow: top up from an app they already have, then pay any PromptPay QR",
-        "Worked out the fee model and the system behind it, then pitched",
+        "Designed the flow: tourists top up from an app they already have, then pay any PromptPay QR",
+        "Worked out the fee model and the system behind it",
+        "Confirmed the problem with tourists, then pitched",
       ],
       th: [
-        "สัมภาษณ์ชาวต่างชาติว่าจ่ายเงินกันยังไง",
-        "วางการใช้งาน โอนจากแอปที่มีอยู่แล้วเข้ามา แล้วสแกนจ่าย QR PromptPay ได้ทุกร้าน",
-        "คิดค่าธรรมเนียมและระบบเบื้องหลัง แล้วขึ้นพิตช์",
+        "วางขั้นตอนการใช้งาน นักท่องเที่ยวโอนจากแอปที่มีอยู่แล้ว แล้วสแกนจ่าย PromptPay ได้ทุกร้าน",
+        "ออกแบบโมเดลค่าธรรมเนียมและระบบเบื้องหลัง",
+        "คุยกับนักท่องเที่ยวเพื่อยืนยันปัญหา แล้วขึ้นพิตช์",
       ],
     },
     decisions: {
@@ -389,8 +372,8 @@ const PROJECT_PAGES = {
       th: "แอปสรุปประชุมที่มีขายต้องจ่ายรายเดือนและใช้ได้จำกัด ผมเลยใช้ AI สร้างแอปบน Mac ขึ้นมาใช้เอง และออกแบบหน้าตาเองทั้งหมด สรุปสิ่งที่ตกลง งานที่ต้องทำ และถามตอบจากประชุมได้ · คะแนนความแปลกใหม่สูงสุดของเซกในรายวิชา",
     },
     role: {
-      en: "I built 100% of it myself, including the illustrations and the UX/UI.",
-      th: "ทำเอง 100% รวมลายเส้นและ UX/UI",
+      en: "I built it with AI and designed every screen, including the illustrations.",
+      th: "สร้างด้วย AI และออกแบบหน้าตาเองทั้งหมด รวมถึงลายเส้น",
     },
     problem: {
       en: "Meeting-notes apps charge every month and run into limits.",
@@ -419,7 +402,7 @@ const PROJECT_PAGES = {
       ],
     },
     numbers: [
-      { v: { en: "Top", th: "สูงสุด" }, en: "score in my class section (novelty / innovation)", th: "คะแนนสูงสุดของเซก หัวข้อความแปลกใหม่/นวัตกรรม" },
+      { v: { en: "Top", th: "สูงสุด" }, en: "innovation score in my class section", th: "คะแนนความแปลกใหม่ในเซก" },
       { v: "26/30", en: "lecture slides matched to the right moment", th: "หน้าสไลด์ที่จับคู่กับคำพูดได้ถูก" },
       { v: "฿0", en: "monthly cost", th: "ค่าใช้งานรายเดือน" },
     ],
@@ -432,8 +415,8 @@ const PROJECT_PAGES = {
       { type: "img", src: "assets/projects/sherlock/home.jpg", cap: { en: "Home and projects", th: "หน้าแรกและโปรเจกต์" } },
     ],
     learned: {
-      en: "Taste in design — when I presented it in class it got the top score in my section for novelty.",
-      th: "รสนิยมการออกแบบ ตอนพรีเซนต์ในรายวิชาได้คะแนนสูงสุดของเซกด้านความแปลกใหม่",
+      en: "Taste in design.",
+      th: "รสนิยมการออกแบบ",
     },
   },
 
@@ -475,7 +458,7 @@ const PROJECT_PAGES = {
       { v: "204,780", en: "views", th: "ยอดดู" },
       { v: "11,050", en: "likes", th: "ไลก์" },
       { v: "8,650", en: "shares", th: "แชร์" },
-      { v: "99.1%", en: "of viewers had never heard of me", th: "ของคนดูไม่เคยรู้จักผมมาก่อน" },
+      { v: "99.1%", en: "of viewers weren't following me", th: "ของคนดูไม่ได้ติดตามผม" },
     ],
     media: [
       { type: "video", src: "assets/projects/kku/clip.mp4", sound: true },
@@ -592,7 +575,7 @@ const PROJECT_PAGES = {
       th: "Ready or Not เป็นเกมแนว tactical shooter ที่มีคนไทยเล่นเยอะมากแต่ไม่มีภาษาไทย คนถามหากันมาหลายปีแล้วไม่มีใครทำออกมาได้ — เพราะเกมนี้บทพูดเยอะมาก และแพตช์ที่แปลครึ่ง ๆ กลาง ๆ แย่กว่าไม่มีเลย\n\nโจทย์เลยเป็นว่าต้องแปลให้ครบทั้งเกม ไม่ใช่แปลเฉพาะส่วนที่ง่าย แล้วเอาไปแจกฟรี\n\nแปลบทพูดไปกว่า 40,000 บรรทัด ครอบคลุมทั้งทีม SWAT พลเรือน และผู้ต้องสงสัย บวก UI กับเมนูในเกมทั้งหมด 12,002 รายการ และชื่อตัวละครอีก 91 รายการ ตัวติดตั้งหาโฟลเดอร์เกมให้เอง ผู้เล่นไม่ต้องมานั่งย้ายไฟล์เอง ในเว็บมีทั้งวิธีลง หน้าแจ้งบัค และกระดานให้คนเสนอเกมถัดไปแล้วโหวตกัน",
     },
     result: {
-      en: "Shipped and still shipping — v15 is live, free to anyone, no paywall and no ads. The release post in the Thai game-mod community group drew 301 reactions, 99 shares and 36 comments, most of them players saying the missions finally make sense to them and the game is more fun to play.",
+      en: "Live and still updated: v15 is out, free to anyone, no paywall and no ads. The release post in the Thai game-mod community group drew 301 reactions, 99 shares and 36 comments, most of them players saying the missions finally make sense to them and the game is more fun to play.",
       th: "ปล่อยแล้วและยังปล่อยต่อ — v15 ใช้งานอยู่จริง โหลดฟรี ไม่มีค่าใช้จ่าย ไม่มีโฆษณา โพสต์แจกในกลุ่มรวมม็อดภาษาไทยได้ 301 ไลก์ 99 แชร์ และ 36 คอมเมนต์ ส่วนใหญ่เป็นผู้เล่นที่บอกว่าเข้าใจภารกิจมากขึ้นและเล่นสนุกขึ้น",
     },
     // the reception, sat next to the result rather than in the gallery
@@ -624,8 +607,8 @@ const PROJECT_PAGES = {
       th: "ทีมพบว่าสิ่งที่ขวางร้านเครื่องดื่มไม่ให้ใช้แอลลูโลสคือความสะดวก ไม่ใช่ราคา จึงเสนอไซรัปที่ใช้แทนน้ำเชื่อมเดิมได้ 1:1 ไม่ต้องปรับสูตร พร้อมแคมเปญ “หวานแบบเป็นมิตร” 3 เฟส และพิตช์ที่ Mitr Phol Innovation & Research Centre",
     },
     role: {
-      en: "Member of team GOAT, developing the product concept with the team.",
-      th: "สมาชิกทีม GOAT ร่วมพัฒนาคอนเซปต์สินค้ากับทีม",
+      en: "Member of team GOAT. We interviewed drink shops and consumers and built the concept together.",
+      th: "สมาชิกทีม GOAT สัมภาษณ์ร้านเครื่องดื่มและผู้บริโภค และพัฒนาคอนเซปต์ร่วมกับทีม",
     },
     problem: {
       en: "Design a new consumer product built on Mitr Phol's allulose syrup — a sugar-free sweetener with monk fruit extract, zero calories, a one-to-one swap for sugar.",
@@ -633,14 +616,14 @@ const PROJECT_PAGES = {
     },
     did: {
       en: [
-        "Developed it into a premium flavoured syrup line",
-        "Packaged it as a gift set",
-        "Pitched it at the Mitr Phol Innovation & Research Centre",
+        "Interviewed 9 drink shops and 17 consumers",
+        "Found that convenience, not price, was what held shops back",
+        "Proposed a syrup that swaps 1:1 for regular syrup with no recipe changes, plus a three-phase “Friendly Sweet” campaign, pitched at the Mitr Phol Innovation & Research Centre",
       ],
       th: [
-        "พัฒนาเป็นไซรัปพรีเมียมหลายรส",
-        "จัดเป็นเซ็ตของขวัญ",
-        "นำไปพิตช์ที่ Mitr Phol Innovation & Research Centre",
+        "สัมภาษณ์ร้านเครื่องดื่ม 9 ร้าน และผู้บริโภค 17 คน",
+        "พบว่าสิ่งที่ขวางร้านคือความสะดวก ไม่ใช่ราคา",
+        "เสนอไซรัปที่ใช้แทนน้ำเชื่อมเดิมได้ 1:1 ไม่ต้องปรับสูตร พร้อมแคมเปญ “หวานแบบเป็นมิตร” 3 เฟส และพิตช์ที่ Mitr Phol Innovation & Research Centre",
       ],
     },
     media: [
